@@ -148,6 +148,37 @@
             margin: 0;
             font-size: 0.95rem;
         }
+
+        /* Стили для блока контактов */
+        .contacts-block {
+            margin-top: 3rem;
+            background: #f0f8ff;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #b3d9ff;
+        }
+        .contacts-block h2 {
+            font-size: 1.3rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .contact-list li {
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        .contact-list a {
+            color: #005bbb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .contact-list a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -223,6 +254,15 @@
         </div>
     </div>
     <!-- КОНЕЦ БЛОКА FAQ -->
+
+    <!-- БЛОК КОНТАКТОВ -->
+    <div class="contacts-block">
+        <h2>Связаться с нами</h2>
+        <ul class="contact-list">
+            <li>📧 <strong>Почта:</strong> <a href="mailto:evgeshka3399@yandex.ru">evgeshka3399@yandex.ru</a></li>
+            <li>💬 <strong>MAX:</strong> <a href="https://max.ru/se14988035_bot">@se14988035_bot</a> (чат-бот для заявок)</li>
+        </ul>
+    </div>
 
     <!-- Якорь для кнопок "Запросить тест" -->
     <div id="form-anchor"></div>
