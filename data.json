@@ -1,1 +1,50 @@
-123
+{
+  "Владимирская область": {
+    "Владимир": {
+      "platforms": [
+        {
+          "name": "Владимирские ведомости",
+          "type": "СМИ",
+          "url": "https://vedom.ru",
+          "email": "reklama@vedom.ru",
+          "status": "Проверено",
+          "utm": "vladimir_vedom"
+        },
+        {
+          "name": "Pro Город",
+          "type": "Новости",
+          "url": "https://progorod33.ru",
+          "email": "reklama@progorod33.ru",
+          "status": "Проверено",
+          "utm": "progorod"
+        },
+        {
+          "name": "ON33.ru",
+          "type": "Афиша",
+          "url": "https://on33.ru",
+          "email": "info@ribena.ru",
+          "status": "Проверено",
+          "utm": "on33"
+        }
+      ],
+      "agencies": [
+        {
+          "name": "АйДиЭм (ID Marketing)",
+          "url": "https://id-marketing.ru",
+          "email": "info@id-marketing.ru",
+          "status": "Проверено"
+        },
+        {
+          "name": "Creative Seo",
+          "url": "https://creative-seo.ru",
+          "email": "info@creative-seo.ru",
+          "status": "Проверено"
+        }
+      ]
+    },
+    "Ковров": {
+      "platforms": [],
+      "agencies": []
+    }
+  }
+}
