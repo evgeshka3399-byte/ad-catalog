@@ -102,7 +102,7 @@
             color: #555;
         }
         
-        /* Стили для карточек площадок */
+        /* Стили для карточек площадок (оставлены для совместимости, хотя на главной их больше нет) */
         .catalog-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -202,11 +202,14 @@
 <body>
 
     <h1>Каталог рекламных площадок для агентств</h1>
-    <div style="margin-bottom: 2rem;">
-        <a href="catalog.html" style="display: inline-block; padding: 12px 24px; background: #005bbb; color: #fff; text-decoration: none; border-radius: 6px; font-size: 1.1rem; font-weight: bold;">
-            📂 Перейти в каталог площадок и агентств →
+    
+    <!-- Кнопка перехода в каталог (компактная) -->
+    <div style="margin-bottom: 1.5rem;">
+        <a href="catalog.html" style="display: inline-block; padding: 10px 20px; background: #005bbb; color: #fff; text-decoration: none; border-radius: 6px; font-size: 1rem; font-weight: bold;">
+            📂 Перейти в каталог →
         </a>
     </div>
+
     <p class="subtitle">Бесплатный тест. Отчёт через 60–90 дней.</p>
 
     <div class="benefits">
@@ -217,20 +220,6 @@
             <li>Честный отчёт по переходам через 60–90 дней.</li>
         </ul>
     </div>
-
-    <!-- БЛОК КАТАЛОГА ПЛОЩАДОК -->
-       <!-- БЛОК ПЕРЕХОДА В КАТАЛОГ -->
-    <h2 style="margin-top: 2rem;">Каталог площадок и агентств</h2>
-    <p style="color: #555; margin-bottom: 1.5rem;">Выберите область и город, чтобы найти площадки для размещения рекламы или агентства для сотрудничества.</p>
-    
-    <div style="margin-bottom: 2rem;">
-        <a href="catalog.html" style="display: inline-block; padding: 12px 24px; background: #005bbb; color: #fff; text-decoration: none; border-radius: 6px; font-size: 1.1rem; font-weight: bold;">
-            📂 Перейти в каталог →
-        </a>
-    </div>
-    <!-- КОНЕЦ БЛОКА ПЕРЕХОДА -->
-       
-    <!-- КОНЕЦ БЛОКА КАТАЛОГА -->
 
     <!-- БЛОК FAQ -->
     <div class="faq">
@@ -273,33 +262,30 @@
         Нажимая кнопку «Отправить», вы соглашаетесь на обработку персональных данных.
     </p>
 
-    <!-- Текст про Wi-Fi убран, как ты и просил -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Находим все кнопки с классом btn
-  const buttons = document.querySelectorAll('a.btn'); 
-  
-  buttons.forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-      const url = this.getAttribute('href');
-      let siteName = 'unknown';
+    <!-- Скрипт отслеживания кликов -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const buttons = document.querySelectorAll('a.btn'); 
       
-      try {
-        // Вытаскиваем utm_campaign из ссылки
-        const urlParams = new URL(url).searchParams;
-        siteName = urlParams.get('utm_campaign') || 'unknown';
-      } catch(err) {
-        console.error('Ошибка парсинга URL', err);
-      }
+      buttons.forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          const url = this.getAttribute('href');
+          let siteName = 'unknown';
+          
+          try {
+            const urlParams = new URL(url).searchParams;
+            siteName = urlParams.get('utm_campaign') || 'unknown';
+          } catch(err) {
+            console.error('Ошибка парсинга URL', err);
+          }
 
-      // Отправляем событие в Метрику с параметром site
-      if (typeof ym !== 'undefined') {
-        ym(114270099, 'reachGoal', 'click_site', { site: siteName });
-      }
+          if (typeof ym !== 'undefined') {
+            ym(114270099, 'reachGoal', 'click_site', { site: siteName });
+          }
+        });
+      });
     });
-  });
-});
-</script>
+    </script>
     
 </body>
 </html>
