@@ -295,6 +295,32 @@
     </p>
 
     <!-- Текст про Wi-Fi убран, как ты и просил -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Находим все кнопки с классом btn
+  const buttons = document.querySelectorAll('a.btn'); 
+  
+  buttons.forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      const url = this.getAttribute('href');
+      let siteName = 'unknown';
+      
+      try {
+        // Вытаскиваем utm_campaign из ссылки
+        const urlParams = new URL(url).searchParams;
+        siteName = urlParams.get('utm_campaign') || 'unknown';
+      } catch(err) {
+        console.error('Ошибка парсинга URL', err);
+      }
+
+      // Отправляем событие в Метрику с параметром site
+      if (typeof ym !== 'undefined') {
+        ym(114270099, 'reachGoal', 'click_site', { site: siteName });
+      }
+    });
+  });
+});
+</script>
     
 </body>
 </html>
