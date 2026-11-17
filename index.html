@@ -98,6 +98,7 @@
             font-size: 1rem;
             font-weight: bold;
             transition: background 0.3s;
+            text-align: center;
         }
         .btn:hover { background: #004a99; }
         
@@ -134,8 +135,10 @@
             border-radius: 4px;
             border: 1px solid #ccc;
             min-width: 200px;
+            width: 100%;
         }
-        .controls label { font-weight: bold; }
+        .controls label { font-weight: bold; display: block; margin-bottom: 5px;}
+        .controls > div { flex: 1; min-width: 200px; }
 
         /* Вкладки */
         .tabs {
@@ -191,7 +194,7 @@
         }
         .card p { margin: 5px 0; font-size: 0.9rem; }
         .card .url { font-size: 0.85rem; color: #666; word-break: break-all; }
-        .card .btn { margin-top: 15px; font-size: 0.9rem; padding: 8px 16px; }
+        .card .btn { margin-top: 15px; font-size: 0.9rem; padding: 8px 16px; width: 100%; }
         
         /* Всплывающая подсказка */
         .card .tooltip {
@@ -245,6 +248,42 @@
         
         /* Центрирование кнопки заявки */
         .cta-wrapper { text-align: center; margin: 2rem 0; }
+
+        /* --- МОБИЛЬНАЯ ВЕРСИЯ (Адаптивность) --- */
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .header-text h1 { font-size: 1.5rem; }
+            .header .btn { width: 100%; margin-top: 10px; }
+            
+            .controls {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .controls > div { min-width: 100%; }
+            
+            .tabs { flex-direction: column; border-bottom: none; gap: 5px; }
+            .tab-btn { 
+                border: 1px solid #ddd; 
+                border-radius: 6px; 
+                text-align: center; 
+                margin-bottom: 0;
+            }
+            .tab-btn.active {
+                background: #005bbb;
+                color: #fff;
+                border-color: #005bbb;
+            }
+            
+            .grid { grid-template-columns: 1fr; }
+            
+            /* На мобильных тултип не нужен, чтобы не перекрывал экран */
+            .card .tooltip { display: none; }
+        }
     </style>
 </head>
 <body>
@@ -275,11 +314,11 @@
     
     <div class="controls">
         <div>
-            <label for="regionSelect">Область:</label><br>
+            <label for="regionSelect">Область:</label>
             <select id="regionSelect"></select>
         </div>
         <div>
-            <label for="citySelect">Город:</label><br>
+            <label for="citySelect">Город:</label>
             <select id="citySelect" disabled></select>
         </div>
     </div>
