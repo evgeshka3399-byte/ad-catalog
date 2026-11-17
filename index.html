@@ -385,9 +385,9 @@
         Нажимая кнопку «Отправить», вы соглашаетесь на обработку персональных данных.
     </p>
 
-    <script>
+       <script>
         let currentData = null;
-        let currentCity = ""; // Пустая строка означает "Все города"
+        let currentCity = ""; 
         let currentTab = "platforms"; 
         let searchQuery = "";
 
@@ -416,7 +416,7 @@
             
             regionSelect.addEventListener('change', function() {
                 updateCitySelect(this.value);
-                renderCards(); // Перерисовываем при смене области
+                renderCards(); 
             });
         }
 
@@ -431,8 +431,6 @@
             citySelect.appendChild(allCitiesOption);
 
             if (!region || !currentData[region]) {
-                // Если область не выбрана (или "Все"), показываем все города из всех областей? 
-                // Для простоты, если область не выбрана, город тоже сбрасываем в "Все"
                 citySelect.disabled = true;
                 currentCity = "";
                 return;
@@ -451,7 +449,6 @@
                 renderCards();
             });
             
-            // По умолчанию выбираем "Все города"
             currentCity = "";
             renderCards();
         }
@@ -513,7 +510,6 @@
                     const name = (item.name || '').toLowerCase();
                     const type = (item.type || '').toLowerCase();
                     const city = (item._city || '').toLowerCase();
-                    // Ищем в названии, типе, специализации и даже в названии города
                     return spec.includes(searchQuery) || name.includes(searchQuery) || type.includes(searchQuery) || city.includes(searchQuery);
                 });
             }
