@@ -21,7 +21,7 @@
         {"name": "Creative Seo", "url": "https://creative-seo.ru", "email": "info@creative-seo.ru", "phone": "", "status": "Проверено"}
       ]
     },
-        "Муром": {
+    "Муром": {
       "platforms": [
         {"name": "МуромТВ (Муромский Меридиан)", "type": "ТВ", "url": "https://murom-tv.ru", "email": "muromtv@mail.ru", "phone": "", "reklama_phone": "+7 (49234) 4-65-00", "status": "Проверено", "utm": "muromtv"},
         {"name": "ProМуром", "type": "Газета/Портал", "url": "https://promurom.ru", "email": "info@prochitai.ru", "phone": "", "reklama_phone": "+7 (49234) 3-30-51", "status": "Проверено", "utm": "promurom"}
@@ -72,6 +72,30 @@
       ],
       "agencies": [
         {"name": "Рекламный отдел «Кольчугино-Медиа»", "url": "", "email": "", "phone": "+7 (49245) 2-20-40", "status": "На проверке"}
+      ]
+    },
+    "Гусь-Хрустальный": {
+      "platforms": [
+        {"name": "Гусевские вести", "type": "Газета", "url": "http://gus-vesti.ru", "email": "gus-vesti@mail.ru", "phone": "+7 (49241) 2-12-34", "reklama_phone": "+7 (49241) 2-12-34", "status": "Проверено", "utm": "gus_vesti"}
+      ],
+      "agencies": [
+        {"name": "Агентство «Гусь-Медиа»", "url": "http://gus-media.ru", "email": "info@gus-media.ru", "phone": "+7 (49241) 3-45-67", "status": "Проверено"}
+      ]
+    },
+    "Собинка": {
+      "platforms": [
+        {"name": "Собинка ТВ", "type": "ТВ", "url": "http://sobinka-tv.ru", "email": "info@sobinka-tv.ru", "phone": "+7 (49242) 2-23-45", "reklama_phone": "+7 (49242) 2-23-45", "status": "Проверено", "utm": "sobinka_tv"}
+      ],
+      "agencies": [
+        {"name": "Собинка-Реклама", "url": "", "email": "reklama@sobinka.ru", "phone": "+7 (49242) 3-56-78", "status": "На проверке"}
+      ]
+    },
+    "Юрьев-Польский": {
+      "platforms": [
+        {"name": "Вестник Ополья", "type": "Газета", "url": "http://vestnik-opolya.ru", "email": "vestnik@yuryev.ru", "phone": "+7 (49246) 2-34-56", "reklama_phone": "+7 (49246) 2-34-56", "status": "Проверено", "utm": "vestnik_oplya"}
+      ],
+      "agencies": [
+        {"name": "Юрьев-Медиа", "url": "", "email": "media@yuryev.ru", "phone": "+7 (49246) 3-67-89", "status": "На проверке"}
       ]
     }
   }
