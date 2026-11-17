@@ -105,30 +105,56 @@
         .benefits ul { margin: 0; padding-left: 1.2rem; }
         .benefits li { margin-bottom: 0.5rem; }
 
-        /* Панель управления */
+        /* Панель управления - ОБНОВЛЕННАЯ СТРУКТУРА */
         .controls {
             background: #f0f8ff;
             padding: 20px;
             border-radius: 8px;
             margin-bottom: 1.5rem;
             display: flex;
-            gap: 20px;
             flex-wrap: wrap;
+            gap: 15px;
             border: 1px solid #b3d9ff;
         }
+        
+        /* Первая строка: Область и Город */
+        .controls-row-1 {
+            display: flex;
+            gap: 15px;
+            width: 100%;
+            flex: 1 1 400px;
+        }
+        
+        /* Вторая строка: Поиск */
+        .controls-row-2 {
+            width: 100%;
+            margin-top: 5px;
+        }
+
         .controls select, .controls input[type="text"] {
-            padding: 8px;
+            padding: 10px;
             font-size: 1rem;
             border-radius: 4px;
             border: 1px solid #ccc;
-            min-width: 200px;
             width: 100%;
+            box-sizing: border-box;
         }
+        
         .controls input[type="text"]::placeholder {
-            color: #999;
+            color: #888;
         }
-        .controls label { font-weight: bold; display: block; margin-bottom: 5px;}
-        .controls > div { flex: 1; min-width: 200px; }
+        
+        .controls label { 
+            font-weight: bold; 
+            display: block; 
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .control-group {
+            flex: 1;
+            min-width: 200px;
+        }
 
         /* Вкладки */
         .tabs {
@@ -153,7 +179,7 @@
             font-weight: bold;
         }
 
-        /* Сетка карточек с выравниванием по высоте */
+        /* Сетка карточек */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -188,14 +214,14 @@
             align-self: flex-start;
         }
         
-        /* Специализация */
+        /* Специализация в карточке */
         .card .specialization { 
             background: #f8f9fa; 
             padding: 8px 10px; 
             border-radius: 4px; 
             margin: 8px 0;
             font-size: 0.85rem;
-            color: #555;
+            color: #444;
             border-left: 3px solid #005bbb;
             line-height: 1.4;
         }
@@ -212,7 +238,7 @@
         .card .contacts div { margin-bottom: 4px; }
         .card .contacts strong { color: #555; }
         
-        /* Кнопка */
+        /* Кнопка в карточке */
         .card .btn { 
             margin-top: auto; 
             font-size: 0.9rem; 
@@ -288,18 +314,24 @@
 
     <h2>Доступные площадки и агентства</h2>
     
+    <!-- ОБНОВЛЕННЫЙ БЛОК УПРАВЛЕНИЯ -->
     <div class="controls">
-        <div>
-            <label for="regionSelect">Область:</label>
-            <select id="regionSelect"></select>
+        <!-- Первая строка: Область и Город -->
+        <div class="controls-row-1">
+            <div class="control-group">
+                <label for="regionSelect">Область:</label>
+                <select id="regionSelect"></select>
+            </div>
+            <div class="control-group">
+                <label for="citySelect">Город:</label>
+                <select id="citySelect" disabled></select>
+            </div>
         </div>
-        <div>
-            <label for="citySelect">Город:</label>
-            <select id="citySelect" disabled></select>
-        </div>
-        <div>
-            <label for="searchInput">Поиск:</label>
-            <input type="text" id="searchInput" placeholder="Какой вид услуг вас интересует? Например: SEO, SMM, наружная реклама...">
+        
+        <!-- Вторая строка: Поиск -->
+        <div class="controls-row-2">
+            <label for="searchInput">Поиск услуг или площадок:</label>
+            <input type="text" id="searchInput" placeholder="Например: табличка с адресом, SEO, газета, баннер...">
         </div>
     </div>
 
