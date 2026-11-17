@@ -105,7 +105,7 @@
         .benefits ul { margin: 0; padding-left: 1.2rem; }
         .benefits li { margin-bottom: 0.5rem; }
 
-        /* Панель управления - ОБНОВЛЕННАЯ СТРУКТУРА */
+        /* Панель управления */
         .controls {
             background: #f0f8ff;
             padding: 20px;
@@ -117,7 +117,6 @@
             border: 1px solid #b3d9ff;
         }
         
-        /* Первая строка: Область и Город */
         .controls-row-1 {
             display: flex;
             gap: 15px;
@@ -125,7 +124,6 @@
             flex: 1 1 400px;
         }
         
-        /* Вторая строка: Поиск */
         .controls-row-2 {
             width: 100%;
             margin-top: 5px;
@@ -224,6 +222,14 @@
             color: #444;
             border-left: 3px solid #005bbb;
             line-height: 1.4;
+        }
+        
+        /* Метка города в карточке (для глобального поиска) */
+        .card .location-tag {
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 5px;
+            display: block;
         }
         
         /* Блок контактов */
@@ -381,7 +387,7 @@
 
     <script>
         let currentData = null;
-        let currentCity = "";
+        let currentCity = ""; // Пустая строка означает "Все города"
         let currentTab = "platforms"; 
         let searchQuery = "";
 
@@ -395,35 +401,58 @@
 
         function initRegionSelect() {
             const regionSelect = document.getElementById('regionSelect');
-            regionSelect.innerHTML = '';
+            // Добавляем опцию "Все области"
+            const allOption = document.createElement('option');
+            allOption.value = "";
+            allOption.textContent = "🔍 Искать по всем областям";
+            regionSelect.appendChild(allOption);
+
             for (const region in currentData) {
                 const option = document.createElement('option');
                 option.value = region;
                 option.textContent = region;
                 regionSelect.appendChild(option);
             }
+            
             regionSelect.addEventListener('change', function() {
                 updateCitySelect(this.value);
+                renderCards(); // Перерисовываем при смене области
             });
-            updateCitySelect(regionSelect.value);
         }
 
         function updateCitySelect(region) {
             const citySelect = document.getElementById('citySelect');
             citySelect.innerHTML = '';
-            if (!currentData[region]) return;
+            
+            // Опция "Все города"
+            const allCitiesOption = document.createElement('option');
+            allCitiesOption.value = "";
+            allCitiesOption.textContent = "🔍 Искать по всем городам";
+            citySelect.appendChild(allCitiesOption);
+
+            if (!region || !currentData[region]) {
+                // Если область не выбрана (или "Все"), показываем все города из всех областей? 
+                // Для простоты, если область не выбрана, город тоже сбрасываем в "Все"
+                citySelect.disabled = true;
+                currentCity = "";
+                return;
+            }
+            
             for (const city in currentData[region]) {
                 const option = document.createElement('option');
                 option.value = city;
                 option.textContent = city;
                 citySelect.appendChild(option);
             }
+            
             citySelect.disabled = false;
             citySelect.addEventListener('change', function() {
                 currentCity = this.value;
                 renderCards();
             });
-            currentCity = citySelect.value;
+            
+            // По умолчанию выбираем "Все города"
+            currentCity = "";
             renderCards();
         }
 
@@ -443,99 +472,141 @@
         function renderCards() {
             const container = document.getElementById('cardsContainer');
             container.innerHTML = '';
-            const region = document.getElementById('regionSelect').value;
             
-            if (!currentData[region] || !currentData[region][currentCity]) {
-                container.innerHTML = '<p>Нет данных для выбранного города.</p>';
-                return;
+            const selectedRegion = document.getElementById('regionSelect').value;
+            
+            // Сбор всех элементов для отображения
+            let itemsToDisplay = [];
+
+            // Логика сбора данных
+            if (selectedRegion && currentData[selectedRegion]) {
+                // Если выбрана конкретная область
+                if (currentCity && currentData[selectedRegion][currentCity]) {
+                    // Если выбран конкретный город
+                    const cityData = currentData[selectedRegion][currentCity][currentTab] || [];
+                    itemsToDisplay = cityData.map(item => ({...item, _region: selectedRegion, _city: currentCity}));
+                } else {
+                    // Если выбрано "Все города" в этой области
+                    for (const city in currentData[selectedRegion]) {
+                        const cityData = currentData[selectedRegion][city][currentTab] || [];
+                        cityData.forEach(item => {
+                            itemsToDisplay.push({...item, _region: selectedRegion, _city: city});
+                        });
+                    }
+                }
+            } else {
+                // Если выбрано "Все области" (или ничего не выбрано)
+                for (const region in currentData) {
+                    for (const city in currentData[region]) {
+                        const cityData = currentData[region][city][currentTab] || [];
+                        cityData.forEach(item => {
+                            itemsToDisplay.push({...item, _region: region, _city: city});
+                        });
+                    }
+                }
             }
-            
-            let items = currentData[region][currentCity][currentTab] || [];
-            
+
             // Фильтрация по поисковому запросу
             if (searchQuery) {
-                items = items.filter(item => {
+                itemsToDisplay = itemsToDisplay.filter(item => {
                     const spec = (item.specialization || '').toLowerCase();
                     const name = (item.name || '').toLowerCase();
                     const type = (item.type || '').toLowerCase();
-                    return spec.includes(searchQuery) || name.includes(searchQuery) || type.includes(searchQuery);
+                    const city = (item._city || '').toLowerCase();
+                    // Ищем в названии, типе, специализации и даже в названии города
+                    return spec.includes(searchQuery) || name.includes(searchQuery) || type.includes(searchQuery) || city.includes(searchQuery);
                 });
             }
             
-            if (items.length === 0) {
-                container.innerHTML = '<p>' + 
-                    (searchQuery ? 'Ничего не найдено по вашему запросу' : 'Пока нет данных в этой категории для выбранного города.') + 
+            if (itemsToDisplay.length === 0) {
+                container.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #666;">' + 
+                    (searchQuery ? 'Ничего не найдено по вашему запросу "' + searchQuery + '"' : 'Выберите область и город или воспользуйтесь поиском.') + 
                     '</p>';
                 return;
             }
             
-            items.forEach(item => {
-                const card = document.createElement('div');
-                card.className = 'card';
-                
-                // Заголовок
-                const h3 = document.createElement('h3');
-                h3.textContent = item.name;
-                card.appendChild(h3);
-                
-                // Статус
-                const status = document.createElement('span');
-                status.className = 'status';
-                status.textContent = item.status === 'Проверено' ? '✔ Проверено' : 'На проверке';
-                card.appendChild(status);
-                
-                // Специализация (если есть)
-                if (item.specialization) {
-                    const specDiv = document.createElement('div');
-                    specDiv.className = 'specialization';
-                    specDiv.textContent = '💼 ' + item.specialization;
-                    card.appendChild(specDiv);
-                }
-                
-                // Блок контактов
-                const contactsDiv = document.createElement('div');
-                contactsDiv.className = 'contacts';
-                
-                if (item.type) {
-                    contactsDiv.innerHTML += `<div><strong>Тип:</strong> ${item.type}</div>`;
-                }
-                if (item.email) {
-                    contactsDiv.innerHTML += `<div><strong>Email:</strong> ${item.email}</div>`;
-                }
-                if (item.phone) {
-                    contactsDiv.innerHTML += `<div><strong>Тел:</strong> ${item.phone}</div>`;
-                }
-                if (item.reklama_phone) {
-                    contactsDiv.innerHTML += `<div><strong>Реклама:</strong> ${item.reklama_phone}</div>`;
-                }
-                card.appendChild(contactsDiv);
-                
-                // Кнопка перехода
-                if (item.url) {
-                    const btn = document.createElement('a');
-                    btn.className = 'btn';
-                    btn.href = `${item.url}?utm_source=ad-catalog-ru&utm_medium=catalog&utm_campaign=${item.utm || 'unknown'}`;
-                    btn.target = '_blank';
-                    btn.textContent = 'Перейти на сайт';
-                    
-                    btn.addEventListener('click', function(e) {
-                        let siteName = item.utm || 'unknown';
-                        if (typeof ym !== 'undefined') {
-                            ym(114270099, 'reachGoal', 'click_site', { site: siteName });
-                        }
-                    });
-                    card.appendChild(btn);
-                } else {
-                    const noUrl = document.createElement('p');
-                    noUrl.style.color = '#999';
-                    noUrl.style.fontSize = '0.8rem';
-                    noUrl.style.marginTop = '10px';
-                    noUrl.textContent = 'Сайт не указан';
-                    card.appendChild(noUrl);
-                }
-                
+            itemsToDisplay.forEach(item => {
+                const card = createCard(item);
                 container.appendChild(card);
             });
+        }
+
+        function createCard(item) {
+            const card = document.createElement('div');
+            card.className = 'card';
+            
+            const statusClass = item.status === 'Проверено' ? 'status-verified' : 'status-pending';
+            
+            // Заголовок
+            const h3 = document.createElement('h3');
+            h3.textContent = item.name;
+            card.appendChild(h3);
+            
+            // Метка города (показываем, если ищем по всем городам/областям)
+            if (!document.getElementById('regionSelect').value || !currentCity) {
+                const locTag = document.createElement('span');
+                locTag.className = 'location-tag';
+                locTag.textContent = `📍 ${item._region}, г. ${item._city}`;
+                card.appendChild(locTag);
+            }
+
+            // Статус
+            const status = document.createElement('span');
+            status.className = 'status';
+            status.textContent = item.status === 'Проверено' ? '✔ Проверено' : 'На проверке';
+            card.appendChild(status);
+            
+            // Специализация (если есть)
+            if (item.specialization) {
+                const specDiv = document.createElement('div');
+                specDiv.className = 'specialization';
+                specDiv.textContent = '💼 ' + item.specialization;
+                card.appendChild(specDiv);
+            }
+            
+            // Блок контактов
+            const contactsDiv = document.createElement('div');
+            contactsDiv.className = 'contacts';
+            
+            if (item.type) {
+                contactsDiv.innerHTML += `<div><strong>Тип:</strong> ${item.type}</div>`;
+            }
+            if (item.email) {
+                contactsDiv.innerHTML += `<div><strong>Email:</strong> ${item.email}</div>`;
+            }
+            if (item.phone) {
+                contactsDiv.innerHTML += `<div><strong>Тел:</strong> ${item.phone}</div>`;
+            }
+            if (item.reklama_phone) {
+                contactsDiv.innerHTML += `<div><strong>Реклама:</strong> ${item.reklama_phone}</div>`;
+            }
+            card.appendChild(contactsDiv);
+            
+            // Кнопка перехода
+            if (item.url) {
+                const btn = document.createElement('a');
+                btn.className = 'btn';
+                btn.href = `${item.url}?utm_source=ad-catalog-ru&utm_medium=catalog&utm_campaign=${item.utm || 'unknown'}`;
+                btn.target = '_blank';
+                btn.textContent = 'Перейти на сайт';
+                
+                btn.addEventListener('click', function(e) {
+                    let siteName = item.utm || 'unknown';
+                    if (typeof ym !== 'undefined') {
+                        ym(114270099, 'reachGoal', 'click_site', { site: siteName });
+                    }
+                });
+                card.appendChild(btn);
+            } else {
+                const noUrl = document.createElement('p');
+                noUrl.style.color = '#999';
+                noUrl.style.fontSize = '0.8rem';
+                noUrl.style.marginTop = '10px';
+                noUrl.textContent = 'Сайт не указан';
+                card.appendChild(noUrl);
+            }
+            
+            return card;
         }
     </script>
 </body>
