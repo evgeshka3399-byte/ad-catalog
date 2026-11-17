@@ -21,7 +21,7 @@
         {"name": "Creative Seo", "url": "https://creative-seo.ru", "email": "info@creative-seo.ru", "phone": "", "status": "Проверено"}
       ]
     },
-    "Муром": {
+        "Муром": {
       "platforms": [
         {"name": "МуромТВ (Муромский Меридиан)", "type": "ТВ", "url": "https://murom-tv.ru", "email": "muromtv@mail.ru", "phone": "", "reklama_phone": "+7 (49234) 4-65-00", "status": "Проверено", "utm": "muromtv"},
         {"name": "ProМуром", "type": "Газета/Портал", "url": "https://promurom.ru", "email": "info@prochitai.ru", "phone": "", "reklama_phone": "+7 (49234) 3-30-51", "status": "Проверено", "utm": "promurom"}
