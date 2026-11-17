@@ -150,7 +150,7 @@
             font-weight: bold;
         }
 
-        /* Сетка карточек */
+        /* Сетка карточек с выравниванием по высоте */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -164,6 +164,10 @@
             background: #fff;
             transition: transform 0.2s, box-shadow 0.2s;
             position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            box-sizing: border-box; /* Важно! Чтобы padding не расширял карточку */
         }
         .card:hover {
             transform: translateY(-3px);
@@ -178,18 +182,30 @@
             border-radius: 4px;
             display: inline-block;
             margin-bottom: 10px;
+            align-self: flex-start;
         }
-        .card p { margin: 5px 0; font-size: 0.9rem; }
+        
+        /* Блок контактов */
         .card .contacts { 
             background: #fafafa; 
             padding: 10px; 
             border-radius: 4px; 
             margin: 10px 0;
             font-size: 0.85rem;
+            flex-grow: 1; 
         }
         .card .contacts div { margin-bottom: 4px; }
         .card .contacts strong { color: #555; }
-        .card .btn { margin-top: 10px; font-size: 0.9rem; padding: 8px 16px; width: 100%; }
+        
+        /* Кнопка */
+        .card .btn { 
+            margin-top: auto; 
+            font-size: 0.9rem; 
+            padding: 8px 16px; 
+            width: 100%; 
+            box-sizing: border-box; /* Важно! Чтобы padding не расширял кнопку */
+            display: block; /* Делаем блочной, чтобы занимала всю ширину */
+        }
         
         /* Всплывающая подсказка */
         .card .tooltip {
