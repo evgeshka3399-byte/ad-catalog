@@ -3,12 +3,28 @@
     "Владимир": {
       "platforms": [
         {
+          "name": "Зебра ТВ",
+          "type": "Интернет-издание",
+          "url": "https://zebra-tv.ru",
+          "email": "info@zebra-tv.ru",
+          "status": "Проверено",
+          "utm": "zebra_tv"
+        },
+        {
+          "name": "ГТРК Владимир",
+          "type": "ТВ и Сайт",
+          "url": "https://vladtv.ru",
+          "email": "rkc@vladtv.ru",
+          "status": "Проверено",
+          "utm": "gtrk_vladimir"
+        },
+        {
           "name": "Владимирские ведомости",
-          "type": "СМИ",
+          "type": "Газета",
           "url": "https://vedom.ru",
           "email": "reklama@vedom.ru",
           "status": "Проверено",
-          "utm": "vladimir_vedom"
+          "utm": "vedom"
         },
         {
           "name": "Pro Город",
@@ -29,9 +45,57 @@
       ],
       "agencies": [
         {
-          "name": "АйДиЭм (ID Marketing)",
+          "name": "5starz",
+          "url": "https://5starz.ru",
+          "email": "info@5starz.ru",
+          "status": "Проверено"
+        },
+        {
+          "name": "АйДиЭм",
           "url": "https://id-marketing.ru",
           "email": "info@id-marketing.ru",
+          "status": "Проверено"
+        },
+        {
+          "name": "Инмедиа Групп",
+          "url": "https://inmediapro.ru",
+          "email": "info@inmediapro.ru",
+          "status": "Проверено"
+        },
+        {
+          "name": "Net-Brand",
+          "url": "https://net-brand.ru",
+          "email": "info@net-brand.ru",
+          "status": "Проверено"
+        },
+        {
+          "name": "Web Digital",
+          "url": "https://volkoffsv.ru",
+          "email": "info@volkoffsv.ru",
+          "status": "Проверено"
+        },
+        {
+          "name": "ABS-Marketing",
+          "url": "https://abs-marketing.ru",
+          "email": "info@abs-marketing.ru",
+          "status": "Проверено"
+        },
+        {
+          "name": "Adventum",
+          "url": "https://adventum.ru",
+          "email": "info@adventum.ru",
+          "status": "Проверено"
+        },
+        {
+          "name": "Vilka",
+          "url": "https://vilka.agency",
+          "email": "hello@vilka.agency",
+          "status": "Проверено"
+        },
+        {
+          "name": "Reart",
+          "url": "https://reart.ru",
+          "email": "info@reart.ru",
           "status": "Проверено"
         },
         {
