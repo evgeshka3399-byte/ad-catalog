@@ -168,11 +168,46 @@
             .grid { grid-template-columns: 1fr; gap: 15px; }
             .card { padding: 15px; }
             
-            /* Форма - убираем двойную прокрутку */
-            .form-container { border: none; box-shadow: none; margin: 0 -15px; width: calc(100% + 30px); border-radius: 0; }
-            iframe { width: 100%; min-height: 900px; height: auto; border: none; } /* Увеличиваем минимальную высоту */
-            
-            /* Текст */
+            /* Контейнер формы */
+.form-container {
+    max-width: 640px; 
+    margin: 0 auto; 
+    border: 1px solid #ddd; 
+    border-radius: 12px; 
+    overflow: hidden; 
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+/* Iframe формы - делаем его адаптивным */
+#ui-form-iframe {
+    width: 100%;
+    border: none;
+    display: block;
+    /* Минимальная высота для ПК, чтобы форма раскрылась полностью */
+    min-height: 800px; 
+    height: 100vh; /* Резиновая высота относительно экрана */
+    max-height: 1200px; /* Ограничение, чтобы не уходила в бесконечность */
+}
+
+/* Мобильная адаптация формы */
+@media (max-width: 768px) {
+    .form-container { 
+        border: none; 
+        box-shadow: none; 
+        margin: 0 -15px; /* Выход за пределы padding body */
+        width: calc(100% + 30px); 
+        border-radius: 0; 
+    }
+    
+    #ui-form-iframe {
+        /* На мобильном даем большую высоту, чтобы влезло всё содержимое */
+        min-height: 1100px; 
+        height: auto;
+    }
+}
+        /* Текст */
             .faq { padding: 20px 15px; }
             .contacts-block { padding: 20px 15px; }
         }
