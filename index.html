@@ -34,7 +34,7 @@
         .btn-outline { background: transparent; color: #005bbb; border: 2px solid #005bbb; }
         .btn-outline:hover { background: #f0f8ff; }
         
-        /* Блок преимуществ (Обновленный) */
+        /* Блок преимуществ */
         .benefits { background: #f8f9fa; padding: 25px; border-radius: 12px; margin-bottom: 2rem; border-left: 5px solid #005bbb; }
         .benefits h2 { font-size: 1.3rem; margin-top: 0; color: #333; }
         .benefits ul { margin: 15px 0; padding-left: 1.5rem; }
@@ -42,7 +42,7 @@
         .benefits-link { display: inline-flex; align-items: center; gap: 5px; color: #005bbb; font-weight: bold; text-decoration: none; margin-top: 10px; border-bottom: 1px dashed #005bbb; }
         .benefits-link:hover { border-bottom-style: solid; }
 
-        /* Панель управления (Фильтры) */
+        /* Панель управления */
         .controls { background: #fff; padding: 20px; border-radius: 12px; margin-bottom: 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border: 1px solid #eee; }
         .controls-row-1 { display: flex; gap: 15px; width: 100%; flex: 1 1 400px; }
         .controls-row-2 { width: 100%; margin-top: 15px; }
@@ -101,15 +101,10 @@
         </div>
     </div>
 
-    <!-- ОБНОВЛЕННЫЙ БЛОК ПРЕИМУЩЕСТВ -->
     <div class="benefits">
         <h2 id="ui-benefits-title">Что вы получаете бесплатно</h2>
-        <ul id="ui-benefits-list">
-            <!-- Заполняется из config.json -->
-        </ul>
-        <a href="about.html" class="benefits-link">
-            🚀 Узнать о Premium-версии и полной аналитике →
-        </a>
+        <ul id="ui-benefits-list"></ul>
+        <a href="about.html" class="benefits-link">🚀 Узнать о Premium-версии и полной аналитике →</a>
     </div>
 
     <h2 id="ui-catalog-title"></h2>
@@ -148,41 +143,34 @@
     <p id="ui-form-disclaimer" style="font-size: 0.9rem; color: #666; margin-top: 1rem; text-align: center;"></p>
 
     <script>
-        let DB = null; // Общая база данных
+        let DB = null;
         let CFG = null;
         let currentTab = 'platforms';
         let searchQuery = '';
 
         // 1. УМНАЯ ЗАГРУЗКА ДАННЫХ ИЗ НЕСКОЛЬКИХ ФАЙЛОВ
-        // Мы создаем массив запросов к файлам. Если файла нет, он просто игнорируется.
         const dataFiles = [
-            'data.json',                  // Владимирская область (основная)
-            'data_moskovskaya_oblast.json' // Московская область (новая)
-            // Сюда можно добавлять новые файлы в будущем, например: 'data_tula_oblast.json'
+            'data.json',                  
+            'data_moskovskaya_oblast.json' 
         ];
 
-        // Запускаем параллельную загрузку всех файлов
         Promise.all([
-            fetch('config.json').then(r => r.ok ? r.json() : null), // Конфиг (тексты)
+            fetch('config.json').then(r => r.ok ? r.json() : null),
             ...dataFiles.map(file => 
                 fetch(file).then(r => r.ok ? r.json() : null).catch(() => null) 
             )
         ])
         .then(results => {
-            CFG = results[0]; // Первый результат - это конфиг
+            CFG = results[0]; 
             
-            // Объединяем все найденные базы данных в одну переменную DB
-            // results[0] - конфиг, results[1] - data.json, results[2] - data_moskovskaya...
             DB = {}; 
-            
             for (let i = 1; i < results.length; i++) {
                 if (results[i]) {
-                    // "Склеиваем" объекты. Ключи (названия областей) не пересекаются, так что всё безопасно.
                     Object.assign(DB, results[i]);
                 }
             }
 
-            console.log("Загружено регионов:", Object.keys(DB).length); // Для проверки в консоли
+            console.log("Загружено регионов:", Object.keys(DB).length);
             
             if (CFG) applyConfig();
             initFilters();
@@ -201,7 +189,6 @@
             document.getElementById('ui-header-subtitle').textContent = CFG.header.subtitle;
             document.getElementById('ui-header-btn').textContent = CFG.header.ctaButton;
             
-            // Заполняем список преимуществ
             const benList = document.getElementById('ui-benefits-list');
             benList.innerHTML = '';
             CFG.benefits.items.forEach(item => {
