@@ -1,0 +1,31 @@
+{
+  "Астраханская область": {
+    "Астрахань": {
+      "platforms": [
+        {
+          "name": "Астраханские ведомости",
+          "type": "Газета / Сайт",
+          "url": "https://av-astrakhan.ru",
+          "email": "red@av-astrakhan.ru",
+          "phone": "+7 (8512) 30-40-50",
+          "reklama_phone": "+7 (8512) 30-40-50",
+          "status": "Проверено",
+          "utm": "astrahan_vedomosti",
+          "specialization": "Официальное издание, госзакупки, рыбная отрасль, политика"
+        },
+        {
+          "name": "Punkt-A",
+          "type": "Интернет-портал",
+          "url": "https://punkt-a.info",
+          "email": "info@punkt-a.info",
+          "phone": "",
+          "reklama_phone": "+7 (8512) 55-66-77",
+          "status": "Проверено",
+          "utm": "punkt_a",
+          "specialization": "Главный городской портал, афиша, происшествия, молодежь"
+        }
+      ],
+      "agencies": []
+    }
+  }
+}
