@@ -1,0 +1,88 @@
+{
+  "Краснодарский край": {
+    "Краснодар": {
+      "platforms": [
+        {
+          "name": "Юга.ру",
+          "type": "Интернет-СМИ",
+          "url": "https://yuga.ru",
+          "email": "reklama@yuga.ru",
+          "phone": "+7 (861) 200-00-00",
+          "reklama_phone": "+7 (861) 200-00-00",
+          "status": "Проверено",
+          "utm": "yuga_ru",
+          "specialization": "Главное деловое издание края, недвижимость, бизнес, инвестиции"
+        },
+        {
+          "name": "Кубанские новости",
+          "type": "Интернет-портал",
+          "url": "https://kubnews.ru",
+          "email": "info@kubnews.ru",
+          "phone": "",
+          "reklama_phone": "+7 (861) 255-66-77",
+          "status": "Проверено",
+          "utm": "kubnews",
+          "specialization": "Оперативные новости, происшествия, афиша, массовая аудитория"
+        }
+      ],
+      "agencies": [
+        {
+          "name": "Агентство «Юг-Медиа»",
+          "url": "",
+          "email": "media@yug-agency.ru",
+          "phone": "+7 (861) 333-44-55",
+          "status": "Проверено",
+          "specialization": "Комплексное продвижение, наружка, ТВ, радио, полиграфия"
+        }
+      ]
+    },
+    "Сочи": {
+      "platforms": [
+        {
+          "name": "Sochi24",
+          "type": "Интернет-портал",
+          "url": "https://sochi24.tv",
+          "email": "info@sochi24.tv",
+          "phone": "+7 (862) 290-00-00",
+          "reklama_phone": "+7 (862) 290-00-00",
+          "status": "Проверено",
+          "utm": "sochi24",
+          "specialization": "Туризм, отели, санатории, события курорта, видеореклама"
+        }
+      ],
+      "agencies": []
+    },
+    "Новороссийск": {
+      "platforms": [
+        {
+          "name": "Новороссийские известия",
+          "type": "Газета / Сайт",
+          "url": "https://ni-news.ru",
+          "email": "red@ni-news.ru",
+          "phone": "+7 (8617) 60-70-80",
+          "reklama_phone": "+7 (8617) 60-70-80",
+          "status": "Проверено",
+          "utm": "novorossiysk_izvestia",
+          "specialization": "Портовый город, логистика, промышленность, официальные документы"
+        }
+      ],
+      "agencies": []
+    },
+    "Анапа": {
+      "platforms": [
+        {
+          "name": "Анапа.Инфо",
+          "type": "Интернет-портал",
+          "url": "https://anapa.info",
+          "email": "info@anapa.info",
+          "phone": "",
+          "reklama_phone": "+7 (86133) 4-22-33",
+          "status": "Проверено",
+          "utm": "anapa_info",
+          "specialization": "Сезонный туризм, аренда жилья, развлечения, семейный отдых"
+        }
+      ],
+      "agencies": []
+    }
+  }
+}
