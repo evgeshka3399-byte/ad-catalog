@@ -148,7 +148,6 @@
         let currentTab = 'platforms';
         let searchQuery = '';
 
-        // 1. УМНАЯ ЗАГРУЗКА ДАННЫХ ИЗ НЕСКОЛЬКИХ ФАЙЛОВ
         const dataFiles = [
             'data.json',                  
             'data_moskovskaya_oblast.json' 
@@ -175,9 +174,9 @@
             )
         ])
         .then(results => {
+            // Сначала присваиваем CFG, и только потом вызываем applyConfig
             CFG = results[0]; 
             
-            // Объединяем базы данных
             DB = {}; 
             let loadedCount = 0;
 
@@ -188,24 +187,19 @@
                         Object.assign(DB, results[i]);
                         loadedCount++;
                         console.log(`✅ Загружен регион: ${keys[0]} (из файла ${dataFiles[i-1]})`);
-                    } else {
-                        console.warn(`⚠️ Файл ${dataFiles[i-1]} загружен, но пуст или имеет неверную структуру`);
                     }
                 }
             }
 
             console.log("Итого загружено регионов:", loadedCount);
-            console.log("Список областей в базе:", Object.keys(DB));
             
-            // 2. ФИЛЬТРАЦИЯ: УДАЛЯЕМ ВСЕ КАРТОЧКИ БЕЗ САЙТА (URL)
+            // Фильтрация карточек без сайта
             if (DB) {
                 for (let region in DB) {
                     for (let city in DB[region]) {
-                        // Фильтруем площадки
                         if (DB[region][city].platforms) {
                             DB[region][city].platforms = DB[region][city].platforms.filter(p => p.url && p.url.trim() !== '');
                         }
-                        // Фильтруем агентства
                         if (DB[region][city].agencies) {
                             DB[region][city].agencies = DB[region][city].agencies.filter(a => a.url && a.url.trim() !== '');
                         }
@@ -214,7 +208,25 @@
                 console.log("✅ База очищена от карточек без сайта");
             }
             
-            if (CFG) applyConfig();
+            // ВАЖНО: Вызываем applyConfig ТОЛЬКО если CFG существует
+            if (CFG) {
+                applyConfig();
+            } else {
+                console.warn("⚠️ config.json не найден или пуст. Используются значения по умолчанию.");
+                // Устанавливаем дефолтные значения, чтобы сайт не упал
+                document.title = "Каталог рекламных площадок";
+                document.getElementById('ui-header-h1').textContent = "Каталог рекламных площадок";
+                document.getElementById('ui-header-subtitle').textContent = "Бесплатный тест. Отчёт через 60–90 дней.";
+                document.getElementById('ui-header-btn').textContent = "📝 Оставить заявку";
+                document.getElementById('ui-benefits-title').textContent = "Что вы получаете бесплатно";
+                document.getElementById('ui-catalog-title').textContent = "Доступные площадки и агентства";
+                document.getElementById('searchInput').placeholder = "Поиск...";
+                document.getElementById('btn-platforms').textContent = "Площадки";
+                document.getElementById('btn-agencies').textContent = "Агентства";
+                document.getElementById('ui-form-title').textContent = "Оставить заявку";
+                document.getElementById('ui-form-iframe').src = "https://docs.google.com/forms/d/e/1FAIpQLSe8ChbFttTHq3D-BTbEJWTUYjF1aM1ezZVIo1Fas2ufZQ9qaA/viewform?embedded=true";
+            }
+            
             initFilters();
             render();
         })
@@ -225,28 +237,53 @@
 
         function applyConfig() {
             if (!CFG) return;
-            document.title = CFG.title;
-            document.getElementById('page-desc').content = CFG.description;
-            document.getElementById('ui-header-h1').textContent = CFG.header.h1;
-            document.getElementById('ui-header-subtitle').textContent = CFG.header.subtitle;
-            document.getElementById('ui-header-btn').textContent = CFG.header.ctaButton;
+            document.title = CFG.site.title;
+            document.getElementById('page-desc').content = CFG.site.description;
+            document.getElementById('ui-header-h1').textContent = CFG.site.header.h1;
+            document.getElementById('ui-header-subtitle').textContent = CFG.site.header.subtitle;
+            document.getElementById('ui-header-btn').textContent = CFG.site.header.ctaButton;
             
             const benList = document.getElementById('ui-benefits-list');
             benList.innerHTML = '';
-            CFG.benefits.items.forEach(item => {
+            CFG.site.benefits.items.forEach(item => {
                 const li = document.createElement('li');
                 li.textContent = item;
                 benList.appendChild(li);
             });
             
-            document.getElementById('ui-catalog-title').textContent = CFG.catalog.title;
-            document.getElementById('searchInput').placeholder = CFG.catalog.searchPlaceholder;
-            document.getElementById('btn-platforms').textContent = CFG.catalog.tabs.platforms;
-            document.getElementById('btn-agencies').textContent = CFG.catalog.tabs.agencies;
+            document.getElementById('ui-catalog-title').textContent = CFG.site.catalog.title;
+            document.getElementById('searchInput').placeholder = CFG.site.catalog.searchPlaceholder;
+            document.getElementById('btn-platforms').textContent = CFG.site.catalog.tabs.platforms;
+            document.getElementById('btn-agencies').textContent = CFG.site.catalog.tabs.agencies;
             
-            document.getElementById('ui-form-title').textContent = CFG.form.title;
-            document.getElementById('ui-form-iframe').src = CFG.form.url;
-            document.getElementById('ui-form-disclaimer').textContent = CFG.form.disclaimer;
+            document.getElementById('ui-faq-title').textContent = CFG.site.faq.title;
+            const faqCont = document.getElementById('ui-faq-container');
+            if (faqCont) {
+                faqCont.innerHTML = '';
+                CFG.site.faq.items.forEach(qa => {
+                    const div = document.createElement('div');
+                    div.className = 'faq-item';
+                    div.innerHTML = `<h3>${qa.q}</h3><p>${qa.a}</p>`;
+                    faqCont.appendChild(div);
+                });
+            }
+            
+            document.getElementById('ui-contacts-title').textContent = CFG.site.contacts.title;
+            const emailLink = document.getElementById('ui-contact-email');
+            if (emailLink) {
+                emailLink.textContent = CFG.site.contacts.email;
+                emailLink.href = `mailto:${CFG.site.contacts.email}`;
+            }
+            const msgLink = document.getElementById('ui-contact-messenger');
+            if (msgLink) {
+                msgLink.textContent = CFG.site.contacts.messenger;
+                msgLink.href = CFG.site.contacts.messengerLink;
+            }
+            
+            document.getElementById('ui-form-title').textContent = CFG.site.form.title;
+            document.getElementById('ui-form-iframe').src = CFG.site.form.url;
+            document.getElementById('ui-form-disclaimer').textContent = CFG.site.form.disclaimer;
+            document.getElementById('ui-cta-btn').textContent = CFG.site.header.ctaButton;
         }
 
         function initFilters() {
