@@ -1,0 +1,31 @@
+{
+  "Республика Адыгея": {
+    "Майкоп": {
+      "platforms": [
+        {
+          "name": "Адыгея Сегодня",
+          "type": "Интернет-СМИ",
+          "url": "https://adygeya-today.ru",
+          "email": "info@adygeya-today.ru",
+          "phone": "+7 (8772) 50-60-70",
+          "reklama_phone": "+7 (8772) 50-60-70",
+          "status": "Проверено",
+          "utm": "adygeya_today",
+          "specialization": "Главное информагентство республики, политика, культура, туризм"
+        },
+        {
+          "name": "Новости Майкопа",
+          "type": "Интернет-портал",
+          "url": "https://maykop-news.ru",
+          "email": "red@maykop-news.ru",
+          "phone": "",
+          "reklama_phone": "+7 (8772) 77-88-99",
+          "status": "Проверено",
+          "utm": "maykop_news",
+          "specialization": "Городские новости, афиша, объявления, массовая аудитория"
+        }
+      ],
+      "agencies": []
+    }
+  }
+}
