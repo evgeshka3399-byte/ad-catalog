@@ -1,0 +1,72 @@
+{
+  "Рязанская область": {
+    "Рязань": {
+      "platforms": [
+        {
+          "name": "Приокская правда",
+          "type": "Газета / Сайт",
+          "url": "https://ppr.ru",
+          "email": "red@ppr.ru",
+          "phone": "+7 (4912) 25-30-40",
+          "reklama_phone": "+7 (4912) 25-30-40",
+          "status": "Проверено",
+          "utm": "priokskaya_pravda",
+          "specialization": "Старейшая газета области, официальные уведомления, бизнес, ЖКХ"
+        },
+        {
+          "name": "Rzn.info",
+          "type": "Интернет-портал",
+          "url": "https://rzn.info",
+          "email": "info@rzn.info",
+          "phone": "+7 (4912) 99-88-77",
+          "reklama_phone": "+7 (4912) 99-88-77",
+          "status": "Проверено",
+          "utm": "rzn_info",
+          "specialization": "Главный новостной портал, афиша, происшествия, нативная реклама"
+        }
+      ],
+      "agencies": [
+        {
+          "name": "Digital-агентство «Рязань-Промо»",
+          "url": "",
+          "email": "hello@ryazan-promo.ru",
+          "phone": "+7 (910) 777-88-99",
+          "status": "На проверке",
+          "specialization": "SMM, таргетированная реклама, контекст, разработка сайтов"
+        }
+      ]
+    },
+    "Касимов": {
+      "platforms": [
+        {
+          "name": "Касимовские вести",
+          "type": "Газета",
+          "url": "",
+          "email": "kv@kasimov.ru",
+          "phone": "+7 (49137) 2-11-22",
+          "reklama_phone": "+7 (49137) 2-11-22",
+          "status": "Проверено",
+          "utm": "kasimov_vesti",
+          "specialization": "Районная газета, татарская культура, туризм, объявления"
+        }
+      ],
+      "agencies": []
+    },
+    "Сасово": {
+      "platforms": [
+        {
+          "name": "Сасовские вести",
+          "type": "Газета",
+          "url": "",
+          "email": "sv@sasovo.ru",
+          "phone": "+7 (49133) 3-22-11",
+          "reklama_phone": "+7 (49133) 3-22-11",
+          "status": "Проверено",
+          "utm": "sasovo_vesti",
+          "specialization": "Муниципальная газета, авиационная тематика, сельское хозяйство"
+        }
+      ],
+      "agencies": []
+    }
+  }
+}
