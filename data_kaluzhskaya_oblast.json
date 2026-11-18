@@ -1,0 +1,72 @@
+{
+  "Калужская область": {
+    "Калуга": {
+      "platforms": [
+        {
+          "name": "Весть",
+          "type": "Газета / Сайт",
+          "url": "https://vesti-kaluga.ru",
+          "email": "red@vesti-kaluga.ru",
+          "phone": "+7 (4842) 50-60-70",
+          "reklama_phone": "+7 (4842) 50-60-70",
+          "status": "Проверено",
+          "utm": "vest_kaluga",
+          "specialization": "Главная областная газета, политика, экономика, официальные документы"
+        },
+        {
+          "name": "Калуга 24",
+          "type": "Интернет-портал",
+          "url": "https://kaluga24.tv",
+          "email": "info@kaluga24.tv",
+          "phone": "+7 (4842) 79-00-00",
+          "reklama_phone": "+7 (4842) 79-00-00",
+          "status": "Проверено",
+          "utm": "kaluga24",
+          "specialization": "Телеканал и сайт, новости города, видеореклама, спецпроекты"
+        }
+      ],
+      "agencies": [
+        {
+          "name": "Агентство «Калуга-Медиа»",
+          "url": "",
+          "email": "media@kaluga-agency.ru",
+          "phone": "+7 (4842) 55-44-33",
+          "status": "Проверено",
+          "specialization": "Наружная реклама, размещение в СМИ, полиграфия, дизайн"
+        }
+      ]
+    },
+    "Обнинск": {
+      "platforms": [
+        {
+          "name": "НГ-Регион",
+          "type": "Газета / Сайт",
+          "url": "https://ng-region.ru",
+          "email": "red@ng-region.ru",
+          "phone": "+7 (48439) 3-22-11",
+          "reklama_phone": "+7 (48439) 3-22-11",
+          "status": "Проверено",
+          "utm": "ng_region",
+          "specialization": "Издание наукограда, наука, образование, IT-компании, B2B"
+        }
+      ],
+      "agencies": []
+    },
+    "Боровск": {
+      "platforms": [
+        {
+          "name": "Боровские вести",
+          "type": "Газета",
+          "url": "",
+          "email": "vesti@borovsk.ru",
+          "phone": "+7 (48438) 4-33-22",
+          "reklama_phone": "+7 (48438) 4-33-22",
+          "status": "Проверено",
+          "utm": "borovsk_vesti",
+          "specialization": "Районная газета, туризм, история, местные объявления"
+        }
+      ],
+      "agencies": []
+    }
+  }
+}
