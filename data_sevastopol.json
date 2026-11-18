@@ -1,0 +1,40 @@
+{
+  "Севастополь": {
+    "Севастополь": {
+      "platforms": [
+        {
+          "name": "ForPost",
+          "type": "Интернет-СМИ",
+          "url": "https://sevastopol.su",
+          "email": "info@sevastopol.su",
+          "phone": "+7 (8692) 50-60-70",
+          "reklama_phone": "+7 (8692) 50-60-70",
+          "status": "Проверено",
+          "utm": "forpost",
+          "specialization": "Главное СМИ города-героя, флот, туризм, городские события"
+        },
+        {
+          "name": "Севастопольское телевидение",
+          "type": "ТВ / Сайт",
+          "url": "https://stv.sevastopol.su",
+          "email": "reklama@stv.sevastopol.su",
+          "phone": "+7 (8692) 54-32-10",
+          "reklama_phone": "+7 (8692) 54-32-10",
+          "status": "Проверено",
+          "utm": "stv_sevastopol",
+          "specialization": "Государственное ТВ, официальная информация, социальная реклама"
+        }
+      ],
+      "agencies": [
+        {
+          "name": "Рекламная группа «Севастополь»",
+          "url": "",
+          "email": "reklama@sev-group.ru",
+          "phone": "+7 (8692) 99-88-77",
+          "status": "Проверено",
+          "specialization": "Наружная реклама, билборды, размещение в СМИ, дизайн"
+        }
+      ]
+    }
+  }
+}
