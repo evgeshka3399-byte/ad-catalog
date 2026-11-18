@@ -1,0 +1,72 @@
+{
+  "Ярославская область": {
+    "Ярославль": {
+      "platforms": [
+        {
+          "name": "Ярославский регион",
+          "type": "Интернет-СМИ",
+          "url": "https://yarreg.ru",
+          "email": "info@yarreg.ru",
+          "phone": "+7 (4852) 30-40-50",
+          "reklama_phone": "+7 (4852) 30-40-50",
+          "status": "Проверено",
+          "utm": "yarreg",
+          "specialization": "Главное областное издание, политика, экономика, социальные проекты"
+        },
+        {
+          "name": "ProГород Ярославль",
+          "type": "Интернет-портал",
+          "url": "https://pg76.ru",
+          "email": "red@pg76.ru",
+          "phone": "",
+          "reklama_phone": "+7 (4852) 67-89-00",
+          "status": "Проверено",
+          "utm": "progorod_yar",
+          "specialization": "Городской портал, афиша, происшествия, нативная реклама, отзывы"
+        }
+      ],
+      "agencies": [
+        {
+          "name": "Агентство «Яр-Медиа»",
+          "url": "",
+          "email": "media@yar-agency.ru",
+          "phone": "+7 (4852) 55-66-77",
+          "status": "Проверено",
+          "specialization": "Комплексное продвижение, наружная реклама, ТВ, радио"
+        }
+      ]
+    },
+    "Рыбинск": {
+      "platforms": [
+        {
+          "name": "Рыбинские известия",
+          "type": "Газета / Сайт",
+          "url": "https://rybinsk-izvestia.ru",
+          "email": "red@rybinsk-izvestia.ru",
+          "phone": "+7 (4855) 22-33-44",
+          "reklama_phone": "+7 (4855) 22-33-44",
+          "status": "Проверено",
+          "utm": "rybinsk_izvestia",
+          "specialization": "Главная газета второго города области, машиностроение, ЖКХ"
+        }
+      ],
+      "agencies": []
+    },
+    "Переславль-Залесский": {
+      "platforms": [
+        {
+          "name": "Переславль-Залесский.Инфо",
+          "type": "Интернет-портал",
+          "url": "https://pereslavl.info",
+          "email": "info@pereslavl.info",
+          "phone": "",
+          "reklama_phone": "+7 (48535) 3-22-11",
+          "status": "Проверено",
+          "utm": "pereslavl_info",
+          "specialization": "Туристический портал, гостиницы, экскурсии, события города"
+        }
+      ],
+      "agencies": []
+    }
+  }
+}
