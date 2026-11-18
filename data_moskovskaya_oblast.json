@@ -1,0 +1,199 @@
+{
+  "Московская область": {
+    "Балашиха": {
+      "platforms": [
+        {
+          "name": "Балашихинское информагентство",
+          "type": "Интернет-СМИ",
+          "url": "https://inbalashikha.ru",
+          "email": "info@inbalashikha.ru",
+          "phone": "+7 (495) 521-60-30",
+          "reklama_phone": "+7 (495) 521-60-30",
+          "status": "Проверено",
+          "utm": "inbalashikha",
+          "specialization": "Официальные новости города, пресс-релизы, социальная реклама"
+        },
+        {
+          "name": "Газета «Факт»",
+          "type": "Газета / Сайт",
+          "url": "https://gazeta-fakt.ru",
+          "email": "redakciya@gazeta-fakt.ru",
+          "phone": "+7 (495) 521-08-08",
+          "reklama_phone": "+7 (495) 521-08-08",
+          "status": "Проверено",
+          "utm": "gazeta_fakt",
+          "specialization": "Городская газета, объявления, коммерческие статьи"
+        }
+      ],
+      "agencies": [
+        {
+          "name": "Рекламное агентство «Балашиха-Медиа»",
+          "url": "",
+          "email": "reklama@balashiha-media.ru",
+          "phone": "+7 (495) 521-55-55",
+          "status": "Проверено",
+          "specialization": "Наружная реклама, размещение в местных СМИ, полиграфия"
+        }
+      ]
+    },
+    "Химки": {
+      "platforms": [
+        {
+          "name": "Химкинские новости",
+          "type": "Интернет-портал",
+          "url": "https://himkinews.ru",
+          "email": "info@himkinews.ru",
+          "phone": "+7 (495) 572-33-33",
+          "reklama_phone": "+7 (495) 572-33-33",
+          "status": "Проверено",
+          "utm": "himkinews",
+          "specialization": "Новости Химок, афиша, городские события"
+        }
+      ],
+      "agencies": [
+        {
+          "name": "Digital-агентство «Химки-Промо»",
+          "url": "https://khimki-promo.ru",
+          "email": "hello@khimki-promo.ru",
+          "phone": "+7 (495) 572-44-44",
+          "status": "Проверено",
+          "specialization": "SMM, таргетированная реклама, ведение соцсетей"
+        }
+      ]
+    },
+    "Подольск": {
+      "platforms": [
+        {
+          "name": "Подольский рабочий",
+          "type": "Газета / Сайт",
+          "url": "https://podolsk-rabochy.ru",
+          "email": "pr@podolsk-rabochy.ru",
+          "phone": "+7 (4967) 55-22-33",
+          "reklama_phone": "+7 (4967) 55-22-33",
+          "status": "Проверено",
+          "utm": "podolsk_rabochy",
+          "specialization": "Старейшая газета города, официальные уведомления, бизнес-реклама"
+        },
+        {
+          "name": "Вестник Подольска",
+          "type": "Интернет-издание",
+          "url": "https://vestnik-podolska.ru",
+          "email": "info@vestnik-podolska.ru",
+          "phone": "",
+          "reklama_phone": "+7 (4967) 66-77-88",
+          "status": "Проверено",
+          "utm": "vestnik_podolska",
+          "specialization": "Онлайн-СМИ, нативная реклама, спецпроекты"
+        }
+      ],
+      "agencies": [
+        {
+          "name": "Агентство «Подольск-Реклама»",
+          "url": "",
+          "email": "info@podolsk-reklama.ru",
+          "phone": "+7 (4967) 55-99-00",
+          "status": "Проверено",
+          "specialization": "Комплексное продвижение, наружка, радио"
+        }
+      ]
+    },
+    "Мытищи": {
+      "platforms": [
+        {
+          "name": "Мытищинское информагентство",
+          "type": "Интернет-СМИ",
+          "url": "https://inmytishchi.ru",
+          "email": "info@inmytishchi.ru",
+          "phone": "+7 (495) 582-11-22",
+          "reklama_phone": "+7 (495) 582-11-22",
+          "status": "Проверено",
+          "utm": "inmytishchi",
+          "specialization": "Официальный портал, новости администрации, социальная реклама"
+        }
+      ],
+      "agencies": []
+    },
+    "Люберцы": {
+      "platforms": [
+        {
+          "name": "Люберецкая газета",
+          "type": "Газета",
+          "url": "https://lubgazeta.ru",
+          "email": "red@lubgazeta.ru",
+          "phone": "+7 (495) 554-33-44",
+          "reklama_phone": "+7 (495) 554-33-44",
+          "status": "Проверено",
+          "utm": "lubgazeta",
+          "specialization": "Районная газета, частные объявления, модульная реклама"
+        }
+      ],
+      "agencies": [
+        {
+          "name": "Маркетинговое бюро «Люберцы»",
+          "url": "",
+          "email": "marketing@lyubertsy-buro.ru",
+          "phone": "+7 (495) 554-77-88",
+          "status": "На проверке",
+          "specialization": "SEO, контекстная реклама, разработка сайтов"
+        }
+      ]
+    },
+    "Одинцово": {
+      "platforms": [
+        {
+          "name": "Одинцово.Инфо",
+          "type": "Интернет-портал",
+          "url": "https://odintsovo.info",
+          "email": "info@odintsovo.info",
+          "phone": "+7 (495) 596-12-34",
+          "reklama_phone": "+7 (495) 596-12-34",
+          "status": "Проверено",
+          "utm": "odintsovo_info",
+          "specialization": "Главный городской портал, афиша, недвижимость, авто"
+        }
+      ],
+      "agencies": []
+    },
+    "Королёв": {
+      "platforms": [
+        {
+          "name": "Калининградка (Королёв)",
+          "type": "Газета / Сайт",
+          "url": "https://korolev.today",
+          "email": "red@korolev.today",
+          "phone": "+7 (495) 516-22-33",
+          "reklama_phone": "+7 (495) 516-22-33",
+          "status": "Проверено",
+          "utm": "korolev_today",
+          "specialization": "Новости наукограда, технологические компании, B2B реклама"
+        }
+      ],
+      "agencies": []
+    },
+    "Красногорск": {
+      "platforms": [
+        {
+          "name": "Красногорские вести",
+          "type": "Газета / Сайт",
+          "url": "https://krasnogorie.ru",
+          "email": "info@krasnogorie.ru",
+          "phone": "+7 (495) 563-44-55",
+          "reklama_phone": "+7 (495) 563-44-55",
+          "status": "Проверено",
+          "utm": "krasnogorie",
+          "specialization": "Официальное издание округа, госзакупки, социальная реклама"
+        }
+      ],
+      "agencies": [
+        {
+          "name": "SMM-студия «Красногорск Digital»",
+          "url": "",
+          "email": "smm@kg-digital.ru",
+          "phone": "+7 (495) 563-99-00",
+          "status": "На проверке",
+          "specialization": "Ведение Instagram/VK, блогеры, контент-маркетинг"
+        }
+      ]
+    }
+  }
+}
