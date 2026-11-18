@@ -1,0 +1,139 @@
+{
+  "Тульская область": {
+    "Тула": {
+      "platforms": [
+        {
+          "name": "Тульские известия",
+          "type": "Газета / Сайт",
+          "url": "https://tula.aif.ru",
+          "email": "redakciya@tula.aif.ru",
+          "phone": "+7 (4872) 30-40-50",
+          "reklama_phone": "+7 (4872) 30-40-50",
+          "status": "Проверено",
+          "utm": "tulskie_izvestiya",
+          "specialization": "Главное областное издание, новости региона, политика, бизнес"
+        },
+        {
+          "name": "Молодой коммунар",
+          "type": "Газета / Сайт",
+          "url": "https://mk.tula.net",
+          "email": "info@mk.tula.net",
+          "phone": "+7 (4872) 36-22-33",
+          "reklama_phone": "+7 (4872) 36-22-33",
+          "status": "Проверено",
+          "utm": "molodoy_kommunar",
+          "specialization": "Областная газета, официальные объявления, социальная реклама"
+        },
+        {
+          "name": "Слобода",
+          "type": "Интернет-портал",
+          "url": "https://sloboda.tula.ru",
+          "email": "red@sloboda.tula.ru",
+          "phone": "",
+          "reklama_phone": "+7 (4872) 25-11-22",
+          "status": "Проверено",
+          "utm": "sloboda_tula",
+          "specialization": "Городской портал, афиша, новости Тулы, развлечения"
+        }
+      ],
+      "agencies": [
+        {
+          "name": "Рекламное агентство «Тула-Медиа»",
+          "url": "https://tula-media.ru",
+          "email": "info@tula-media.ru",
+          "phone": "+7 (4872) 70-10-20",
+          "status": "Проверено",
+          "specialization": "Комплексная реклама, наружка, ТВ, радио, полиграфия"
+        },
+        {
+          "name": "Digital-студия «Тульский Маркетолог»",
+          "url": "",
+          "email": "hello@tulamarketolog.ru",
+          "phone": "+7 (910) 555-66-77",
+          "status": "На проверке",
+          "specialization": "SMM, таргет, контекстная реклама, ведение соцсетей"
+        }
+      ]
+    },
+    "Новомосковск": {
+      "platforms": [
+        {
+          "name": "Новомосковская правда",
+          "type": "Газета / Сайт",
+          "url": "https://nmpravda.ru",
+          "email": "red@nmpravda.ru",
+          "phone": "+7 (48762) 5-22-33",
+          "reklama_phone": "+7 (48762) 5-22-33",
+          "status": "Проверено",
+          "utm": "nmpravda",
+          "specialization": "Главная газета города химиков, промышленная реклама, B2B"
+        }
+      ],
+      "agencies": []
+    },
+    "Алексин": {
+      "platforms": [
+        {
+          "name": "Алексинский вестник",
+          "type": "Газета",
+          "url": "",
+          "email": "vestnik@aleksin.ru",
+          "phone": "+7 (48753) 4-11-22",
+          "reklama_phone": "+7 (48753) 4-11-22",
+          "status": "Проверено",
+          "utm": "aleksin_vestnik",
+          "specialization": "Районная газета, муниципальные новости, объявления"
+        }
+      ],
+      "agencies": []
+    },
+    "Щёкино": {
+      "platforms": [
+        {
+          "name": "Знамя коммунизма (Щёкино)",
+          "type": "Газета",
+          "url": "",
+          "email": "zk@schekino.ru",
+          "phone": "+7 (48751) 2-33-44",
+          "reklama_phone": "+7 (48751) 2-33-44",
+          "status": "Проверено",
+          "utm": "znamya_schekino",
+          "specialization": "Старейшая газета района, химическая промышленность, ЖКХ"
+        }
+      ],
+      "agencies": []
+    },
+    "Узловая": {
+      "platforms": [
+        {
+          "name": "Узловская заря",
+          "type": "Газета",
+          "url": "",
+          "email": "zarya@uzlovaya.ru",
+          "phone": "+7 (48731) 5-55-66",
+          "reklama_phone": "+7 (48731) 5-55-66",
+          "status": "Проверено",
+          "utm": "uzlovaya_zarya",
+          "specialization": "Муниципальная газета, угольная тематика, социальные проекты"
+        }
+      ],
+      "agencies": []
+    },
+    "Ефремов": {
+      "platforms": [
+        {
+          "name": "Красное знамя (Ефремов)",
+          "type": "Газета",
+          "url": "",
+          "email": "kz@efremov.ru",
+          "phone": "+7 (48741) 2-22-33",
+          "reklama_phone": "+7 (48741) 2-22-33",
+          "status": "Проверено",
+          "utm": "efremov_kz",
+          "specialization": "Районная газета, агропромышленный комплекс, сельское хозяйство"
+        }
+      ],
+      "agencies": []
+    }
+  }
+}
