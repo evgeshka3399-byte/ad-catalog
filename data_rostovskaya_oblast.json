@@ -1,0 +1,72 @@
+{
+  "Ростовская область": {
+    "Ростов-на-Дону": {
+      "platforms": [
+        {
+          "name": "DonNews",
+          "type": "Интернет-СМИ",
+          "url": "https://donnews.ru",
+          "email": "reklama@donnews.ru",
+          "phone": "+7 (863) 200-11-22",
+          "reklama_phone": "+7 (863) 200-11-22",
+          "status": "Проверено",
+          "utm": "donnews",
+          "specialization": "Главное деловое СМИ региона, экономика, политика, бизнес"
+        },
+        {
+          "name": "Блокнот Ростов",
+          "type": "Интернет-портал",
+          "url": "https://bloknot-rostov.ru",
+          "email": "info@bloknot-rostov.ru",
+          "phone": "",
+          "reklama_phone": "+7 (863) 333-44-55",
+          "status": "Проверено",
+          "utm": "bloknot_rostov",
+          "specialization": "Народные новости, соцсети, массовая аудитория, нативная реклама"
+        }
+      ],
+      "agencies": [
+        {
+          "name": "Digital-агентство «Ростов-Промо»",
+          "url": "",
+          "email": "hello@rostov-promo.ru",
+          "phone": "+7 (918) 555-66-77",
+          "status": "На проверке",
+          "specialization": "SMM, таргет, контекст, разработка сайтов, лидогенерация"
+        }
+      ]
+    },
+    "Таганрог": {
+      "platforms": [
+        {
+          "name": "Таганрогская правда",
+          "type": "Газета / Сайт",
+          "url": "https://taganrog-pravda.ru",
+          "email": "red@taganrog-pravda.ru",
+          "phone": "+7 (8634) 30-40-50",
+          "reklama_phone": "+7 (8634) 30-40-50",
+          "status": "Проверено",
+          "utm": "taganrog_pravda",
+          "specialization": "Исторический город, туризм, промышленность, местные объявления"
+        }
+      ],
+      "agencies": []
+    },
+    "Шахты": {
+      "platforms": [
+        {
+          "name": "Шахтинские известия",
+          "type": "Газета",
+          "url": "",
+          "email": "si@shakhty.ru",
+          "phone": "+7 (8636) 22-33-44",
+          "reklama_phone": "+7 (8636) 22-33-44",
+          "status": "Проверено",
+          "utm": "shakhty_izvestia",
+          "specialization": "Угольный бассейн, социальная сфера, муниципальная реклама"
+        }
+      ],
+      "agencies": []
+    }
+  }
+}
