@@ -148,23 +148,50 @@
     <p id="ui-form-disclaimer" style="font-size: 0.9rem; color: #666; margin-top: 1rem; text-align: center;"></p>
 
     <script>
-        let DB = null;
+        let DB = null; // Общая база данных
         let CFG = null;
         let currentTab = 'platforms';
         let searchQuery = '';
 
+        // 1. УМНАЯ ЗАГРУЗКА ДАННЫХ ИЗ НЕСКОЛЬКИХ ФАЙЛОВ
+        // Мы создаем массив запросов к файлам. Если файла нет, он просто игнорируется.
+        const dataFiles = [
+            'data.json',                  // Владимирская область (основная)
+            'data_moskovskaya_oblast.json' // Московская область (новая)
+            // Сюда можно добавлять новые файлы в будущем, например: 'data_tula_oblast.json'
+        ];
+
+        // Запускаем параллельную загрузку всех файлов
         Promise.all([
-            fetch('config.json').then(r => r.json()),
-            fetch('data.json').then(r => r.json())
+            fetch('config.json').then(r => r.ok ? r.json() : null), // Конфиг (тексты)
+            ...dataFiles.map(file => 
+                fetch(file).then(r => r.ok ? r.json() : null).catch(() => null) 
+            )
         ])
-        .then(([config, data]) => {
-            CFG = config.site;
-            DB = data;
-            applyConfig();
+        .then(results => {
+            CFG = results[0]; // Первый результат - это конфиг
+            
+            // Объединяем все найденные базы данных в одну переменную DB
+            // results[0] - конфиг, results[1] - data.json, results[2] - data_moskovskaya...
+            DB = {}; 
+            
+            for (let i = 1; i < results.length; i++) {
+                if (results[i]) {
+                    // "Склеиваем" объекты. Ключи (названия областей) не пересекаются, так что всё безопасно.
+                    Object.assign(DB, results[i]);
+                }
+            }
+
+            console.log("Загружено регионов:", Object.keys(DB).length); // Для проверки в консоли
+            
+            if (CFG) applyConfig();
             initFilters();
             render();
         })
-        .catch(err => console.error(err));
+        .catch(err => {
+            console.error("Ошибка инициализации:", err);
+            document.body.innerHTML = '<div style="text-align:center; padding:50px; color:red;"><h1>Ошибка загрузки</h1><p>Не удалось загрузить данные. Проверьте консоль (F12).</p></div>';
+        });
 
         function applyConfig() {
             if (!CFG) return;
