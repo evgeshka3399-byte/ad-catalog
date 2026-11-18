@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Каталог рекламных площадок для агентств</title>
-    <meta name="description" content="Бесплатный каталог рекламных площадок во Владимире. Тест площадок с отчетом через 60-90 дней.">
+    <title id="page-title">Каталог рекламных площадок</title>
+    <meta name="description" id="page-desc" content="">
     
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -14,282 +14,56 @@
             for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
             k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
         })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=114270099', 'ym');
-
         ym(114270099, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/114270099" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-
-    <!-- JSON-LD РАЗМЕТКА ДЛЯ ПОИСКОВИКОВ -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Где разместить рекламу во Владимире?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "В нашем каталоге собраны локальные СМИ, городские порталы и паблики ВК Владимира. Вы можете выбрать площадку по тематике и запросить бесплатный тест."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Сколько стоит реклама на владимирских сайтах?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Цены зависят от площадки. В каталоге указаны ориентировочные цены «от». Точную стоимость необходимо уточнять у самой площадки."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Что такое бесплатный тест площадки?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Мы бесплатно размещаем информацию о вашей площадке в каталоге и отслеживаем переходы на ваш сайт в течение 60-90 дней. После этого вы получаете честный отчет."
-          }
-        }
-      ]
-    }
-    </script>
 
     <style>
         html { scroll-behavior: smooth; }
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.6;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            color: #222;
-        }
-        
-        /* Шапка сайта */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid #eee;
-        }
+        body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 20px; color: #222; }
+        .header { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 15px; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 2px solid #eee; }
         .header-text h1 { font-size: 1.8rem; margin: 0 0 5px 0; }
         .header-text .subtitle { font-size: 1.1rem; color: #555; margin: 0; }
-        
-        /* Кнопки */
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #005bbb;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 6px;
-            font-size: 1rem;
-            font-weight: bold;
-            transition: background 0.3s;
-            text-align: center;
-            cursor: pointer;
-            border: none;
-        }
+        .btn { display: inline-block; padding: 10px 20px; background: #005bbb; color: #fff; text-decoration: none; border-radius: 6px; font-size: 1rem; font-weight: bold; transition: background 0.3s; text-align: center; cursor: pointer; border: none; }
         .btn:hover { background: #004a99; }
-        
-        .benefits {
-            background: #f5f5f5;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-        }
+        .benefits { background: #f5f5f5; padding: 20px; border-radius: 8px; margin-bottom: 2rem; }
         .benefits h2 { font-size: 1.2rem; margin-top: 0; }
         .benefits ul { margin: 0; padding-left: 1.2rem; }
         .benefits li { margin-bottom: 0.5rem; }
-
-        /* Панель управления */
-        .controls {
-            background: #f0f8ff;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            border: 1px solid #b3d9ff;
-        }
-        
-        .controls-row-1 {
-            display: flex;
-            gap: 15px;
-            width: 100%;
-            flex: 1 1 400px;
-        }
-        
-        .controls-row-2 {
-            width: 100%;
-            margin-top: 5px;
-        }
-
-        .controls select, .controls input[type="text"] {
-            padding: 10px;
-            font-size: 1rem;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        
-        .controls input[type="text"]::placeholder {
-            color: #888;
-        }
-        
-        .controls label { 
-            font-weight: bold; 
-            display: block; 
-            margin-bottom: 5px;
-            color: #333;
-        }
-        
-        .control-group {
-            flex: 1;
-            min-width: 200px;
-        }
-
-        /* Вкладки */
-        .tabs {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #eee;
-        }
-        .tab-btn {
-            padding: 10px 20px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 1.1rem;
-            color: #666;
-            border-bottom: 2px solid transparent;
-            margin-bottom: -2px;
-        }
-        .tab-btn.active {
-            color: #005bbb;
-            border-bottom-color: #005bbb;
-            font-weight: bold;
-        }
-
-        /* Сетка карточек */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
-            margin-bottom: 2rem;
-        }
-        .card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 15px;
-            background: #fff;
-            transition: transform 0.2s, box-shadow 0.2s;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            box-sizing: border-box;
-        }
-        .card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
+        .controls { background: #f0f8ff; padding: 20px; border-radius: 8px; margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; gap: 15px; border: 1px solid #b3d9ff; }
+        .controls-row-1 { display: flex; gap: 15px; width: 100%; flex: 1 1 400px; }
+        .controls-row-2 { width: 100%; margin-top: 5px; }
+        .controls select, .controls input[type="text"] { padding: 10px; font-size: 1rem; border-radius: 4px; border: 1px solid #ccc; width: 100%; box-sizing: border-box; }
+        .controls input[type="text"]::placeholder { color: #888; }
+        .controls label { font-weight: bold; display: block; margin-bottom: 5px; color: #333; }
+        .control-group { flex: 1; min-width: 200px; }
+        .tabs { display: flex; gap: 10px; margin-bottom: 1rem; border-bottom: 2px solid #eee; }
+        .tab-btn { padding: 10px 20px; background: none; border: none; cursor: pointer; font-size: 1.1rem; color: #666; border-bottom: 2px solid transparent; margin-bottom: -2px; }
+        .tab-btn.active { color: #005bbb; border-bottom-color: #005bbb; font-weight: bold; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-bottom: 2rem; }
+        .card { border: 1px solid #ddd; border-radius: 8px; padding: 15px; background: #fff; transition: transform 0.2s, box-shadow 0.2s; position: relative; display: flex; flex-direction: column; height: 100%; box-sizing: border-box; }
+        .card:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
         .card h3 { margin-top: 0; font-size: 1.2rem; margin-bottom: 5px; }
-        .card .status {
-            font-size: 0.85rem;
-            color: #2e7d32;
-            background: #e8f5e9;
-            padding: 2px 6px;
-            border-radius: 4px;
-            display: inline-block;
-            margin-bottom: 10px;
-            align-self: flex-start;
-        }
-        
-        /* Специализация в карточке */
-        .card .specialization { 
-            background: #f8f9fa; 
-            padding: 8px 10px; 
-            border-radius: 4px; 
-            margin: 8px 0;
-            font-size: 0.85rem;
-            color: #444;
-            border-left: 3px solid #005bbb;
-            line-height: 1.4;
-        }
-        
-        /* Метка города в карточке */
-        .card .location-tag {
-            font-size: 0.8rem;
-            color: #666;
-            margin-bottom: 5px;
-            display: block;
-        }
-        
-        /* Блок контактов */
-        .card .contacts { 
-            background: #fafafa; 
-            padding: 10px; 
-            border-radius: 4px; 
-            margin: 10px 0;
-            font-size: 0.85rem;
-            flex-grow: 1; 
-        }
+        .card .status { font-size: 0.85rem; color: #2e7d32; background: #e8f5e9; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 10px; align-self: flex-start; }
+        .card .specialization { background: #f8f9fa; padding: 8px 10px; border-radius: 4px; margin: 8px 0; font-size: 0.85rem; color: #444; border-left: 3px solid #005bbb; line-height: 1.4; }
+        .card .location-tag { font-size: 0.8rem; color: #666; margin-bottom: 5px; display: block; }
+        .card .contacts { background: #fafafa; padding: 10px; border-radius: 4px; margin: 10px 0; font-size: 0.85rem; flex-grow: 1; }
         .card .contacts div { margin-bottom: 4px; }
         .card .contacts strong { color: #555; }
-        
-        /* Кнопка в карточке */
-        .card .btn-card { 
-            margin-top: auto; 
-            font-size: 0.9rem; 
-            padding: 8px 16px; 
-            width: 100%; 
-            box-sizing: border-box;
-            display: block;
-            background: #005bbb;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 4px;
-        }
+        .card .btn-card { margin-top: auto; font-size: 0.9rem; padding: 8px 16px; width: 100%; box-sizing: border-box; display: block; background: #005bbb; color: white; text-align: center; text-decoration: none; border-radius: 4px; }
         .card .btn-card:hover { background: #004a99; }
-
-        /* FAQ */
-        .faq {
-            background: #fafafa;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-        }
+        .faq { background: #fafafa; padding: 20px; border-radius: 8px; margin-bottom: 2rem; }
         .faq h2 { font-size: 1.3rem; margin-top: 0; }
         .faq-item { margin-bottom: 1.5rem; }
         .faq-item h3 { font-size: 1.05rem; margin-bottom: 0.3rem; color: #005bbb; }
         .faq-item p { margin: 0; font-size: 0.95rem; }
-
-        /* Контакты */
-        .contacts-block {
-            background: #f0f8ff;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #b3d9ff;
-            margin-bottom: 2rem;
-        }
+        .contacts-block { background: #f0f8ff; padding: 20px; border-radius: 8px; border: 1px solid #b3d9ff; margin-bottom: 2rem; }
         .contacts-block h2 { font-size: 1.3rem; margin-top: 0; margin-bottom: 1rem; }
         .contact-list { list-style: none; padding: 0; margin: 0; }
         .contact-list li { margin-bottom: 10px; font-size: 1rem; }
         .contact-list a { color: #005bbb; text-decoration: none; font-weight: 500; }
         .contact-list a:hover { text-decoration: underline; }
-        
         .cta-wrapper { text-align: center; margin: 2rem 0; }
-
-        /* Мобильная версия */
         @media (max-width: 768px) {
             body { padding: 15px; }
             .header { flex-direction: column; align-items: flex-start; }
@@ -308,26 +82,21 @@
 
     <div class="header">
         <div class="header-text">
-            <h1>Каталог рекламных площадок</h1>
-            <p class="subtitle">Бесплатный тест. Отчёт через 60–90 дней.</p>
+            <h1 id="ui-header-h1">Загрузка...</h1>
+            <p class="subtitle" id="ui-header-subtitle"></p>
         </div>
         <div>
-            <a href="#form-anchor" class="btn">📝 Оставить заявку на тест</a>
+            <a href="#form-anchor" class="btn" id="ui-header-btn"></a>
         </div>
     </div>
 
     <div class="benefits">
-        <h2>Что вы получаете</h2>
-        <ul>
-            <li>Подборку площадок с ориентировочными ценами «от».</li>
-            <li>Прямые контакты площадок без посредников.</li>
-            <li>Честный отчёт по переходам через 60–90 дней.</li>
-        </ul>
+        <h2 id="ui-benefits-title"></h2>
+        <ul id="ui-benefits-list"></ul>
     </div>
 
-    <h2>Доступные площадки и агентства</h2>
+    <h2 id="ui-catalog-title"></h2>
     
-    <!-- БЛОК УПРАВЛЕНИЯ -->
     <div class="controls">
         <div class="controls-row-1">
             <div class="control-group">
@@ -339,90 +108,135 @@
                 <select id="citySelect" disabled><option>Сначала выберите область</option></select>
             </div>
         </div>
-        
         <div class="controls-row-2">
-            <label for="searchInput">Поиск услуг или площадок:</label>
-            <input type="text" id="searchInput" placeholder="Например: табличка с адресом, SEO, газета, баннер...">
+            <label for="searchInput" id="ui-search-label">Поиск услуг или площадок:</label>
+            <input type="text" id="searchInput" placeholder="">
         </div>
     </div>
 
     <div class="tabs">
-        <button class="tab-btn active" id="btn-platforms" onclick="setTab('platforms')">Площадки (Реклама)</button>
-        <button class="tab-btn" id="btn-agencies" onclick="setTab('agencies')">Агентства (Маркетологи)</button>
+        <button class="tab-btn active" id="btn-platforms"></button>
+        <button class="tab-btn" id="btn-agencies"></button>
     </div>
 
     <div id="cardsContainer" class="grid"></div>
 
     <div class="cta-wrapper">
-        <a href="#form-anchor" class="btn">📝 Оставить заявку на тест</a>
+        <a href="#form-anchor" class="btn" id="ui-cta-btn"></a>
     </div>
 
     <div class="faq">
-        <h2>Частые вопросы</h2>
-        <div class="faq-item">
-            <h3>Где разместить рекламу во Владимире?</h3>
-            <p>В нашем каталоге собраны локальные СМИ, городские порталы и паблики ВК Владимира. Вы можете выбрать площадку по тематике и запросить бесплатный тест.</p>
-        </div>
-        <div class="faq-item">
-            <h3>Сколько стоит реклама на владимирских сайтах?</h3>
-            <p>Цены зависят от площадки. В каталоге указаны ориентировочные цены «от». Точную стоимость необходимо уточнять у самой площадки.</p>
-        </div>
-        <div class="faq-item">
-            <h3>Что такое бесплатный тест площадки?</h3>
-            <p>Мы бесплатно размещаем информацию о вашей площадке в каталоге и отслеживаем переходы на ваш сайт в течение 60-90 дней. После этого вы получаете честный отчет.</p>
-        </div>
+        <h2 id="ui-faq-title"></h2>
+        <div id="ui-faq-container"></div>
     </div>
 
     <div class="contacts-block">
-        <h2>Связаться с нами</h2>
+        <h2 id="ui-contacts-title"></h2>
         <ul class="contact-list">
-            <li>📧 <strong>Почта:</strong> <a href="mailto:ad-catalog-ru@yandex.ru">ad-catalog-ru@yandex.ru</a></li>
-            <li>💬 <strong>MAX:</strong> <a href="https://max.ru/se14988035_bot">@se14988035_bot</a> (чат-бот для заявок)</li>
+            <li>📧 <strong>Почта:</strong> <a id="ui-contact-email" href=""></a></li>
+            <li>💬 <strong>MAX:</strong> <a id="ui-contact-messenger" href="" target="_blank"></a></li>
         </ul>
     </div>
 
     <div id="form-anchor"></div>
-    <h2>Оставить заявку на тест</h2>
+    <h2 id="ui-form-title"></h2>
     <div style="max-width: 640px; margin: 0 auto; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe8ChbFttTHq3D-BTbEJWTUYjF1aM1ezZVIo1Fas2ufZQ9qaA/viewform?embedded=true" width="100%" height="750" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
+        <iframe id="ui-form-iframe" width="100%" height="750" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
     </div>
-    <p style="font-size: 0.9rem; color: #666; margin-top: 1rem; text-align: center;">
-        Нажимая кнопку «Отправить», вы соглашаетесь на обработку персональных данных.
-    </p>
+    <p id="ui-form-disclaimer" style="font-size: 0.9rem; color: #666; margin-top: 1rem; text-align: center;"></p>
 
     <script>
         // Глобальные переменные
         let DB = null;
+        let CFG = null;
         let currentTab = 'platforms';
         let searchQuery = '';
 
-        // 1. Загрузка данных
-        fetch('data.json')
-            .then(res => {
-                if (!res.ok) throw new Error('Ошибка загрузки data.json');
-                return res.json();
-            })
-            .then(data => {
-                DB = data;
-                initFilters();
-                render();
-            })
-            .catch(err => {
-                console.error(err);
-                document.getElementById('cardsContainer').innerHTML = '<p style="color:red; grid-column: 1/-1;">Ошибка: не удалось загрузить базу данных. Проверьте файл data.json.</p>';
-                document.getElementById('regionSelect').innerHTML = '<option>Ошибка загрузки</option>';
-            });
+        // 1. Загрузка конфигов и данных
+        Promise.all([
+            fetch('config.json').then(r => r.json()),
+            fetch('data.json').then(r => r.json())
+        ])
+        .then(([config, data]) => {
+            CFG = config.site;
+            DB = data;
+            
+            // Применяем тексты из конфига
+            applyConfig();
+            
+            // Инициализируем каталог
+            initFilters();
+            render();
+        })
+        .catch(err => {
+            console.error(err);
+            document.body.innerHTML = '<div style="text-align:center; padding:50px; color:red;"><h1>Ошибка загрузки</h1><p>Не удалось загрузить config.json или data.json</p></div>';
+        });
 
-        // 2. Инициализация фильтров
+        function applyConfig() {
+            if (!CFG) return;
+            
+            // Meta
+            document.title = CFG.title;
+            document.getElementById('page-desc').content = CFG.description;
+            
+            // Header
+            document.getElementById('ui-header-h1').textContent = CFG.header.h1;
+            document.getElementById('ui-header-subtitle').textContent = CFG.header.subtitle;
+            document.getElementById('ui-header-btn').textContent = CFG.header.ctaButton;
+            
+            // Benefits
+            document.getElementById('ui-benefits-title').textContent = CFG.benefits.title;
+            const benList = document.getElementById('ui-benefits-list');
+            benList.innerHTML = '';
+            CFG.benefits.items.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                benList.appendChild(li);
+            });
+            
+            // Catalog
+            document.getElementById('ui-catalog-title').textContent = CFG.catalog.title;
+            document.getElementById('searchInput').placeholder = CFG.catalog.searchPlaceholder;
+            document.getElementById('btn-platforms').textContent = CFG.catalog.tabs.platforms;
+            document.getElementById('btn-agencies').textContent = CFG.catalog.tabs.agencies;
+            
+            // FAQ
+            document.getElementById('ui-faq-title').textContent = CFG.faq.title;
+            const faqCont = document.getElementById('ui-faq-container');
+            faqCont.innerHTML = '';
+            CFG.faq.items.forEach(qa => {
+                const div = document.createElement('div');
+                div.className = 'faq-item';
+                div.innerHTML = `<h3>${qa.q}</h3><p>${qa.a}</p>`;
+                faqCont.appendChild(div);
+            });
+            
+            // Contacts
+            document.getElementById('ui-contacts-title').textContent = CFG.contacts.title;
+            const emailLink = document.getElementById('ui-contact-email');
+            emailLink.textContent = CFG.contacts.email;
+            emailLink.href = `mailto:${CFG.contacts.email}`;
+            
+            const msgLink = document.getElementById('ui-contact-messenger');
+            msgLink.textContent = CFG.contacts.messenger;
+            msgLink.href = CFG.contacts.messengerLink;
+            
+            // Form
+            document.getElementById('ui-form-title').textContent = CFG.form.title;
+            document.getElementById('ui-form-iframe').src = CFG.form.url;
+            document.getElementById('ui-form-disclaimer').textContent = CFG.form.disclaimer;
+            document.getElementById('ui-cta-btn').textContent = CFG.header.ctaButton;
+        }
+
+        // 2. Логика каталога (без изменений)
         function initFilters() {
             const regSel = document.getElementById('regionSelect');
             const citySel = document.getElementById('citySelect');
             
-            // Очистка
             regSel.innerHTML = '<option value="">🔍 Все области</option>';
             citySel.innerHTML = '<option value="">🔍 Все города</option>';
             
-            // Заполнение областей
             if (DB && typeof DB === 'object') {
                 for (let region in DB) {
                     let opt = document.createElement('option');
@@ -432,7 +246,6 @@
                 }
             }
 
-            // События
             regSel.onchange = function() {
                 updateCities(regSel.value);
                 render();
@@ -475,7 +288,6 @@
             render();
         }
 
-        // 3. Главная функция отрисовки
         function render() {
             const container = document.getElementById('cardsContainer');
             if (!container) return;
@@ -487,65 +299,47 @@
             
             let items = [];
 
-            // ЛОГИКА СБОРА ДАННЫХ
             if (searchQuery) {
-                // ЕСЛИ ЕСТЬ ПОИСК: собираем ВСЁ (и площадки, и агентства) из ВСЕХ городов
                 if (DB) {
                     for (let r in DB) {
                         for (let c in DB[r]) {
-                            // Добавляем площадки
-                            if (DB[r][c].platforms) {
-                                DB[r][c].platforms.forEach(i => items.push({...i, _r: r, _c: c, _t: 'platforms'}));
-                            }
-                            // Добавляем агентства
-                            if (DB[r][c].agencies) {
-                                DB[r][c].agencies.forEach(i => items.push({...i, _r: r, _c: c, _t: 'agencies'}));
-                            }
+                            if (DB[r][c].platforms) DB[r][c].platforms.forEach(i => items.push({...i, _r: r, _c: c, _t: 'platforms'}));
+                            if (DB[r][c].agencies) DB[r][c].agencies.forEach(i => items.push({...i, _r: r, _c: c, _t: 'agencies'}));
                         }
                     }
                 }
             } else {
-                // ЕСЛИ НЕТ ПОИСКА: фильтруем строго по выбору
                 if (DB && region && DB[region]) {
                     let citiesToCheck = city ? [city] : Object.keys(DB[region]);
-                    
                     citiesToCheck.forEach(c => {
                         if (DB[region][c] && DB[region][c][currentTab]) {
                             DB[region][c][currentTab].forEach(i => items.push({...i, _r: region, _c: c}));
                         }
                     });
                 } else if (DB && !region) {
-                    // Если область не выбрана, показываем все данные текущей вкладки
                     for (let r in DB) {
                         for (let c in DB[r]) {
-                            if (DB[r][c][currentTab]) {
-                                DB[r][c][currentTab].forEach(i => items.push({...i, _r: r, _c: c}));
-                            }
+                            if (DB[r][c][currentTab]) DB[r][c][currentTab].forEach(i => items.push({...i, _r: r, _c: c}));
                         }
                     }
                 }
             }
 
-            // ФИЛЬТРАЦИЯ ПОИСКА
             if (searchQuery && items.length > 0) {
                 items = items.filter(i => {
                     let text = ((i.specialization || '') + ' ' + (i.name || '') + ' ' + (i.type || '') + ' ' + (i._c || '')).toLowerCase();
                     return text.includes(searchQuery);
                 });
 
-                // АВТО-ПЕРЕКЛЮЧЕНИЕ ВКЛАДКИ ПРИ ПОИСКЕ
                 if (items.length > 0) {
                     const firstItemTab = items[0]._t;
-                    if (firstItemTab && firstItemTab !== currentTab) {
-                        setTab(firstItemTab);
-                    }
+                    if (firstItemTab && firstItemTab !== currentTab) setTab(firstItemTab);
                 }
             }
 
-            // ОТРИСОВКА
             if (items.length === 0) {
                 container.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #666;">' + 
-                    (searchQuery ? 'Ничего не найдено по запросу "' + searchQuery + '"' : 'Выберите область и город или воспользуйтесь поиском.') + 
+                    (searchQuery ? CFG.catalog.noResults + ' "' + searchQuery + '"' : CFG.catalog.emptyState) + 
                     '</p>';
                 return;
             }
@@ -554,19 +348,14 @@
                 let card = document.createElement('div');
                 card.className = 'card';
                 
-                // Локация
                 let locHtml = (!city || searchQuery) ? `<span class="location">📍 ${item._r}, ${item._c}</span>` : '';
-                
-                // Специализация
                 let specHtml = item.specialization ? `<div class="spec">💼 ${item.specialization}</div>` : '';
                 
-                // Контакты
                 let contactsHtml = '';
                 if (item.email) contactsHtml += `<div>✉️ ${item.email}</div>`;
                 if (item.phone) contactsHtml += `<div>📞 ${item.phone}</div>`;
                 if (item.reklama_phone) contactsHtml += `<div>📢 Реклама: ${item.reklama_phone}</div>`;
                 
-                // Кнопка
                 let btnHtml = '';
                 if (item.url) {
                     let utm = `?utm_source=ad-catalog-ru&utm_medium=catalog&utm_campaign=${item.utm || 'search'}`;
