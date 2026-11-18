@@ -142,98 +142,195 @@
     
     <p id="ui-form-disclaimer" style="font-size: 0.9rem; color: #666; margin-top: 1rem; text-align: center;"></p>
 
-    <script>
-        let DB = null;
+        <script>
+        // Глобальные переменные
+        let DB = {}; 
         let CFG = null;
         let currentTab = 'platforms';
         let searchQuery = '';
 
-        // 1. УМНАЯ ЗАГРУЗКА ДАННЫХ ИЗ НЕСКОЛЬКИХ ФАЙЛОВ
-        const dataFiles = [
-            'data.json',                  
-            'data_moskovskaya_oblast.json' 
+        // Список файлов с данными регионов
+        const regionFiles = [
+            'data.json', 
+            'data_moskovskaya_oblast.json'
         ];
 
-        Promise.all([
-            fetch('config.json').then(r => r.ok ? r.json() : null),
-            ...dataFiles.map(file => 
-                fetch(file).then(r => r.ok ? r.json() : null).catch(() => null) 
-            )
-        ])
-        .then(results => {
-            CFG = results[0]; 
-            
-            DB = {}; 
-            for (let i = 1; i < results.length; i++) {
-                if (results[i]) {
-                    Object.assign(DB, results[i]);
-                }
+        // Функция безопасной загрузки JSON
+        async function loadJson(url) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                return await response.json();
+            } catch (e) {
+                console.warn(`Не удалось загрузить ${url}:`, e);
+                return null;
             }
-
-            console.log("Загружено регионов:", Object.keys(DB).length);
-            
-            if (CFG) applyConfig();
-            initFilters();
-            render();
-        })
-        .catch(err => {
-            console.error("Ошибка инициализации:", err);
-            document.body.innerHTML = '<div style="text-align:center; padding:50px; color:red;"><h1>Ошибка загрузки</h1><p>Не удалось загрузить данные. Проверьте консоль (F12).</p></div>';
-        });
-
-        function applyConfig() {
-            if (!CFG) return;
-            document.title = CFG.title;
-            document.getElementById('page-desc').content = CFG.description;
-            document.getElementById('ui-header-h1').textContent = CFG.header.h1;
-            document.getElementById('ui-header-subtitle').textContent = CFG.header.subtitle;
-            document.getElementById('ui-header-btn').textContent = CFG.header.ctaButton;
-            
-            const benList = document.getElementById('ui-benefits-list');
-            benList.innerHTML = '';
-            CFG.benefits.items.forEach(item => {
-                const li = document.createElement('li');
-                li.textContent = item;
-                benList.appendChild(li);
-            });
-            
-            document.getElementById('ui-catalog-title').textContent = CFG.catalog.title;
-            document.getElementById('searchInput').placeholder = CFG.catalog.searchPlaceholder;
-            document.getElementById('btn-platforms').textContent = CFG.catalog.tabs.platforms;
-            document.getElementById('btn-agencies').textContent = CFG.catalog.tabs.agencies;
-            
-            document.getElementById('ui-form-title').textContent = CFG.form.title;
-            document.getElementById('ui-form-iframe').src = CFG.form.url;
-            document.getElementById('ui-form-disclaimer').textContent = CFG.form.disclaimer;
         }
 
+        // Основная функция инициализации
+        async function init() {
+            // 1. Загружаем конфиг (тексты)
+            CFG = await loadJson('config.json');
+            
+            // Если конфига нет, создаем дефолтный, чтобы сайт не падал
+            if (!CFG) {
+                console.warn("config.json не найден, используем настройки по умолчанию");
+                CFG = {
+                    site: {
+                        title: "Каталог рекламных площадок",
+                        description: "Каталог проверенных площадок",
+                        header: { h1: "Каталог рекламных площадок", subtitle: "Бесплатный тест. Отчёт через 60–90 дней.", ctaButton: "📝 Оставить заявку" },
+                        benefits: { title: "Что вы получаете бесплатно", items: ["Доступ к базе площадок", "Прямые контакты", "Честная аналитика"] },
+                        catalog: { title: "Доступные площадки и агентства", searchPlaceholder: "Поиск...", tabs: { platforms: "Площадки", agencies: "Агентства" }, noResults: "Ничего не найдено", emptyState: "Выберите параметры" },
+                        form: { title: "Оставить заявку", url: "https://docs.google.com/forms/d/e/1FAIpQLSe8ChbFttTHq3D-BTbEJWTUYjF1aM1ezZVIo1Fas2ufZQ9qaA/viewform?embedded=true", disclaimer: "Нажимая кнопку, вы соглашаетесь на обработку данных." },
+                        contacts: { title: "Связаться с нами", email: "ad-catalog-ru@yandex.ru", messenger: "@se14988035_bot", messengerLink: "https://max.ru/se14988035_bot" },
+                        faq: { title: "Частые вопросы", items: [{q: "Как это работает?", a: "Мы собираем проверенные площадки."}] }
+                    }
+                };
+            }
+
+            // 2. Загружаем все файлы регионов и объединяем их
+            const promises = regionFiles.map(file => loadJson(file));
+            const results = await Promise.all(promises);
+
+            results.forEach(data => {
+                if (data && typeof data === 'object') {
+                    Object.assign(DB, data);
+                }
+            });
+
+            console.log("Загружено регионов:", Object.keys(DB).length);
+            console.log("Список регионов:", Object.keys(DB));
+
+            // 3. Запускаем отрисовку
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', startApp);
+            } else {
+                startApp();
+            }
+        }
+
+        function startApp() {
+            applyConfig();
+            initFilters();
+            render();
+        }
+
+        // Применяем тексты из конфига к HTML элементам
+        function applyConfig() {
+            if (!CFG || !CFG.site) return;
+            const S = CFG.site;
+            
+            document.title = S.title || "Каталог";
+            const desc = document.getElementById('page-desc');
+            if (desc) desc.content = S.description || "";
+
+            safeSetText('ui-header-h1', S.header?.h1);
+            safeSetText('ui-header-subtitle', S.header?.subtitle);
+            safeSetText('ui-header-btn', S.header?.ctaButton);
+            safeSetText('ui-benefits-title', S.benefits?.title);
+            safeSetText('ui-catalog-title', S.catalog?.title);
+            safeSetText('ui-search-label', "Поиск услуг или площадок:");
+            safeSetPlaceholder('searchInput', S.catalog?.searchPlaceholder);
+            safeSetText('btn-platforms', S.catalog?.tabs?.platforms);
+            safeSetText('btn-agencies', S.catalog?.tabs?.agencies);
+            safeSetText('ui-form-title', S.form?.title);
+            safeSetText('ui-form-disclaimer', S.form?.disclaimer);
+            safeSetSrc('ui-form-iframe', S.form?.url);
+            safeSetText('ui-contacts-title', S.contacts?.title);
+            
+            const emailLink = document.getElementById('ui-contact-email');
+            if (emailLink && S.contacts?.email) {
+                emailLink.textContent = S.contacts.email;
+                emailLink.href = `mailto:${S.contacts.email}`;
+            }
+            
+            const msgLink = document.getElementById('ui-contact-messenger');
+            if (msgLink && S.contacts?.messenger) {
+                msgLink.textContent = S.contacts.messenger;
+                msgLink.href = S.contacts.messengerLink || "#";
+            }
+
+            // Заполняем список преимуществ
+            const benList = document.getElementById('ui-benefits-list');
+            if (benList && S.benefits?.items) {
+                benList.innerHTML = '';
+                S.benefits.items.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    benList.appendChild(li);
+                });
+            }
+
+            // Заполняем FAQ
+            const faqCont = document.getElementById('ui-faq-container');
+            if (faqCont && S.faq?.items) {
+                safeSetText('ui-faq-title', S.faq.title);
+                faqCont.innerHTML = '';
+                S.faq.items.forEach(qa => {
+                    const div = document.createElement('div');
+                    div.className = 'faq-item';
+                    div.innerHTML = `<h3>${qa.q}</h3><p>${qa.a}</p>`;
+                    faqCont.appendChild(div);
+                });
+            }
+        }
+
+        // Вспомогательные функции для безопасной установки текста
+        function safeSetText(id, text) {
+            const el = document.getElementById(id);
+            if (el && text) el.textContent = text;
+        }
+        function safeSetPlaceholder(id, text) {
+            const el = document.getElementById(id);
+            if (el && text) el.placeholder = text;
+        }
+        function safeSetSrc(id, src) {
+            const el = document.getElementById(id);
+            if (el && src) el.src = src;
+        }
+
+        // Инициализация фильтров (Область/Город)
         function initFilters() {
             const regSel = document.getElementById('regionSelect');
             const citySel = document.getElementById('citySelect');
+            
             regSel.innerHTML = '<option value="">🔍 Все области</option>';
             citySel.innerHTML = '<option value="">🔍 Все города</option>';
             
-            if (DB) {
+            if (DB && typeof DB === 'object') {
                 for (let region in DB) {
                     let opt = document.createElement('option');
-                    opt.value = region; opt.textContent = region;
+                    opt.value = region;
+                    opt.textContent = region;
                     regSel.appendChild(opt);
                 }
             }
 
             regSel.onchange = function() { updateCities(regSel.value); render(); };
             citySel.onchange = function() { render(); };
-            document.getElementById('searchInput').oninput = function(e) { searchQuery = e.target.value.toLowerCase().trim(); render(); };
+            
+            const searchInp = document.getElementById('searchInput');
+            if (searchInp) {
+                searchInp.oninput = function(e) { searchQuery = e.target.value.toLowerCase().trim(); render(); };
+            }
         }
 
         function updateCities(region) {
             const citySel = document.getElementById('citySelect');
             citySel.innerHTML = '<option value="">🔍 Все города</option>';
-            if (!region || !DB || !DB[region]) { citySel.disabled = true; render(); return; }
+            
+            if (!region || !DB || !DB[region]) { 
+                citySel.disabled = true; 
+                render(); 
+                return; 
+            }
+            
             citySel.disabled = false;
             for (let city in DB[region]) {
                 let opt = document.createElement('option');
-                opt.value = city; opt.textContent = city;
+                opt.value = city;
+                opt.textContent = city;
                 citySel.appendChild(opt);
             }
             render();
@@ -241,20 +338,26 @@
 
         function setTab(tab) {
             currentTab = tab;
-            document.getElementById('btn-platforms').classList.toggle('active', tab === 'platforms');
-            document.getElementById('btn-agencies').classList.toggle('active', tab === 'agencies');
+            const btnP = document.getElementById('btn-platforms');
+            const btnA = document.getElementById('btn-agencies');
+            if (btnP) btnP.classList.toggle('active', tab === 'platforms');
+            if (btnA) btnA.classList.toggle('active', tab === 'agencies');
             render();
         }
 
+        // Главная функция отрисовки карточек
         function render() {
             const container = document.getElementById('cardsContainer');
             if (!container) return;
             container.innerHTML = '';
-            const region = document.getElementById('regionSelect').value;
-            const city = document.getElementById('citySelect').value;
+            
+            const region = document.getElementById('regionSelect')?.value;
+            const city = document.getElementById('citySelect')?.value;
             let items = [];
 
+            // Логика сбора данных
             if (searchQuery) {
+                // Поиск по ВСЕМ данным
                 if (DB) {
                     for (let r in DB) {
                         for (let c in DB[r]) {
@@ -264,12 +367,16 @@
                     }
                 }
             } else {
+                // Фильтрация по выбору
                 if (DB && region && DB[region]) {
                     let citiesToCheck = city ? [city] : Object.keys(DB[region]);
                     citiesToCheck.forEach(c => {
-                        if (DB[region][c] && DB[region][c][currentTab]) DB[region][c][currentTab].forEach(i => items.push({...i, _r: region, _c: c}));
+                        if (DB[region][c] && DB[region][c][currentTab]) {
+                            DB[region][c][currentTab].forEach(i => items.push({...i, _r: region, _c: c}));
+                        }
                     });
                 } else if (DB && !region) {
+                    // Если область не выбрана, показываем всё из текущей вкладки
                     for (let r in DB) {
                         for (let c in DB[r]) {
                             if (DB[r][c][currentTab]) DB[r][c][currentTab].forEach(i => items.push({...i, _r: r, _c: c}));
@@ -278,34 +385,63 @@
                 }
             }
 
+            // Фильтрация поиска
             if (searchQuery && items.length > 0) {
                 items = items.filter(i => {
                     let text = ((i.specialization || '') + ' ' + (i.name || '') + ' ' + (i.type || '') + ' ' + (i._c || '')).toLowerCase();
                     return text.includes(searchQuery);
                 });
-                if (items.length > 0 && items[0]._t !== currentTab) setTab(items[0]._t);
+                
+                // Авто-переключение вкладки при поиске
+                if (items.length > 0 && items[0]._t !== currentTab) {
+                    setTab(items[0]._t);
+                }
             }
 
+            // Вывод результатов
             if (items.length === 0) {
-                container.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #666; padding: 20px;">' + 
-                    (searchQuery ? 'Ничего не найдено по запросу "' + searchQuery + '"' : 'Выберите параметры для поиска') + '</p>';
+                const msg = searchQuery ? `Ничего не найдено по запросу "${searchQuery}"` : (CFG?.site?.catalog?.emptyState || 'Выберите параметры');
+                container.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: #666; padding: 20px;">${msg}</p>`;
                 return;
             }
 
             items.forEach(item => {
                 let card = document.createElement('div');
                 card.className = 'card';
+                
                 let locHtml = (!city || searchQuery) ? `<span class="location">📍 ${item._r}, ${item._c}</span>` : '';
                 let specHtml = item.specialization ? `<div class="spec">💼 ${item.specialization}</div>` : '';
+                
                 let contactsHtml = '';
                 if (item.email) contactsHtml += `<div>✉️ ${item.email}</div>`;
                 if (item.phone) contactsHtml += `<div>📞 ${item.phone}</div>`;
-                let btnHtml = item.url ? `<a href="${item.url}?utm_source=ad-catalog-ru&utm_medium=catalog&utm_campaign=${item.utm||'search'}" target="_blank" class="btn-card">Перейти на сайт</a>` : `<div style="color:#999; font-size:0.85rem; margin-top:auto; text-align:center;">Сайт не указан</div>`;
+                if (item.reklama_phone) contactsHtml += `<div>📢 Реклама: ${item.reklama_phone}</div>`;
+                
+                let btnHtml = '';
+                if (item.url) {
+                    let utm = `?utm_source=ad-catalog-ru&utm_medium=catalog&utm_campaign=${item.utm || 'search'}`;
+                    btnHtml = `<a href="${item.url}${utm}" target="_blank" class="btn-card">Перейти на сайт</a>`;
+                } else {
+                    btnHtml = `<div style="color:#999; font-size:0.85rem; margin-top:auto; text-align:center;">Сайт не указан</div>`;
+                }
 
-                card.innerHTML = `${locHtml}<h3>${item.name}</h3><span class="status">${item.status}</span>${specHtml}<div class="contacts"><div><strong>Тип:</strong> ${item.type||'-'}</div>${contactsHtml}</div>${btnHtml}`;
+                card.innerHTML = `
+                    ${locHtml}
+                    <h3>${item.name || 'Без названия'}</h3>
+                    <span class="status">${item.status || ''}</span>
+                    ${specHtml}
+                    <div class="contacts">
+                        <div><strong>Тип:</strong> ${item.type || '-'}</div>
+                        ${contactsHtml}
+                    </div>
+                    ${btnHtml}
+                `;
                 container.appendChild(card);
             });
         }
+
+        // Запуск
+        init();
     </script>
 </body>
 </html>
