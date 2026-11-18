@@ -1,0 +1,72 @@
+{
+  "Ставропольский край": {
+    "Ставрополь": {
+      "platforms": [
+        {
+          "name": "Победа26",
+          "type": "Интернет-СМИ",
+          "url": "https://pobeda26.ru",
+          "email": "info@pobeda26.ru",
+          "phone": "+7 (8652) 30-40-50",
+          "reklama_phone": "+7 (8652) 30-40-50",
+          "status": "Проверено",
+          "utm": "pobeda26",
+          "specialization": "Главное информагентство края, политика, АПК, социальные проекты"
+        },
+        {
+          "name": "Stavropol.ru",
+          "type": "Интернет-портал",
+          "url": "https://stavropol.ru",
+          "email": "red@stavropol.ru",
+          "phone": "",
+          "reklama_phone": "+7 (8652) 55-66-77",
+          "status": "Проверено",
+          "utm": "stavropol_ru",
+          "specialization": "Городской портал, афиша, недвижимость, авто, услуги"
+        }
+      ],
+      "agencies": [
+        {
+          "name": "Агентство «Ставрополь-Медиа»",
+          "url": "",
+          "email": "media@stav-agency.ru",
+          "phone": "+7 (8652) 77-88-99",
+          "status": "Проверено",
+          "specialization": "Наружная реклама, размещение в СМИ, дизайн, полиграфия"
+        }
+      ]
+    },
+    "Пятигорск": {
+      "platforms": [
+        {
+          "name": "Кавказский узел (Пятигорск)",
+          "type": "Интернет-портал",
+          "url": "https://kavkaz-uzel.eu/pyatigorsk",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "На проверке",
+          "utm": "kavkaz_uzel_pyatigorsk",
+          "specialization": "Курортный город, туризм, здоровье, санатории, события КМВ"
+        }
+      ],
+      "agencies": []
+    },
+    "Невинномысск": {
+      "platforms": [
+        {
+          "name": "Невинномысский рабочий",
+          "type": "Газета",
+          "url": "",
+          "email": "nr@nevinnomyssk.ru",
+          "phone": "+7 (86555) 4-22-33",
+          "reklama_phone": "+7 (86555) 4-22-33",
+          "status": "Проверено",
+          "utm": "nevinnomyssk_rabochiy",
+          "specialization": "Химическая промышленность, энергетика, рабочие специальности"
+        }
+      ],
+      "agencies": []
+    }
+  }
+}
