@@ -1,0 +1,56 @@
+{
+  "Ивановская область": {
+    "Иваново": {
+      "platforms": [
+        {
+          "name": "Рабочий край",
+          "type": "Газета / Сайт",
+          "url": "https://rk-ivanovo.ru",
+          "email": "red@rk-ivanovo.ru",
+          "phone": "+7 (4932) 30-11-22",
+          "reklama_phone": "+7 (4932) 30-11-22",
+          "status": "Проверено",
+          "utm": "rabochiy_kray",
+          "specialization": "Старейшая газета региона, текстильная промышленность, политика"
+        },
+        {
+          "name": "IvanovoNews",
+          "type": "Интернет-портал",
+          "url": "https://ivanovonews.ru",
+          "email": "info@ivanovonews.ru",
+          "phone": "",
+          "reklama_phone": "+7 (4932) 99-88-77",
+          "status": "Проверено",
+          "utm": "ivanovonews",
+          "specialization": "Главный новостной портал, афиша, недвижимость, авто"
+        }
+      ],
+      "agencies": [
+        {
+          "name": "Агентство «Ив-Промо»",
+          "url": "",
+          "email": "promo@iv-agency.ru",
+          "phone": "+7 (4932) 55-44-33",
+          "status": "Проверено",
+          "specialization": "Наружная реклама, полиграфия, дизайн вывесок, размещение в СМИ"
+        }
+      ]
+    },
+    "Шуя": {
+      "platforms": [
+        {
+          "name": "Шуйские известия",
+          "type": "Газета",
+          "url": "",
+          "email": "si@shuya.ru",
+          "phone": "+7 (49351) 2-33-44",
+          "reklama_phone": "+7 (49351) 2-33-44",
+          "status": "Проверено",
+          "utm": "shuya_izvestia",
+          "specialization": "Районная газета, мыловарение, текстиль, местные объявления"
+        }
+      ],
+      "agencies": []
+    }
+  }
+}
