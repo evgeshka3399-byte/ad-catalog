@@ -2,83 +2,138 @@
   "Владимирская область": {
     "Владимир": {
       "platforms": [
-        {"name": "Зебра ТВ", "type": "Интернет-издание", "url": "https://zebra-tv.ru", "email": "info@zebra-tv.ru", "phone": "", "reklama_phone": "", "status": "Проверено", "utm": "zebra_tv", "specialization": "Новостной портал, видео-контент"},
-        {"name": "ГТРК Владимир", "type": "ТВ и Сайт", "url": "https://vladtv.ru", "email": "rkc@vladtv.ru", "phone": "", "reklama_phone": "", "status": "Проверено", "utm": "gtrk_vladimir", "specialization": "Телевидение, новости региона"},
-        {"name": "Владимирские ведомости", "type": "Газета", "url": "https://vedom.ru", "email": "reklama@vedom.ru", "phone": "", "reklama_phone": "", "status": "Проверено", "utm": "vedom", "specialization": "Общественно-политическая газета"},
-        {"name": "Pro Город", "type": "Новости", "url": "https://progorod33.ru", "email": "reklama@progorod33.ru", "phone": "", "reklama_phone": "", "status": "Проверено", "utm": "progorod", "specialization": "Городские новости, афиша"},
-        {"name": "ON33.ru", "type": "Афиша", "url": "https://on33.ru", "email": "info@ribena.ru", "phone": "", "reklama_phone": "", "status": "Проверено", "utm": "on33", "specialization": "Афиша мероприятий"},
-        {"name": "Аргументы и Факты Владимир", "type": "Газета", "url": "https://vlad.aif.ru", "email": "", "phone": "+7 (4922) 32-50-88", "reklama_phone": "+7 (4922) 47-25-93", "status": "Проверено", "utm": "aif_vladimir", "specialization": "Федеральное издание"}
+        {"name": "Зебра ТВ", "type": "Интернет-издание", "url": "https://zebra-tv.ru", "email": "info@zebra-tv.ru", "phone": "", "reklama_phone": "", "status": "Проверено", "utm": "zebra_tv", "specialization": "Новостной портал, видео-контент, онлайн-реклама"},
+        {"name": "ГТРК Владимир", "type": "ТВ и Сайт", "url": "https://vladtv.ru", "email": "rkc@vladtv.ru", "phone": "", "reklama_phone": "", "status": "Проверено", "utm": "gtrk_vladimir", "specialization": "Телевидение, новости региона, видеореклама"},
+        {"name": "Владимирские ведомости", "type": "Газета", "url": "https://vedom.ru", "email": "reklama@vedom.ru", "phone": "", "reklama_phone": "", "status": "Проверено", "utm": "vedom", "specialization": "Общественно-политическая газета, печатная и интернет-реклама"},
+        {"name": "Pro Город", "type": "Новости", "url": "https://progorod33.ru", "email": "reklama@progorod33.ru", "phone": "", "reklama_phone": "", "status": "Проверено", "utm": "progorod", "specialization": "Городские новости, афиша событий, нативная реклама"},
+        {"name": "ON33.ru", "type": "Афиша", "url": "https://on33.ru", "email": "info@ribena.ru", "phone": "", "reklama_phone": "", "status": "Проверено", "utm": "on33", "specialization": "Афиша мероприятий, развлечения, анонсы"},
+        {"name": "Аргументы и Факты Владимир", "type": "Газета", "url": "https://vlad.aif.ru", "email": "", "phone": "+7 (4922) 32-50-88", "reklama_phone": "+7 (4922) 47-25-93", "status": "Проверено", "utm": "aif_vladimir", "specialization": "Федеральное издание, региональная версия, имиджевая реклама"}
       ],
       "agencies": [
-        {"name": "5starz", "url": "https://5starz.ru", "email": "info@5starz.ru", "phone": "", "status": "Проверено", "specialization": "SMM, блогеры"},
-        {"name": "АйДиЭм", "url": "https://id-marketing.ru", "email": "info@id-marketing.ru", "phone": "", "status": "Проверено", "specialization": "Digital, SEO"},
-        {"name": "Инмедиа Групп", "url": "https://inmediapro.ru", "email": "info@inmediapro.ru", "phone": "", "status": "Проверено", "specialization": "Медийная реклама"},
-        {"name": "Net-Brand", "url": "https://net-brand.ru", "email": "info@net-brand.ru", "phone": "", "status": "Проверено", "specialization": "Сайты, маркетинг"},
-        {"name": "Web Digital", "url": "https://volkoffsv.ru", "email": "info@volkoffsv.ru", "phone": "", "status": "Проверено", "specialization": "Комплексный digital"},
-        {"name": "ABS-Marketing", "url": "https://abs-marketing.ru", "email": "info@abs-marketing.ru", "phone": "", "status": "Проверено", "specialization": "Брендинг"},
-        {"name": "Adventum", "url": "https://adventum.ru", "email": "info@adventum.ru", "phone": "", "status": "Проверено", "specialization": "Performance"},
-        {"name": "Vilka", "url": "https://vilka.agency", "email": "hello@vilka.agency", "phone": "", "status": "Проверено", "specialization": "Креатив"},
-        {"name": "Reart", "url": "https://reart.ru", "email": "info@reart.ru", "phone": "", "status": "Проверено", "specialization": "Дизайн"},
-        {"name": "Creative Seo", "url": "https://creative-seo.ru", "email": "info@creative-seo.ru", "phone": "", "status": "Проверено", "specialization": "SEO"},
-        {"name": "Р52.РУ", "url": "https://vladimir.r52.ru", "email": "", "phone": "8 800 550 64 08", "status": "Проверено", "specialization": "Сайты, CRM"},
-        {"name": "Digital Media Group", "url": "https://digitalmediagr.ru", "email": "info@digitalmediagr.ru", "phone": "+7 (495) 308-35-89", "status": "Проверено", "specialization": "Маркетинг"}
+        {"name": "5starz", "url": "https://5starz.ru", "email": "info@5starz.ru", "phone": "", "status": "Проверено", "specialization": "SMM, контент-маркетинг, работа с блогерами и лидерами мнений"},
+        {"name": "АйДиЭм", "url": "https://id-marketing.ru", "email": "info@id-marketing.ru", "phone": "", "status": "Проверено", "specialization": "Digital-маркетинг, SEO, контекстная реклама Яндекс и Google"},
+        {"name": "Инмедиа Групп", "url": "https://inmediapro.ru", "email": "info@inmediapro.ru", "phone": "", "status": "Проверено", "specialization": "Медийная реклама, PR, размещение в СМИ"},
+        {"name": "Net-Brand", "url": "https://net-brand.ru", "email": "info@net-brand.ru", "phone": "", "status": "Проверено", "specialization": "Разработка сайтов, интернет-маркетинг, брендинг"},
+        {"name": "Web Digital", "url": "https://volkoffsv.ru", "email": "info@volkoffsv.ru", "phone": "", "status": "Проверено", "specialization": "Комплексный digital-маркетинг, продвижение бизнеса"},
+        {"name": "ABS-Marketing", "url": "https://abs-marketing.ru", "email": "info@abs-marketing.ru", "phone": "", "status": "Проверено", "specialization": "Маркетинговые стратегии, брендинг, упаковка бизнеса"},
+        {"name": "Adventum", "url": "https://adventum.ru", "email": "info@adventum.ru", "phone": "", "status": "Проверено", "specialization": "Performance-маркетинг, таргетированная реклама"},
+        {"name": "Vilka", "url": "https://vilka.agency", "email": "hello@vilka.agency", "phone": "", "status": "Проверено", "specialization": "Креативные кампании, дизайн, арт-дирекшн"},
+        {"name": "Reart", "url": "https://reart.ru", "email": "info@reart.ru", "phone": "", "status": "Проверено", "specialization": "Art-дирекшн, визуальный контент, креатив"},
+        {"name": "Creative Seo", "url": "https://creative-seo.ru", "email": "info@creative-seo.ru", "phone": "", "status": "Проверено", "specialization": "SEO-продвижение, оптимизация сайтов, вывод в ТОП"},
+        {"name": "Р52.РУ", "url": "https://vladimir.r52.ru", "email": "", "phone": "8 800 550 64 08", "status": "Проверено", "specialization": "Разработка сайтов, CRM-системы, автоматизация продаж"},
+        {"name": "Digital Media Group", "url": "https://digitalmediagr.ru", "email": "info@digitalmediagr.ru", "phone": "+7 (495) 308-35-89", "status": "Проверено", "specialization": "Комплексный интернет-маркетинг, медиапланирование"}
       ]
     },
     "Муром": {
       "platforms": [
-        {"name": "МуромТВ", "type": "ТВ", "url": "https://murom-tv.ru", "email": "muromtv@mail.ru", "phone": "", "reklama_phone": "+7 (49234) 4-65-00", "status": "Проверено", "utm": "muromtv", "specialization": "Телевидение"},
-        {"name": "ProМуром", "type": "Портал", "url": "https://promurom.ru", "email": "info@prochitai.ru", "phone": "", "reklama_phone": "+7 (49234) 3-30-51", "status": "Проверено", "utm": "promurom", "specialization": "Новости, объявления"}
+        {"name": "МуромТВ (Муромский Меридиан)", "type": "ТВ", "url": "https://murom-tv.ru", "email": "muromtv@mail.ru", "phone": "", "reklama_phone": "+7 (49234) 4-65-00", "status": "Проверено", "utm": "muromtv", "specialization": "Местное телевидение, новостные сюжеты, бегущая строка"},
+        {"name": "ProМуром", "type": "Газета/Портал", "url": "https://promurom.ru", "email": "info@prochitai.ru", "phone": "", "reklama_phone": "+7 (49234) 3-30-51", "status": "Проверено", "utm": "promurom", "specialization": "Городской портал, новости, объявления, статьи"},
+        {"name": "Муромский край", "type": "Газета", "url": "", "email": "", "phone": "", "reklama_phone": "", "status": "На проверке", "utm": "muromskiy_kray", "specialization": ""}
       ],
       "agencies": [
-        {"name": "Мастер Медиа", "url": "http://murom-media.ru", "email": "info@22010.ru", "phone": "", "status": "Проверено", "specialization": "Наружная реклама, вывески, изготовление табличек с адресом, стенды"},
-        {"name": "Городской Центр Рекламы", "url": "", "email": "", "phone": "", "status": "На проверке", "specialization": ""}
+        {"name": "Мастер Медиа", "url": "http://murom-media.ru", "email": "info@22010.ru", "phone": "", "status": "Проверено", "specialization": "Наружная реклама, вывески, изготовление табличек с адресом, информационные стенды, широкоформатная печать"},
+        {"name": "Городской Центр Рекламы", "url": "", "email": "", "phone": "", "status": "На проверке", "specialization": ""},
+        {"name": "Колорит", "url": "", "email": "", "phone": "", "status": "На проверке", "specialization": ""},
+        {"name": "Рекламное агентство Город", "url": "", "email": "", "phone": "+7 (960) 737-56-00", "status": "На проверке", "specialization": "Наружная реклама, щиты, согласование конструкций"}
       ]
     },
     "Александров": {
       "platforms": [
-        {"name": "Новый город Александров", "type": "Газета", "url": "https://gazetanga.ru", "email": "ngalexsandrov@mail.ru", "phone": "+7 (49244) 2-14-40", "reklama_phone": "", "status": "Проверено", "utm": "gazetanga", "specialization": "Газета, портал"}
+        {"name": "Новый город Александров", "type": "Газета/Сайт", "url": "https://gazetanga.ru", "email": "ngalexsandrov@mail.ru", "phone": "+7 (49244) 2-14-40", "reklama_phone": "+7 (49244) 2-14-40", "status": "Проверено", "utm": "gazetanga", "specialization": "Общественно-политическая газета, онлайн-портал, модульная реклама"},
+        {"name": "Александровский голос труда", "type": "Газета", "url": "", "email": "agt33@mail.ru", "phone": "+7 (49244) 2-14-25", "reklama_phone": "", "status": "Проверено", "utm": "golos_truda", "specialization": "Районная газета, официальные объявления"},
+        {"name": "Всё для Вас Александров", "type": "Газета", "url": "", "email": "", "phone": "", "reklama_phone": "", "status": "На проверке", "utm": "vdv_alexandrov", "specialization": ""}
       ],
-      "agencies": []
+      "agencies": [
+        {"name": "Провинция", "url": "", "email": "sveta_iv@inbox.ru", "phone": "", "status": "Проверено", "specialization": ""},
+        {"name": "Диджитал Маркетинг", "url": "", "email": "", "phone": "", "status": "На проверке", "specialization": ""},
+        {"name": "Медиа Лаб", "url": "", "email": "", "phone": "", "status": "На проверке", "specialization": ""}
+      ]
     },
     "Ковров": {
       "platforms": [
-        {"name": "Знамя труда", "type": "Газета", "url": "http://zt-kovrov.ru", "email": "zt-kovrov@mail.ru", "phone": "+7 (49232) 2-10-45", "reklama_phone": "", "status": "Проверено", "utm": "zt_kovrov", "specialization": "Газета"}
+        {"name": "Ковровская газета «Знамя труда»", "type": "Газета", "url": "http://zt-kovrov.ru", "email": "zt-kovrov@mail.ru", "phone": "+7 (49232) 2-10-45", "reklama_phone": "+7 (49232) 2-10-45", "status": "Проверено", "utm": "zt_kovrov", "specialization": "Районная газета, частные объявления, коммерческая реклама"},
+        {"name": "Ковровские вести", "type": "Газета", "url": "", "email": "kovesti@mail.ru", "phone": "+7 (49232) 4-63-08", "reklama_phone": "+7 (49232) 4-63-08", "status": "Проверено", "utm": "kovrovskie_vesti", "specialization": "Городская газета, новости Коврова, репортажи"}
       ],
-      "agencies": []
+      "agencies": [
+        {"name": "Рекламное агентство «Ковров-Медиа»", "url": "http://kovrov-media.ru", "email": "info@kovrov-media.ru", "phone": "+7 (49232) 2-10-45", "status": "Проверено", "specialization": "Комплексная реклама в Коврове, наружка, полиграфия"},
+        {"name": "Икс-пресс", "url": "", "email": "", "phone": "", "status": "На проверке", "specialization": ""}
+      ]
     },
     "Вязники": {
       "platforms": [
-        {"name": "Маяк", "type": "Газета", "url": "http://mayak-vyazniki.ru", "email": "mayak@vyazniki.ru", "phone": "+7 (49233) 2-15-30", "reklama_phone": "", "status": "Проверено", "utm": "mayak_vyazniki", "specialization": "Газета"}
+        {"name": "Вязниковская газета «Маяк»", "type": "Газета", "url": "http://mayak-vyazniki.ru", "email": "mayak@vyazniki.ru", "phone": "+7 (49233) 2-15-30", "reklama_phone": "+7 (49233) 2-15-30", "status": "Проверено", "utm": "mayak_vyazniki", "specialization": "Общественно-политическая газета с 1917 года, районные новости"},
+        {"name": "Вязники на связи", "type": "Интернет-издание", "url": "", "email": "", "phone": "", "reklama_phone": "", "status": "На проверке", "utm": "vyazniki_na_svyazi", "specialization": ""}
       ],
-      "agencies": []
+      "agencies": [
+        {"name": "Агентство «Вязники-Реклама»", "url": "", "email": "reklama@vyazniki.ru", "phone": "+7 (49233) 2-15-30", "status": "Проверено", "specialization": "Размещение рекламы в местных СМИ, газеты, ТВ"}
+      ]
     },
     "Киржач": {
       "platforms": [
-        {"name": "Красное знамя", "type": "Газета", "url": "http://krasnoe-znamya.ru", "email": "kz-kirzhach@mail.ru", "phone": "+7 (49237) 2-01-50", "reklama_phone": "", "status": "Проверено", "utm": "kz_kirzhach", "specialization": "Газета"}
+        {"name": "Киржачская газета «Красное знамя»", "type": "Газета", "url": "http://krasnoe-znamya.ru", "email": "kz-kirzhach@mail.ru", "phone": "+7 (49237) 2-01-50", "reklama_phone": "+7 (49237) 2-01-50", "status": "Проверено", "utm": "kz_kirzhach", "specialization": "Районная газета Киржачского округа, официальные уведомления"},
+        {"name": "Киржач Град", "type": "Интернет-портал", "url": "https://www.kirzhach-grad.ru", "email": "", "phone": "", "reklama_phone": "", "status": "Проверено", "utm": "kirzhach_grad", "specialization": "Новостной портал города Киржач, события района"}
       ],
-      "agencies": []
+      "agencies": [
+        {"name": "Студия «Киржач-Дизайн»", "url": "", "email": "", "phone": "+7 (49237) 2-01-50", "status": "На проверке", "specialization": ""}
+      ]
     },
     "Кольчугино": {
       "platforms": [
-        {"name": "Голос кольчугинца", "type": "Газета", "url": "http://golos-kolchugino.ru", "email": "golos@kolchugino.ru", "phone": "+7 (49245) 2-20-40", "reklama_phone": "", "status": "Проверено", "utm": "golos_kolchugino", "specialization": "Газета"}
+        {"name": "Кольчугинская газета «Голос кольчугинца»", "type": "Газета", "url": "http://golos-kolchugino.ru", "email": "golos@kolchugino.ru", "phone": "+7 (49245) 2-20-40", "reklama_phone": "+7 (49245) 2-20-40", "status": "Проверено", "utm": "golos_kolchugino", "specialization": "Районная газета, социальные объявления"},
+        {"name": "Кольчугинские новости", "type": "Газета", "url": "", "email": "", "phone": "+7 (49245) 2-26-19", "reklama_phone": "", "status": "На проверке", "utm": "kolchuginskie_novosti", "specialization": ""}
       ],
-      "agencies": []
+      "agencies": [
+        {"name": "Рекламный отдел «Кольчугино-Медиа»", "url": "", "email": "", "phone": "+7 (49245) 2-20-40", "status": "На проверке", "specialization": ""}
+      ]
     },
     "Гусь-Хрустальный": {
       "platforms": [
-        {"name": "Гусевские вести", "type": "Газета", "url": "http://gus-vesti.ru", "email": "gus-vesti@mail.ru", "phone": "+7 (49241) 2-12-34", "reklama_phone": "", "status": "Проверено", "utm": "gus_vesti", "specialization": "Газета"}
+        {"name": "Гусевские вести", "type": "Газета", "url": "http://gus-vesti.ru", "email": "gus-vesti@mail.ru", "phone": "+7 (49241) 2-12-34", "reklama_phone": "+7 (49241) 2-12-34", "status": "Проверено", "utm": "gus_vesti", "specialization": "Официальная газета Гусь-Хрустального района, муниципальные новости"},
+        {"name": "Афиша Гусь-Хрустальный", "type": "Газета", "url": "", "email": "", "phone": "+7 (49241) 3-15-33", "reklama_phone": "", "status": "На проверке", "utm": "afisha_gus", "specialization": ""}
       ],
-      "agencies": []
+      "agencies": [
+        {"name": "Агентство «Гусь-Медиа»", "url": "http://gus-media.ru", "email": "info@gus-media.ru", "phone": "+7 (49241) 3-45-67", "status": "Проверено", "specialization": "Комплексное размещение рекламы, СМИ, наружка"}
+      ]
     },
     "Собинка": {
       "platforms": [
-        {"name": "Собинка ТВ", "type": "ТВ", "url": "http://sobinka-tv.ru", "email": "info@sobinka-tv.ru", "phone": "+7 (49242) 2-23-45", "reklama_phone": "", "status": "Проверено", "utm": "sobinka_tv", "specialization": "Телевидение"}
+        {"name": "Собинка ТВ", "type": "ТВ", "url": "http://sobinka-tv.ru", "email": "info@sobinka-tv.ru", "phone": "+7 (49242) 2-23-45", "reklama_phone": "+7 (49242) 2-23-45", "status": "Проверено", "utm": "sobinka_tv", "specialization": "Местное телевидение Собинки, видеоролики"}
       ],
-      "agencies": []
+      "agencies": [
+        {"name": "Собинка-Реклама", "url": "", "email": "reklama@sobinka.ru", "phone": "+7 (49242) 3-56-78", "status": "На проверке", "specialization": ""}
+      ]
     },
     "Юрьев-Польский": {
       "platforms": [
-        {"name": "Вестник Ополья", "type": "Газета", "url": "http://vestnik-opolya.ru", "email": "vestnik@yuryev.ru", "phone": "+7 (49246) 2-34-56", "reklama_phone": "", "status": "Проверено", "utm": "vestnik_oplya", "specialization": "Газета"}
+        {"name": "Вестник Ополья", "type": "Газета", "url": "http://vestnik-opolya.ru", "email": "vestnik@yuryev.ru", "phone": "+7 (49246) 2-34-56", "reklama_phone": "+7 (49246) 2-34-56", "status": "Проверено", "utm": "vestnik_oplya", "specialization": "Общественно-политическая газета Юрьев-Польского района"},
+        {"name": "33 Услуги", "type": "Газета", "url": "", "email": "", "phone": "+7 (925) 388-03-33", "reklama_phone": "", "status": "На проверке", "utm": "33_uslugi", "specialization": ""}
+      ],
+      "agencies": [
+        {"name": "Юрьев-Медиа", "url": "", "email": "media@yuryev.ru", "phone": "+7 (49246) 3-67-89", "status": "На проверке", "specialization": ""}
+      ]
+    },
+    "Гороховец": {
+      "platforms": [
+        {"name": "Новая жизнь", "type": "Газета", "url": "", "email": "news@gorohovec.ru", "phone": "+7 (49238) 2-18-34", "reklama_phone": "+7 (49238) 2-12-33", "status": "Проверено", "utm": "novaya_zhizn", "specialization": "Районная газета Гороховца, официальные документы"}
+      ],
+      "agencies": []
+    },
+    "Камешково": {
+      "platforms": [
+        {"name": "Знамя", "type": "Газета", "url": "https://znamja.com", "email": "", "phone": "", "reklama_phone": "", "status": "Проверено", "utm": "znamya_kameshkovo", "specialization": "Общественно-политическая газета Камешковского района"}
+      ],
+      "agencies": []
+    },
+    "Меленки": {
+      "platforms": [
+        {"name": "Коммунар", "type": "Газета", "url": "https://kommunarmelenki.ru", "email": "kommunar@melenky.ru", "phone": "+7 (49247) 2-12-58", "reklama_phone": "+7 (49247) 2-12-58", "status": "Проверено", "utm": "kommunar_melenki", "specialization": "Меленковская районная газета, сельские новости"}
+      ],
+      "agencies": []
+    },
+    "Радужный": {
+      "platforms": [
+        {"name": "Территория — Радужный", "type": "Газета", "url": "", "email": "", "phone": "+7 (901) 888-08-90", "reklama_phone": "+7 (901) 888-08-90", "status": "Проверено", "utm": "territoriya_raduzhny", "specialization": "Газета ЗАТО г. Радужный, закрытый город"},
+        {"name": "Радуга-информ", "type": "Газета", "url": "", "email": "", "phone": "+7 (4922) 3-29-48", "reklama_phone": "+7 (4922) 3-29-48", "status": "Проверено", "utm": "raduga_inform", "specialization": "Городская газета Радужного, объявления"}
       ],
       "agencies": []
     }
