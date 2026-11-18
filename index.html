@@ -142,75 +142,73 @@
     
     <p id="ui-form-disclaimer" style="font-size: 0.9rem; color: #666; margin-top: 1rem; text-align: center;"></p>
 
-        <script>
-        // Глобальные переменные
-        let DB = {}; 
+    <script>
+        let DB = null;
         let CFG = null;
         let currentTab = 'platforms';
         let searchQuery = '';
 
-        // Список файлов с данными регионов
-        const regionFiles = [
+        // Список файлов данных. Добавляйте сюда новые файлы по аналогии
+        const dataFiles = [
             'data.json', 
             'data_moskovskaya_oblast.json'
         ];
 
-        // Функция безопасной загрузки JSON
-        async function loadJson(url) {
-            try {
-                const response = await fetch(url);
-                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                return await response.json();
-            } catch (e) {
-                console.warn(`Не удалось загрузить ${url}:`, e);
-                return null;
-            }
-        }
+        console.log("Начинаю загрузку данных из файлов:", dataFiles);
 
-        // Основная функция инициализации
-        async function init() {
-            // 1. Загружаем конфиг (тексты)
-            CFG = await loadJson('config.json');
-            
-            // Если конфига нет, создаем дефолтный, чтобы сайт не падал
-            if (!CFG) {
-                console.warn("config.json не найден, используем настройки по умолчанию");
-                CFG = {
-                    site: {
-                        title: "Каталог рекламных площадок",
-                        description: "Каталог проверенных площадок",
-                        header: { h1: "Каталог рекламных площадок", subtitle: "Бесплатный тест. Отчёт через 60–90 дней.", ctaButton: "📝 Оставить заявку" },
-                        benefits: { title: "Что вы получаете бесплатно", items: ["Доступ к базе площадок", "Прямые контакты", "Честная аналитика"] },
-                        catalog: { title: "Доступные площадки и агентства", searchPlaceholder: "Поиск...", tabs: { platforms: "Площадки", agencies: "Агентства" }, noResults: "Ничего не найдено", emptyState: "Выберите параметры" },
-                        form: { title: "Оставить заявку", url: "https://docs.google.com/forms/d/e/1FAIpQLSe8ChbFttTHq3D-BTbEJWTUYjF1aM1ezZVIo1Fas2ufZQ9qaA/viewform?embedded=true", disclaimer: "Нажимая кнопку, вы соглашаетесь на обработку данных." },
-                        contacts: { title: "Связаться с нами", email: "ad-catalog-ru@yandex.ru", messenger: "@se14988035_bot", messengerLink: "https://max.ru/se14988035_bot" },
-                        faq: { title: "Частые вопросы", items: [{q: "Как это работает?", a: "Мы собираем проверенные площадки."}] }
+        Promise.all([
+            fetch('config.json').then(r => {
+                if (!r.ok) console.warn("Config.json не найден или ошибка");
+                return r.ok ? r.json() : null;
+            }),
+            ...dataFiles.map(file => 
+                fetch(file).then(r => {
+                    if (!r.ok) {
+                        console.error(`❌ ОШИБКА: Не удалось загрузить файл ${file} (Статус: ${r.status})`);
+                        return null;
                     }
-                };
-            }
+                    return r.json().catch(e => {
+                        console.error(`❌ ОШИБКА: Неверный формат JSON в файле ${file}`, e);
+                        return null;
+                    });
+                }).catch(e => {
+                    console.error(`❌ ОШИБКА: Сетевая ошибка при загрузке ${file}`, e);
+                    return null;
+                })
+            )
+        ])
+        .then(results => {
+            CFG = results[0]; 
+            DB = {}; 
+            let loadedCount = 0;
 
-            // 2. Загружаем все файлы регионов и объединяем их
-            const promises = regionFiles.map(file => loadJson(file));
-            const results = await Promise.all(promises);
-
-            results.forEach(data => {
-                if (data && typeof data === 'object') {
-                    Object.assign(DB, data);
+            for (let i = 1; i < results.length; i++) {
+                if (results[i]) {
+                    // Проверяем, есть ли ключи в загруженном объекте
+                    const keys = Object.keys(results[i]);
+                    if (keys.length > 0) {
+                        Object.assign(DB, results[i]);
+                        loadedCount++;
+                        console.log(`✅ Загружен регион: ${keys[0]} (из файла ${dataFiles[i-1]})`);
+                    } else {
+                        console.warn(`⚠️ Файл ${dataFiles[i-1]} загружен, но пуст или имеет неверную структуру`);
+                    }
                 }
-            });
-
-            console.log("Загружено регионов:", Object.keys(DB).length);
-            console.log("Список регионов:", Object.keys(DB));
-
-            // 3. Запускаем отрисовку
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', startApp);
-            } else {
-                startApp();
             }
-        }
 
-        function startApp() {
+            console.log("Итого загружено регионов:", loadedCount);
+            console.log("Список областей в базе:", Object.keys(DB));
+            
+            if (CFG) applyConfig();
+            initFilters();
+            render();
+        })
+        .catch(err => {
+            console.error("Критическая ошибка инициализации:", err);
+            document.body.innerHTML = '<div style="text-align:center; padding:50px; color:red;"><h1>Ошибка загрузки</h1><p>Откройте консоль (F12) чтобы увидеть детали.</p></div>';
+        });
+
+       function startApp() {
             applyConfig();
             initFilters();
             render();
