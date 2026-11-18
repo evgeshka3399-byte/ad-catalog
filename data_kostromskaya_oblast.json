@@ -1,0 +1,56 @@
+{
+  "Костромская область": {
+    "Кострома": {
+      "platforms": [
+        {
+          "name": "Костромская неделя",
+          "type": "Газета / Сайт",
+          "url": "https://kn-week.ru",
+          "email": "red@kn-week.ru",
+          "phone": "+7 (4942) 31-22-33",
+          "reklama_phone": "+7 (4942) 31-22-33",
+          "status": "Проверено",
+          "utm": "kostroma_nedelya",
+          "specialization": "Областная газета, официальные документы, бизнес, социальная реклама"
+        },
+        {
+          "name": "K1News",
+          "type": "Интернет-портал",
+          "url": "https://k1news.ru",
+          "email": "info@k1news.ru",
+          "phone": "",
+          "reklama_phone": "+7 (4942) 45-67-89",
+          "status": "Проверено",
+          "utm": "k1news",
+          "specialization": "Оперативные новости, афиша, происшествия, молодежная аудитория"
+        }
+      ],
+      "agencies": [
+        {
+          "name": "Digital-студия «Кострома-Онлайн»",
+          "url": "",
+          "email": "hello@kostroma-online.ru",
+          "phone": "+7 (920) 333-44-55",
+          "status": "На проверке",
+          "specialization": "SMM, таргет, контекстная реклама, создание лендингов"
+        }
+      ]
+    },
+    "Шарья": {
+      "platforms": [
+        {
+          "name": "Новая сила",
+          "type": "Газета",
+          "url": "",
+          "email": "ns@sharya.ru",
+          "phone": "+7 (49435) 2-11-22",
+          "reklama_phone": "+7 (49435) 2-11-22",
+          "status": "Проверено",
+          "utm": "sharya_ns",
+          "specialization": "Районная газета, лесная промышленность, транспортный узел"
+        }
+      ],
+      "agencies": []
+    }
+  }
+}
