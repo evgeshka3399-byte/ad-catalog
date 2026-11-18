@@ -1,0 +1,56 @@
+{
+  "Брянская область": {
+    "Брянск": {
+      "platforms": [
+        {
+          "name": "Брянские новости",
+          "type": "Интернет-СМИ",
+          "url": "https://bryansknovosti.ru",
+          "email": "info@bryansknovosti.ru",
+          "phone": "+7 (4832) 60-70-80",
+          "reklama_phone": "+7 (4832) 60-70-80",
+          "status": "Проверено",
+          "utm": "bryansk_novosti",
+          "specialization": "Оперативные новости города, происшествия, политика, соцреклама"
+        },
+        {
+          "name": "Правда-Брянск",
+          "type": "Газета / Сайт",
+          "url": "https://pravda-bryansk.ru",
+          "email": "red@pravda-bryansk.ru",
+          "phone": "+7 (4832) 55-44-33",
+          "reklama_phone": "+7 (4832) 55-44-33",
+          "status": "Проверено",
+          "utm": "pravda_bryansk",
+          "specialization": "Областная газета, официальные уведомления, агропром, ЖКХ"
+        }
+      ],
+      "agencies": [
+        {
+          "name": "Рекламная группа «Брянск-Медиа»",
+          "url": "",
+          "email": "media@bryansk-group.ru",
+          "phone": "+7 (4832) 77-66-55",
+          "status": "Проверено",
+          "specialization": "Комплексное размещение, наружка, ТВ, радио, полиграфия"
+        }
+      ]
+    },
+    "Клинцы": {
+      "platforms": [
+        {
+          "name": "Труд",
+          "type": "Газета",
+          "url": "",
+          "email": "trud@klintsy.ru",
+          "phone": "+7 (48336) 4-22-33",
+          "reklama_phone": "+7 (48336) 4-22-33",
+          "status": "Проверено",
+          "utm": "klintsy_trud",
+          "specialization": "Районная газета, трикотажная промышленность, сельское хозяйство"
+        }
+      ],
+      "agencies": []
+    }
+  }
+}
