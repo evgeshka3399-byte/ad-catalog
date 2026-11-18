@@ -1,0 +1,72 @@
+{
+  "Республика Крым": {
+    "Симферополь": {
+      "platforms": [
+        {
+          "name": "Крым.Реалии",
+          "type": "Интернет-СМИ",
+          "url": "https://ru.krymr.com",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "На проверке",
+          "utm": "krym_realii",
+          "specialization": "Международное СМИ, политика, аналитика, широкая аудитория"
+        },
+        {
+          "name": "Пресс-Центр",
+          "type": "Интернет-портал",
+          "url": "https://press-crimea.ru",
+          "email": "info@press-crimea.ru",
+          "phone": "+7 (3652) 50-60-70",
+          "reklama_phone": "+7 (3652) 50-60-70",
+          "status": "Проверено",
+          "utm": "press_crimea",
+          "specialization": "Деловые новости, бизнес, инвестиции, официальный партнер"
+        }
+      ],
+      "agencies": [
+        {
+          "name": "Агентство «Крым-Медиа»",
+          "url": "",
+          "email": "media@crimea-agency.ru",
+          "phone": "+7 (3652) 77-88-99",
+          "status": "Проверено",
+          "specialization": "Туристическая реклама, наружка, размещение в местных СМИ"
+        }
+      ]
+    },
+    "Севастополь": {
+      "platforms": [
+        {
+          "name": "ForPost",
+          "type": "Интернет-СМИ",
+          "url": "https://sevastopol.su",
+          "email": "info@sevastopol.su",
+          "phone": "+7 (8692) 50-60-70",
+          "reklama_phone": "+7 (8692) 50-60-70",
+          "status": "Проверено",
+          "utm": "forpost",
+          "specialization": "Главное СМИ города-героя, флот, туризм, городские события"
+        }
+      ],
+      "agencies": []
+    },
+    "Ялта": {
+      "platforms": [
+        {
+          "name": "Ялта.Онлайн",
+          "type": "Интернет-портал",
+          "url": "https://yalta.online",
+          "email": "info@yalta.online",
+          "phone": "",
+          "reklama_phone": "+7 (3654) 33-44-55",
+          "status": "Проверено",
+          "utm": "yalta_online",
+          "specialization": "Элитный туризм, отели, рестораны, мероприятия, VIP-услуги"
+        }
+      ],
+      "agencies": []
+    }
+  }
+}
