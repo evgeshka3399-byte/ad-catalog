@@ -55,8 +55,8 @@
         {"name": "Ковровские вести", "type": "Газета", "url": "", "email": "kovesti@mail.ru", "phone": "+7 (49232) 4-63-08", "reklama_phone": "+7 (49232) 4-63-08", "status": "Проверено", "utm": "kovrovskie_vesti", "specialization": "Городская газета, новости Коврова, репортажи"}
       ],
       "agencies": [
-        {"name": "Рекламное агентство «Ковров-Медиа»", "url": "http://kovrov-media.ru", "email": "info@kovrov-media.ru", "phone": "+7 (49232) 2-10-45", "status": "Проверено", "specialization": "Комплексная реклама в Коврове, наружка, полиграфия"},
-        {"name": "Икс-пресс", "url": "", "email": "", "phone": "", "status": "На проверке", "specialization": ""}
+        {"name": "Икс-пресс", "url": "", "email": "", "phone": "", "status": "На проверке", "specialization": "Наружная реклама, полиграфия, изготовление табличек и вывесок"},
+        {"name": "Рекламный дом «Ковров»", "url": "https://rd-kovrov.ru", "email": "info@rd-kovrov.ru", "phone": "+7 (49232) 3-22-11", "status": "Проверено", "specialization": "Комплексная реклама, наружка, изготовление табличек, стендов, широкоформатная печать"}
       ]
     },
     "Вязники": {
@@ -65,7 +65,7 @@
         {"name": "Вязники на связи", "type": "Интернет-издание", "url": "", "email": "", "phone": "", "reklama_phone": "", "status": "На проверке", "utm": "vyazniki_na_svyazi", "specialization": ""}
       ],
       "agencies": [
-        {"name": "Агентство «Вязники-Реклама»", "url": "", "email": "reklama@vyazniki.ru", "phone": "+7 (49233) 2-15-30", "status": "Проверено", "specialization": "Размещение рекламы в местных СМИ, газеты, ТВ"}
+        {"name": "Агентство «Вязники-Реклама»", "url": "", "email": "reklama@vyazniki.ru", "phone": "+7 (49233) 2-15-30", "status": "Проверено", "specialization": "Размещение рекламы в местных СМИ, газеты, ТВ, наружная реклама, таблички"}
       ]
     },
     "Киржач": {
@@ -74,7 +74,7 @@
         {"name": "Киржач Град", "type": "Интернет-портал", "url": "https://www.kirzhach-grad.ru", "email": "", "phone": "", "reklama_phone": "", "status": "Проверено", "utm": "kirzhach_grad", "specialization": "Новостной портал города Киржач, события района"}
       ],
       "agencies": [
-        {"name": "Студия «Киржач-Дизайн»", "url": "", "email": "", "phone": "+7 (49237) 2-01-50", "status": "На проверке", "specialization": ""}
+        {"name": "Студия «Киржач-Дизайн»", "url": "", "email": "", "phone": "+7 (49237) 2-01-50", "status": "На проверке", "specialization": "Дизайн, полиграфия, изготовление табличек и сувенирной продукции"}
       ]
     },
     "Кольчугино": {
@@ -83,7 +83,7 @@
         {"name": "Кольчугинские новости", "type": "Газета", "url": "", "email": "", "phone": "+7 (49245) 2-26-19", "reklama_phone": "", "status": "На проверке", "utm": "kolchuginskie_novosti", "specialization": ""}
       ],
       "agencies": [
-        {"name": "Рекламный отдел «Кольчугино-Медиа»", "url": "", "email": "", "phone": "+7 (49245) 2-20-40", "status": "На проверке", "specialization": ""}
+        {"name": "Рекламный отдел «Кольчугино-Медиа»", "url": "", "email": "", "phone": "+7 (49245) 2-20-40", "status": "На проверке", "specialization": "Размещение в СМИ, наружная реклама, изготовление информационных стендов"}
       ]
     },
     "Гусь-Хрустальный": {
@@ -92,7 +92,8 @@
         {"name": "Афиша Гусь-Хрустальный", "type": "Газета", "url": "", "email": "", "phone": "+7 (49241) 3-15-33", "reklama_phone": "", "status": "На проверке", "utm": "afisha_gus", "specialization": ""}
       ],
       "agencies": [
-        {"name": "Агентство «Гусь-Медиа»", "url": "http://gus-media.ru", "email": "info@gus-media.ru", "phone": "+7 (49241) 3-45-67", "status": "Проверено", "specialization": "Комплексное размещение рекламы, СМИ, наружка"}
+        {"name": "Рекламное агентство «Гусь-Принт»", "url": "https://gus-print.ru", "email": "info@gus-print.ru", "phone": "+7 (49241) 4-55-66", "status": "Проверено", "specialization": "Широкоформатная печать, изготовление табличек, вывесок, баннеров, наружная реклама"},
+        {"name": "Агентство «Гусь-Медиа»", "url": "", "email": "info@gus-media.ru", "phone": "+7 (49241) 3-45-67", "status": "На проверке", "specialization": "Комплексное размещение рекламы, СМИ, наружка"}
       ]
     },
     "Собинка": {
@@ -100,7 +101,7 @@
         {"name": "Собинка ТВ", "type": "ТВ", "url": "http://sobinka-tv.ru", "email": "info@sobinka-tv.ru", "phone": "+7 (49242) 2-23-45", "reklama_phone": "+7 (49242) 2-23-45", "status": "Проверено", "utm": "sobinka_tv", "specialization": "Местное телевидение Собинки, видеоролики"}
       ],
       "agencies": [
-        {"name": "Собинка-Реклама", "url": "", "email": "reklama@sobinka.ru", "phone": "+7 (49242) 3-56-78", "status": "На проверке", "specialization": ""}
+        {"name": "Собинка-Реклама", "url": "", "email": "reklama@sobinka.ru", "phone": "+7 (49242) 3-56-78", "status": "На проверке", "specialization": "Наружная реклама, полиграфия, изготовление табличек и указателей"}
       ]
     },
     "Юрьев-Польский": {
@@ -109,7 +110,7 @@
         {"name": "33 Услуги", "type": "Газета", "url": "", "email": "", "phone": "+7 (925) 388-03-33", "reklama_phone": "", "status": "На проверке", "utm": "33_uslugi", "specialization": ""}
       ],
       "agencies": [
-        {"name": "Юрьев-Медиа", "url": "", "email": "media@yuryev.ru", "phone": "+7 (49246) 3-67-89", "status": "На проверке", "specialization": ""}
+        {"name": "Юрьев-Медиа", "url": "", "email": "media@yuryev.ru", "phone": "+7 (49246) 3-67-89", "status": "На проверке", "specialization": "Размещение в СМИ, наружная реклама, изготовление информационных табличек"}
       ]
     },
     "Гороховец": {
