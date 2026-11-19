@@ -148,46 +148,79 @@
         let currentTab = 'platforms';
         let searchQuery = '';
 
-        const dataFiles = [
-    'data.json', // Владимирская область (базовая)
-    'data_moskovskaya_oblast.json',
-    'data_tulskaya_oblast.json',
-    'data_kaluzhskaya_oblast.json',
-    'data_ryazanskaya_oblast.json',
-    'data_yaroslavskaya_oblast.json',
-    'data_kostromskaya_oblast.json',
-    'data_ivanovskaya_oblast.json',
-    'data_bryanskaya_oblast.json',
-    // Южный федеральный округ
-    'data_krasnodarskiy_kray.json',
-    'data_rostovskaya_oblast.json',
-    'data_stavropolskiy_kray.json',
-    'data_astrahanskaya_oblast.json',
-    'data_volgogradskaya_oblast.json',
-    'data_republika_krym.json',
-    'data_sevastopol.json',
-    'data_republika_adygeya.json'
-        ];
-
-        console.log("Начинаю загрузку данных...");
-
-        Promise.all([
-            fetch('config.json').then(r => r.ok ? r.json() : null),
-            ...dataFiles.map(file => 
-                fetch(file).then(r => {
+       fetch('data/list.json')
+    .then(res => {
+        if (!res.ok) throw new Error('Не удалось загрузить list.json');
+        return res.json();
+    })
+    .then(fileList => {
+        // fileList — это массив имён файлов из list.json
+        
+        // 2. Формируем массив запросов ко всем файлам данных
+        const dataPromises = fileList.map(fileName => 
+            fetch(`data/${fileName}`)
+                .then(r => {
                     if (!r.ok) {
-                        console.error(`❌ ОШИБКА: Не удалось загрузить ${file}`);
+                        console.error(`❌ Ошибка загрузки ${fileName}: ${r.status}`);
                         return null;
                     }
                     return r.json().catch(e => {
-                        console.error(`❌ ОШИБКА JSON в ${file}`, e);
+                        console.error(`❌ Ошибка JSON в ${fileName}`, e);
                         return null;
                     });
-                }).catch(e => {
-                    console.error(`❌ Сетевая ошибка ${file}`, e);
+                })
+                .catch(e => {
+                    console.error(`❌ Сетевая ошибка ${fileName}`, e);
                     return null;
                 })
-            )
+        );
+
+        Promise.all([
+                       fetch('config.json').then(r => r.ok ? r.json() : null),
+            ...dataPromises
+        ]);
+    })
+    .then(results => {
+        const CFG = results[0];
+        const DB = {};
+        let loadedCount = 0;
+
+        // Объединяем все загруженные регионы в одну базу
+        for (let i = 1; i < results.length; i++) {
+            if (results[i]) {
+                const keys = Object.keys(results[i]);
+                if (keys.length > 0) {
+                    Object.assign(DB, results[i]);
+                    loadedCount++;
+                    console.log(`✅ Загружен: ${keys[0]}`);
+                }
+            }
+        }
+
+        console.log(`Итого регионов: ${loadedCount}`);
+
+        // Фильтрация карточек без URL
+        if (DB) {
+            for (let region in DB) {
+                for (let city in DB[region]) {
+                    if (DB[region][city].platforms) {
+                        DB[region][city].platforms = DB[region][city].platforms.filter(p => p.url && p.url.trim() !== '');
+                    }
+                    if (DB[region][city].agencies) {
+                        DB[region][city].agencies = DB[region][city].agencies.filter(a => a.url && a.url.trim() !== '');
+                    }
+                }
+            }
+        }
+
+        if (CFG) applyConfig(CFG);
+        initFilters(DB);
+        render(DB);
+    })
+    .catch(err => {
+        console.error("Критическая ошибка:", err);
+        document.body.innerHTML = '<div style="text-align:center;padding:50px;color:red"><h1>Ошибка загрузки</h1><p>Проверьте консоль (F12)</p></div>';
+    });
         ])
         .then(results => {
             // results[0] - это config.json, results[1] - data.json, results[2] - moskovskaya...
