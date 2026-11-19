@@ -145,6 +145,146 @@
           "price_to": 80000
         }
       ]
+    },
+    "Старый Оскол": {
+      "platforms": [
+        {
+          "name": "Oskol.City",
+          "type": "Портал",
+          "url": "https://oskol.city/",
+          "email": "info@oskol.city",
+          "phone": "+7 (4725) 37-40-79",
+          "reklama_phone": "+7 (920) 200-61-81",
+          "status": "Проверено",
+          "utm": "osk_city_001",
+          "specialization": "городской информационный портал, новости и афиша, баннерная реклама, PR-публикации и спецпроекты, охват округа",
+          "price_from": 3000,
+          "price_to": 40000
+        },
+        {
+          "name": "9 канал (Оскол ТВ)",
+          "type": "ТВ",
+          "url": "https://oskoltv.ru/",
+          "email": "",
+          "phone": "+7 (4725) 45-04-60",
+          "reklama_phone": "+7 (4725) 45-04-60",
+          "status": "Проверено",
+          "utm": "osk_9kanal_002",
+          "specialization": "местное телевидение Старого Оскола, производство видеосюжетов, баннеры на сайте oskoltv.ru, посты в ВК/ОК, встроенная реклама в ролики, пакетные тарифы",
+          "price_from": 800,
+          "price_to": 25000
+        },
+        {
+          "name": "Публичный Старый Оскол (паблик ВК)",
+          "type": "Паблик ВК",
+          "url": "https://vk.ru/oskol",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "osk_vk_pso_003",
+          "specialization": "крупнейший паблик города 75,4 тыс. подписчиков, рекламные посты и интеграции, охват Старооскольского округа, народные новости",
+          "price_from": 3000,
+          "price_to": 15000
+        },
+        {
+          "name": "Тревожный Старый Оскол (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/sta_oskol",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "osk_tg_trevozh_004",
+          "specialization": "крупнейший TG-канал 84,2 тыс. подписчиков, оперативные новости и ЧП, рекламные посты и интеграции, охват Белгородской области",
+          "price_from": 8000,
+          "price_to": 40000
+        },
+        {
+          "name": "L1VE Старый Оскол (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/l1ve_oskol",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "osk_tg_l1ve_005",
+          "specialization": "городской TG-канал 18,6 тыс. подписчиков, новости и обсуждения, рекламные интеграции и нативные посты, охват округа",
+          "price_from": 15273,
+          "price_to": 30000
+        },
+        {
+          "name": "Старый Оскол №1 (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/oskoln1",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "osk_tg_n1_006",
+          "specialization": "новостной TG-канал, городские новости и происшествия, рекламные посты и интеграции, охват Старого Оскола",
+          "price_from": 2000,
+          "price_to": 10000
+        }
+      ],
+      "agencies": [
+        {
+          "name": "Ferrum Studio",
+          "type": "Digital-агентство",
+          "url": "https://ferrumstudio.ru/",
+          "email": "",
+          "phone": "",
+          "status": "Проверено",
+          "utm": "osk_ferrum_101",
+          "specialization": "VK-реклама и таргет в регионах, SMM-продвижение, контекстная реклама, разработка сайтов и SEO",
+          "price_from": 20000,
+          "price_to": 100000
+        }
+      ]
+    },
+    "Губкин": {
+      "platforms": [
+        {
+          "name": "Губкин ТРК",
+          "type": "ТВ",
+          "url": "https://gubtrk.ru/",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "gbk_gubtrk_001",
+          "specialization": "местное ТВ «Губкин-ТВ», объявления в телегазете и бегущей строке, пакеты Базовый/Стандарт/Бизнес, баннеры и посты на сайте и в соцсетях",
+          "price_from": 1500,
+          "price_to": 20000
+        },
+        {
+          "name": "ГубкинГоворит (паблик ВК)",
+          "type": "Паблик ВК",
+          "url": "https://vk.ru/gubkin_says",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "gbk_vk_govor_002",
+          "specialization": "крупнейший городской паблик 49 тыс. подписчиков, рекламные посты и интеграции, охват Губкинского округа, лайфстайл и новости",
+          "price_from": 2500,
+          "price_to": 12000
+        },
+        {
+          "name": "ЧП Губкин (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/chpgbk",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "gbk_tg_chp_003",
+          "specialization": "городской TG-канал 3,9 тыс. подписчиков, срочные новости Губкина и области, рекламные посты, охват Белгородской области",
+          "price_from": 800,
+          "price_to": 4000
+        }
+      ],
+      "agencies": []
     }
   }
 }
