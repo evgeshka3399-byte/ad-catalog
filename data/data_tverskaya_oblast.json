@@ -1,0 +1,249 @@
+{
+  "Тверская область": {
+    "Тверь": {
+      "platforms": [
+        {
+          "name": "Тверская жизнь",
+          "type": "Газета",
+          "url": "https://tverlife.ru/",
+          "email": "internet@riatver.ru",
+          "phone": "+7 (4822) 415-416",
+          "reklama_phone": "+7 (4822) 415-416 (доб. 223)",
+          "status": "Проверено",
+          "utm": "tvr_tverlife_001",
+          "specialization": "областная газета, модульная реклама, PR-статьи, официальные публикации, сайт издания",
+          "price_from": 1500,
+          "price_to": 50000
+        },
+        {
+          "name": "Тверские Ведомости",
+          "type": "Газета",
+          "url": "https://vedtver.ru/",
+          "email": "internet@riatver.ru",
+          "phone": "+7 (4822) 415-416",
+          "reklama_phone": "+7 (4822) 415-416 (доб. 215, 247)",
+          "status": "Проверено",
+          "utm": "tvr_vedtver_002",
+          "specialization": "региональная газета, новости и аналитика, модульная реклама, PR-статьи, сайт издания, охват Верхневолжья",
+          "price_from": 1500,
+          "price_to": 50000
+        },
+        {
+          "name": "ГТРК «Тверь» (ВГТРК)",
+          "type": "ТВ",
+          "url": "https://vesti-tver.ru/",
+          "email": "vestiwebtver@yandex.ru",
+          "phone": "+7 (4822) 45-38-92",
+          "reklama_phone": "+7 (4822) 32-09-18",
+          "status": "Проверено",
+          "utm": "tvr_gtrk_003",
+          "specialization": "государственная ТРК (ВГТРК), ТВ Россия 1 и Россия 24 с региональными врезками, радио России/Маяк/Вести FM, производство роликов и сюжетов, баннеры на сайте 3000-8000 руб/нед, нативные статьи 9000-12000 руб, видеоролики 5000-8000 руб",
+          "price_from": 3000,
+          "price_to": 150000
+        },
+        {
+          "name": "ТВ Тверь",
+          "type": "ТВ",
+          "url": "https://tvtver.ru/",
+          "email": "info@tvtver.ru",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "tvr_tvtver_004",
+          "specialization": "областной телеканал, производство роликов и сюжетов, реклама на ТВ и сайте, охват Твери и области",
+          "price_from": 1000,
+          "price_to": 100000
+        },
+        {
+          "name": "ТИА (Тверское информационное агентство)",
+          "type": "Интернет-издание",
+          "url": "https://tvernews.ru/",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "tvr_tia_005",
+          "specialization": "региональный новостной портал, самые свежие новости Твери и области, баннерная реклама, нативные статьи, охват региона",
+          "price_from": 3000,
+          "price_to": 60000
+        },
+        {
+          "name": "Твериград",
+          "type": "Портал",
+          "url": "https://tverigrad.ru/",
+          "email": "",
+          "phone": "+7 (4822) 78-77-04",
+          "reklama_phone": "+7 (4822) 78-77-01",
+          "status": "Проверено",
+          "utm": "tvr_tverigrad_006",
+          "specialization": "информационный портал Тверской области, новости и аналитика, баннерная реклама и PR-публикации, охват региона",
+          "price_from": 2500,
+          "price_to": 50000
+        },
+        {
+          "name": "АиФ Тверь",
+          "type": "Интернет-издание",
+          "url": "https://tver.aif.ru/",
+          "email": "glavred@aif.ru",
+          "phone": "+7 (495) 646-57-57",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "tvr_aif_007",
+          "specialization": "региональное издание АиФ, баннеры и нативные статьи, аналитика и расследования, охват Твери и области",
+          "price_from": 3000,
+          "price_to": 60000
+        },
+        {
+          "name": "Твериград (паблик ВК)",
+          "type": "Паблик ВК",
+          "url": "https://vk.ru/tverigradnews",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "+7 (4822) 78-77-01",
+          "status": "Проверено",
+          "utm": "tvr_vk_tverigrad_008",
+          "specialization": "крупное новостное сообщество ВК, оперативные новости Твери и региона, рекламные посты и интеграции, охват области",
+          "price_from": 4000,
+          "price_to": 25000
+        },
+        {
+          "name": "Я живу в Твери (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/Live_tver",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "tvr_tg_livetver_009",
+          "specialization": "городской TG-канал 40 тыс. подписчиков, свежие новости Твери, рекламные посты и интеграции, охват области",
+          "price_from": 3000,
+          "price_to": 20000
+        },
+        {
+          "name": "Тверь Онлайн (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/tver6",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "tvr_tg_tver6_010",
+          "specialization": "TG-канал, свежие новости города каждый день, Происшествия и события, рекламные посты, охват Твери",
+          "price_from": 1500,
+          "price_to": 10000
+        },
+        {
+          "name": "Тверь Сегодня (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/tver_today",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "tvr_tg_tvertoday_011",
+          "specialization": "TG-канал 9,3 тыс. подписчиков, новости Твери и области, рекламные посты и интеграции, охват региона",
+          "price_from": 1500,
+          "price_to": 10000
+        }
+      ],
+      "agencies": [
+        {
+          "name": "РА «Тверской проспект»",
+          "type": "Медиахолдинг",
+          "url": "https://tp.tver.ru/",
+          "email": "",
+          "phone": "",
+          "status": "Проверено",
+          "utm": "tvr_tp_101",
+          "specialization": "единственный медиахолдинг в регионе, комплексные рекламные кампании, ТВ/радио/интернет, формирование отношения потребителей",
+          "price_from": 15000,
+          "price_to": 300000
+        },
+        {
+          "name": "Hastra Agency",
+          "type": "Digital-агентство",
+          "url": "https://hastra.ru/tver/",
+          "email": "",
+          "phone": "",
+          "status": "Проверено",
+          "utm": "tvr_hastra_102",
+          "specialization": "SEO-продвижение, контекстная и таргетированная реклама, SMM-ведение, SERM и репутация, аналитика",
+          "price_from": 20000,
+          "price_to": 150000
+        },
+        {
+          "name": "Digital Media Group",
+          "type": "Digital-агентство",
+          "url": "https://digitalmediagr.ru/tver/",
+          "email": "",
+          "phone": "",
+          "status": "Проверено",
+          "utm": "tvr_dmg_103",
+          "specialization": "комплексное продвижение бизнеса, создание сайтов и SEO, контекстная реклама и SMM, SERM и чат-боты",
+          "price_from": 20000,
+          "price_to": 250000
+        },
+        {
+          "name": "LIFE MEDIA",
+          "type": "Digital-агентство",
+          "url": "https://lifemediadigital.ru/",
+          "email": "",
+          "phone": "",
+          "status": "Проверено",
+          "utm": "tvr_lifemedia_104",
+          "specialization": "премиум-агентство полного цикла из Твери, SMM и таргетированная реклама, AI-контент, разработка сайтов с AI",
+          "price_from": 30000,
+          "price_to": 300000
+        },
+        {
+          "name": "Регион ТВ",
+          "type": "ТВ-селлер",
+          "url": "https://tver.rtv.media/",
+          "email": "info.tver@rtv.media",
+          "phone": "+7 (4822) 630-445",
+          "status": "Проверено",
+          "utm": "tvr_rtv_105",
+          "specialization": "реклама на 12 федеральных ТВ-каналах в Твери, медиапланирование, производство роликов, онлайн-размещение",
+          "price_from": 10000,
+          "price_to": 300000
+        }
+      ]
+    },
+    "Ржев": {
+      "platforms": [
+        {
+          "name": "Ржевград",
+          "type": "Интернет-издание",
+          "url": "https://rzhevgrad.ru/",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "rzh_rzhevgrad_001",
+          "specialization": "информационный портал Ржева, лидер на ржевском рынке интернет-СМИ, баннерная реклама, нативные статьи, охват Ржева и района",
+          "price_from": 1500,
+          "price_to": 25000
+        }
+      ],
+      "agencies": []
+    },
+    "Торжок": {
+      "platforms": [
+        {
+          "name": "Новоторжский вестник (паблик ВК)",
+          "type": "Паблик ВК",
+          "url": "https://vk.ru/novotorvestnik",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "trz_vk_novotor_001",
+          "specialization": "общественно-политическая еженедельная газета, летопись истории Торжка и района, рекламные посты, охват города и района",
+          "price_from": 800,
+          "price_to": 8000
+        }
+      ],
+      "agencies": []
+    }
+  }
+}
