@@ -3,26 +3,196 @@
     "Астрахань": {
       "platforms": [
         {
-          "name": "Астраханские ведомости",
-          "type": "Газета / Сайт",
-          "url": "https://av-astrakhan.ru",
-          "email": "red@av-astrakhan.ru",
-          "phone": "+7 (8512) 30-40-50",
-          "reklama_phone": "+7 (8512) 30-40-50",
+          "name": "AST-NEWS.ru",
+          "type": "Интернет-издание",
+          "url": "https://ast-news.ru/",
+          "email": "79275636657@yandex.ru",
+          "phone": "+7 (927) 559-92-40",
           "status": "Проверено",
-          "utm": "astrahan_vedomosti",
-          "specialization": "Официальное издание, госзакупки, рыбная отрасль, политика"
+          "utm": "ast_news_astrakhan",
+          "specialization": "Интернет-СМИ, новости Астрахани, размещение рекламных статей, пресс-релизы, баннерная реклама, спецпроекты, публикации с анонсом в соцсетях",
+          "price_from": 2000,
+          "price_to": 50000
         },
         {
-          "name": "Punkt-A",
-          "type": "Интернет-портал",
-          "url": "https://punkt-a.info",
+          "name": "Пункт-А",
+          "type": "Интернет-издание",
+          "url": "https://punkt-a.info/",
           "email": "info@punkt-a.info",
-          "phone": "",
-          "reklama_phone": "+7 (8512) 55-66-77",
+          "phone": "+7 (8512) 00-00-00",
           "status": "Проверено",
-          "utm": "punkt_a",
-          "specialization": "Главный городской портал, афиша, происшествия, молодежь"
+          "utm": "punkt_a_astrakhan",
+          "specialization": "Информационный портал, новости региона, аналитика, реклама в новостной ленте, нативная интеграция, баннеры, PR-статьи",
+          "price_from": 3000,
+          "price_to": 60000
+        },
+        {
+          "name": "Астрахань 24",
+          "type": "ТВ",
+          "url": "https://astrakhan-24.ru/",
+          "email": "reklama@a24.press",
+          "phone": "+7 (8512) 24-24-85",
+          "status": "Проверено",
+          "utm": "astrakhan_24_tv",
+          "specialization": "Телеканал и новостной портал, видеоролики в эфире и на сайте, размещение новостных сюжетов, баннерная реклама, нативные интеграции",
+          "price_from": 5000,
+          "price_to": 100000
+        },
+        {
+          "name": "Блокнот Астрахань",
+          "type": "Интернет-издание",
+          "url": "https://bloknot-astrakhan.ru/",
+          "email": "bloknot-astrakhan@mail.ru",
+          "phone": "8 (8512) 22-33-55",
+          "status": "Проверено",
+          "utm": "bloknot_astrakhan",
+          "specialization": "Городской портал, новости, афиша, размещение пресс-релизов, баннерная реклама, статьи на главной странице, PR-материалы",
+          "price_from": 2500,
+          "price_to": 45000
+        },
+        {
+          "name": "Типичная Астрахань",
+          "type": "Паблик ВК",
+          "url": "https://vk.com/astra30",
+          "status": "Проверено",
+          "utm": "tipichnaya_astrakhan_vk",
+          "specialization": "Крупнейший городской паблик ВКонтакте, размещение рекламных постов, репостов, анонсов мероприятий, охват более 100 000 подписчиков",
+          "price_from": 1500,
+          "price_to": 15000
+        },
+        {
+          "name": "Подслушано Астрахань",
+          "type": "Паблик ВК",
+          "url": "https://vk.com/podslushano_astra",
+          "status": "Проверено",
+          "utm": "podslushano_astra_vk",
+          "specialization": "Паблик с историями и новостями ВКонтакте, рекламные посты с закреплением, нативные публикации, охват более 30 000 подписчиков",
+          "price_from": 1000,
+          "price_to": 8000
+        },
+        {
+          "name": "Астрахань 24",
+          "type": "Telegram-канал",
+          "url": "https://t.me/astrakhan24",
+          "status": "Проверено",
+          "utm": "astrakhan_24_tg",
+          "specialization": "Новостной Telegram-канал, размещение рекламных постов, репостов из других каналов, анонсы событий",
+          "price_from": 1500,
+          "price_to": 10000
+        },
+        {
+          "name": "AST-NEWS",
+          "type": "Telegram-канал",
+          "url": "https://t.me/ast_news",
+          "status": "Проверено",
+          "utm": "ast_news_tg",
+          "specialization": "Telegram-канал интернет-СМИ, новостные посты, коммерческие публикации, реклама сайтов и услуг",
+          "price_from": 1000,
+          "price_to": 8000
+        },
+        {
+          "name": "АиФ Астрахань",
+          "type": "Интернет-издание",
+          "url": "https://astrakhan.aif.ru/",
+          "status": "Проверено",
+          "utm": "aif_astrakhan",
+          "specialization": "Региональное отделение федерального СМИ, новости, статьи, размещение PR-материалов, баннерная реклама",
+          "price_from": 5000,
+          "price_to": 80000
+        },
+        {
+          "name": "Astrakhan.Ru",
+          "type": "Интернет-издание",
+          "url": "https://astrakhan.ru/",
+          "status": "Проверено",
+          "utm": "astrakhan_ru_portal",
+          "specialization": "Интернет-портал, городские новости, видеоконтент, реклама на сайте, спецпроекты",
+          "price_from": 3000,
+          "price_to": 50000
+        }
+      ],
+      "agencies": [
+        {
+          "name": "Квартал",
+          "type": "Рекламное агентство",
+          "url": "https://kvartal-reklama.com/",
+          "email": "kvartal-reklama@yandex.ru",
+          "phone": "+7 (903) 321-65-69",
+          "status": "Проверено",
+          "utm": "kvartal_reklama_astrakhan",
+          "specialization": "Наружная реклама, изготовление вывесок, световые короба, объемные буквы, широкоформатная печать, монтаж рекламных конструкций, оформление фасадов",
+          "price_from": 5000,
+          "price_to": 200000
+        },
+        {
+          "name": "Распиарыч",
+          "type": "Digital-агентство",
+          "url": "https://raspiarych.ru/",
+          "phone": "+7 (925) 111-51-51",
+          "status": "Проверено",
+          "utm": "raspiarych_astrakhan",
+          "specialization": "Маркетинг полного цикла, SEO-продвижение, контекстная реклама Яндекс Директ, таргет ВК, разработка сайтов, SMM, комплексное продвижение бизнеса",
+          "price_from": 15000,
+          "price_to": 300000
+        },
+        {
+          "name": "В точку",
+          "type": "Digital-агентство",
+          "url": "https://t4ka.ru/",
+          "email": "info@t4ka.ru",
+          "phone": "+7 (927) 975-21-10",
+          "status": "Проверено",
+          "utm": "v_tochku_astrakhan",
+          "specialization": "Интернет-маркетинг, создание сайтов, ведение соцсетей (SMM), таргетированная и контекстная реклама, SEO, лидогенерация",
+          "price_from": 20000,
+          "price_to": 250000
+        },
+        {
+          "name": "Олеандр",
+          "type": "Рекламное агентство",
+          "url": "http://www.mr-oleandr.ru/",
+          "email": "mr-oleandr@rambler.ru",
+          "phone": "+7 (8512) 70-61-52",
+          "status": "Проверено",
+          "utm": "oleandr_astrakhan",
+          "specialization": "Мастерская рекламы, изготовление вывесок, объемные буквы, световые короба, наружная реклама, таблички, информационные стенды",
+          "price_from": 2000,
+          "price_to": 150000
+        },
+        {
+          "name": "ЛюксПринт",
+          "type": "Рекламное агентство",
+          "url": "http://luxprint.pro/",
+          "phone": "+7 (927) 580-62-25",
+          "status": "Проверено",
+          "utm": "luxprint_astrakhan",
+          "specialization": "Широкоформатная печать, полиграфия, изготовление наружной рекламы, визитки, листовки, баннеры, таблички, УФ-печать",
+          "price_from": 500,
+          "price_to": 50000
+        }
+      ]
+    },
+    "Ахтубинск": {
+      "platforms": [
+        {
+          "name": "Ахтубинская правда",
+          "type": "Интернет-издание",
+          "url": "https://ahtpravda.ru/",
+          "status": "Проверено",
+          "utm": "ahtubinskaya_pravda",
+          "specialization": "Районная газета и интернет-издание, новости Ахтубинска, официальные объявления, рекламные статьи, пресс-релизы",
+          "price_from": 1000,
+          "price_to": 20000
+        },
+        {
+          "name": "Ахтубинск Знает",
+          "type": "Telegram-канал",
+          "url": "https://t.me/akhtybinsk_znaet",
+          "status": "Проверено",
+          "utm": "ahtubinsk_znaet_tg",
+          "specialization": "Местный Telegram-канал, новости и происшествия Ахтубинска, размещение рекламных постов, анонсов, более 14 000 подписчиков",
+          "price_from": 500,
+          "price_to": 5000
         }
       ],
       "agencies": []
