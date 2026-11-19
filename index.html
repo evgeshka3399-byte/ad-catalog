@@ -142,57 +142,45 @@
     
     <p id="ui-form-disclaimer" style="font-size: 0.9rem; color: #666; margin-top: 1rem; text-align: center;"></p>
 
-           <script>
+               <script>
         let DB = null;
         let CFG = null;
         let currentTab = 'platforms';
         let searchQuery = '';
 
-        // СТАРЫЙ РАБОЧИЙ МАССИВ (Жесткие пути без папки data/)
         const dataFiles = [
-            'data.json', 
-            'data_moskovskaya_oblast.json', 
-            'data_tulskaya_oblast.json',
-            'data_kaluzhskaya_oblast.json',
-            'data_ryazanskaya_oblast.json',
-            'data_yaroslavskaya_oblast.json',
-            'data_kostromskaya_oblast.json',
-            'data_ivanovskaya_oblast.json',
-            'data_bryanskaya_oblast.json',
-            'data_krasnodarskiy_kray.json',
-            'data_rostovskaya_oblast.json',
-            'data_stavropolskiy_kray.json',
-            'data_astrahanskaya_oblast.json',
-            'data_volgogradskaya_oblast.json',
-            'data_republika_krym.json',
-            'data_sevastopol.json',
-            'data_republika_adygeya.json'
+            'data.json',                  
+            'data_moskovskaya_oblast.json' 
         ];
 
-        console.log("Начинаю загрузку данных из файлов:", dataFiles);
+        console.log("Начинаю загрузку данных...");
 
         Promise.all([
             fetch('config.json').then(r => r.ok ? r.json() : null),
             ...dataFiles.map(file => 
                 fetch(file).then(r => {
                     if (!r.ok) {
-                        console.error(`❌ ОШИБКА: Не удалось загрузить файл ${file} (Статус: ${r.status})`);
+                        console.error(`❌ ОШИБКА: Не удалось загрузить ${file}`);
                         return null;
                     }
                     return r.json().catch(e => {
-                        console.error(`❌ ОШИБКА: Неверный формат JSON в файле ${file}`, e);
+                        console.error(`❌ ОШИБКА JSON в ${file}`, e);
                         return null;
                     });
                 }).catch(e => {
-                    console.error(`❌ ОШИБКА: Сетевая ошибка при загрузке ${file}`, e);
+                    console.error(`❌ Сетевая ошибка ${file}`, e);
                     return null;
                 })
             )
         ])
         .then(results => {
-            CFG = results[0]; 
+            // results[0] - это config.json, results[1] - data.json, results[2] - moskovskaya...
+            const rawConfig = results[0];
             
-            // Объединяем базы данных
+            // ВАЖНО: Проверяем структуру конфига. Если внутри есть объект "site", берем его.
+            // Это исправляет ошибку, когда мы пытались читать CFG.header, а он лежал в CFG.site.header
+            CFG = (rawConfig && rawConfig.site) ? rawConfig.site : rawConfig;
+            
             DB = {}; 
             let loadedCount = 0;
 
@@ -202,15 +190,12 @@
                     if (keys.length > 0) {
                         Object.assign(DB, results[i]);
                         loadedCount++;
-                        console.log(`✅ Загружен регион: ${keys[0]} (из файла ${dataFiles[i-1]})`);
-                    } else {
-                        console.warn(`⚠️ Файл ${dataFiles[i-1]} загружен, но пуст или имеет неверную структуру`);
+                        console.log(`✅ Загружен регион: ${keys[0]}`);
                     }
                 }
             }
 
-            console.log("Итого загружено регионов:", loadedCount);
-            console.log("Список областей в базе:", Object.keys(DB));
+            console.log(`Итого регионов: ${loadedCount}. Области:`, Object.keys(DB));
             
             // Фильтрация карточек без сайта
             if (DB) {
@@ -224,67 +209,65 @@
                         }
                     }
                 }
-                console.log("✅ База очищена от карточек без сайта");
+                console.log("✅ База очищена от карточек без URL");
             }
             
-            if (CFG) applyConfig();
+            // Применяем конфиг и запускаем сайт
+            if (CFG) {
+                applyConfig();
+            } else {
+                console.warn("⚠️ Конфиг не загружен, использую заглушки");
+                document.getElementById('ui-header-h1').textContent = "Каталог рекламных площадок";
+                document.getElementById('ui-header-subtitle').textContent = "Бесплатный тест";
+            }
+            
             initFilters();
             render();
         })
         .catch(err => {
-            console.error("Критическая ошибка инициализации:", err);
-            document.body.innerHTML = '<div style="text-align:center; padding:50px; color:red;"><h1>Ошибка загрузки</h1><p>Откройте консоль (F12) чтобы увидеть детали.</p></div>';
+            console.error("Критическая ошибка:", err);
+            document.body.innerHTML = '<div style="text-align:center; padding:50px; color:red;"><h1>Ошибка загрузки</h1><p>Проверьте консоль (F12)</p></div>';
         });
 
         function applyConfig() {
             if (!CFG) return;
-            document.title = CFG.site.title;
-            document.getElementById('page-desc').content = CFG.site.description;
-            document.getElementById('ui-header-h1').textContent = CFG.site.header.h1;
-            document.getElementById('ui-header-subtitle').textContent = CFG.site.header.subtitle;
-            document.getElementById('ui-header-btn').textContent = CFG.site.header.ctaButton;
+            // Теперь мы точно знаем, что CFG - это объект из ключа "site"
+            document.title = CFG.title || "Каталог";
+            document.getElementById('page-desc').content = CFG.description || "";
             
-            const benList = document.getElementById('ui-benefits-list');
-            benList.innerHTML = '';
-            CFG.site.benefits.items.forEach(item => {
-                const li = document.createElement('li');
-                li.textContent = item;
-                benList.appendChild(li);
-            });
-            
-            document.getElementById('ui-catalog-title').textContent = CFG.site.catalog.title;
-            document.getElementById('searchInput').placeholder = CFG.site.catalog.searchPlaceholder;
-            document.getElementById('btn-platforms').textContent = CFG.site.catalog.tabs.platforms;
-            document.getElementById('btn-agencies').textContent = CFG.site.catalog.tabs.agencies;
-            
-            document.getElementById('ui-faq-title').textContent = CFG.site.faq.title;
-            const faqCont = document.getElementById('ui-faq-container');
-            if (faqCont) {
-                faqCont.innerHTML = '';
-                CFG.site.faq.items.forEach(qa => {
-                    const div = document.createElement('div');
-                    div.className = 'faq-item';
-                    div.innerHTML = `<h3>${qa.q}</h3><p>${qa.a}</p>`;
-                    faqCont.appendChild(div);
-                });
+            if (CFG.header) {
+                document.getElementById('ui-header-h1').textContent = CFG.header.h1;
+                document.getElementById('ui-header-subtitle').textContent = CFG.header.subtitle;
+                document.getElementById('ui-header-btn').textContent = CFG.header.ctaButton;
             }
             
-            document.getElementById('ui-contacts-title').textContent = CFG.site.contacts.title;
-            const emailLink = document.getElementById('ui-contact-email');
-            if (emailLink) {
-                emailLink.textContent = CFG.site.contacts.email;
-                emailLink.href = `mailto:${CFG.site.contacts.email}`;
-            }
-            const msgLink = document.getElementById('ui-contact-messenger');
-            if (msgLink) {
-                msgLink.textContent = CFG.site.contacts.messenger;
-                msgLink.href = CFG.site.contacts.messengerLink;
+            if (CFG.benefits) {
+                document.getElementById('ui-benefits-title').textContent = CFG.benefits.title;
+                const benList = document.getElementById('ui-benefits-list');
+                benList.innerHTML = '';
+                if (CFG.benefits.items) {
+                    CFG.benefits.items.forEach(item => {
+                        const li = document.createElement('li');
+                        li.textContent = item;
+                        benList.appendChild(li);
+                    });
+                }
             }
             
-            document.getElementById('ui-form-title').textContent = CFG.site.form.title;
-            document.getElementById('ui-form-iframe').src = CFG.site.form.url;
-            document.getElementById('ui-form-disclaimer').textContent = CFG.site.form.disclaimer;
-            document.getElementById('ui-cta-btn').textContent = CFG.site.header.ctaButton;
+            if (CFG.catalog) {
+                document.getElementById('ui-catalog-title').textContent = CFG.catalog.title;
+                document.getElementById('searchInput').placeholder = CFG.catalog.searchPlaceholder;
+                if (CFG.catalog.tabs) {
+                    document.getElementById('btn-platforms').textContent = CFG.catalog.tabs.platforms;
+                    document.getElementById('btn-agencies').textContent = CFG.catalog.tabs.agencies;
+                }
+            }
+            
+            if (CFG.form) {
+                document.getElementById('ui-form-title').textContent = CFG.form.title;
+                document.getElementById('ui-form-iframe').src = CFG.form.url;
+                document.getElementById('ui-form-disclaimer').textContent = CFG.form.disclaimer;
+            }
         }
 
         function initFilters() {
