@@ -1,0 +1,150 @@
+{
+  "Белгородская область": {
+    "Белгород": {
+      "platforms": [
+        {
+          "name": "БелПресса",
+          "type": "Интернет-издание",
+          "url": "https://www.belpressa.ru/",
+          "email": "reklama@belpressa.ru",
+          "phone": "+7 (4722) 32-00-51",
+          "reklama_phone": "+7 (4722) 32-01-65",
+          "status": "Проверено",
+          "utm": "bel_belpressa_001",
+          "specialization": "региональный новостной портал, баннеры и PR-публикации, инфографика и спецпроекты, медиа ИД «Мир Белогорья»",
+          "price_from": 5000,
+          "price_to": 80000
+        },
+        {
+          "name": "Белгородские известия",
+          "type": "Газета",
+          "url": "https://www.belwesti.ru/",
+          "email": "belwesti@belpressa.ru",
+          "phone": "+7 (4722) 32-22-63",
+          "reklama_phone": "+7 (4722) 32-01-65",
+          "status": "Проверено",
+          "utm": "bel_belwesti_002",
+          "specialization": "областная общественно-политическая газета, модульная реклама, частные объявления и поздравления, PR-статьи и интервью, официальные публикации",
+          "price_from": 1000,
+          "price_to": 45000
+        },
+        {
+          "name": "Мир Белогорья",
+          "type": "ТВ",
+          "url": "https://mirbelogorya.ru/",
+          "email": "reklama@tvbelgorod.ru",
+          "phone": "+7 (4722) 58-44-04",
+          "reklama_phone": "+7 (4722) 58-44-04",
+          "status": "Проверено",
+          "utm": "bel_mirbelogorya_003",
+          "specialization": "региональное ТВ и радио, производство теле- и радиороликов, реклама на транспорте, спонсорство и бегущая строка, охват области",
+          "price_from": 72,
+          "price_to": 120000
+        },
+        {
+          "name": "Fonar.tv",
+          "type": "Интернет-издание",
+          "url": "https://fonar.tv/",
+          "email": "ad@fonar.tv",
+          "phone": "+7 (920) 556-20-26",
+          "reklama_phone": "+7 (920) 556-20-26",
+          "status": "Проверено",
+          "utm": "bel_fonar_004",
+          "specialization": "региональное интернет-СМИ, нативные интеграции и спецпроекты, статьи и объяснительные форматы, сотрудничество с брендами",
+          "price_from": 5000,
+          "price_to": 60000
+        },
+        {
+          "name": "БелПресса (паблик ВК)",
+          "type": "Паблик ВК",
+          "url": "https://vk.ru/belpressa",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "+7 (4722) 32-01-65",
+          "status": "Проверено",
+          "utm": "bel_vk_belpressa_005",
+          "specialization": "новостное сообщество 12 тыс. подписчиков, рекламные посты, охват региона, аналитика и инфографика",
+          "price_from": 2000,
+          "price_to": 10000
+        },
+        {
+          "name": "Типичный Белгород (паблик ВК)",
+          "type": "Паблик ВК",
+          "url": "https://vk.ru/tibelg",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "bel_vk_tb_006",
+          "specialization": "городской паблик 11,8 тыс. подписчиков, рекламные посты и репосты, нативные интеграции, конкурсы и розыгрыши",
+          "price_from": 700,
+          "price_to": 6000
+        },
+        {
+          "name": "Новости Белгорода и Области (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/belgorod_smi",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "bel_tg_smi_007",
+          "specialization": "новостной TG-канал 63 тыс. подписчиков, рекламные посты, охват региона, оперативные новости",
+          "price_from": 1846,
+          "price_to": 15000
+        },
+        {
+          "name": "Белгород №1 (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/belgorod01",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "bel_tg_belgorod01_008",
+          "specialization": "главный TG-канал области 192 тыс. подписчиков, нативные интеграции, рекламные посты, охват Белгорода и области",
+          "price_from": 22378,
+          "price_to": 60000
+        }
+      ],
+      "agencies": [
+        {
+          "name": "Hastra Agency",
+          "type": "Digital-агентство",
+          "url": "https://hastra.ru/belgorod/",
+          "email": "",
+          "phone": "",
+          "status": "Проверено",
+          "utm": "bel_hastra_101",
+          "specialization": "SEO-продвижение, контекстная и таргетированная реклама, SMM-ведение, SERM и репутация, аналитика",
+          "price_from": 20000,
+          "price_to": 150000
+        },
+        {
+          "name": "ART6",
+          "type": "Digital-агентство",
+          "url": "https://art6.ru/belgorod/",
+          "email": "",
+          "phone": "",
+          "status": "Проверено",
+          "utm": "bel_art6_102",
+          "specialization": "создание и продвижение сайтов, контекстная реклама, интернет-маркетинг и аналитика, брендинг",
+          "price_from": 15000,
+          "price_to": 120000
+        },
+        {
+          "name": "РА «Фантазия»",
+          "type": "Рекламное агентство",
+          "url": "https://vk.ru/fancybel_2020",
+          "email": "",
+          "phone": "+7 (4722) 38-07-17",
+          "status": "Проверено",
+          "utm": "bel_fancy_103",
+          "specialization": "изготовление рекламы, наружное и indoor-размещение, полиграфия и сувенирка, дизайн макетов",
+          "price_from": 5000,
+          "price_to": 80000
+        }
+      ]
+    }
+  }
+}
