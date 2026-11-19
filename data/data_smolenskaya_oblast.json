@@ -1,0 +1,237 @@
+{
+  "Смоленская область": {
+    "Смоленск": {
+      "platforms": [
+        {
+          "name": "Рабочий путь",
+          "type": "Газета",
+          "url": "https://rabochy-put.ru/",
+          "email": "",
+          "phone": "+7 (4812) 38-63-00",
+          "reklama_phone": "+7 (4812) 38-63-00",
+          "status": "Проверено",
+          "utm": "sml_rabput_001",
+          "specialization": "старейшая областная общественно-политическая газета, модульная реклама и объявления, PR-статьи, официальные публикации, паблик ВК 39,2 тыс. подписчиков",
+          "price_from": 1500,
+          "price_to": 50000
+        },
+        {
+          "name": "Смоленская газета",
+          "type": "Газета",
+          "url": "https://smolgazeta.ru/",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "sml_smolgaz_002",
+          "specialization": "официальная региональная газета Администрации Смоленской области, модульная реклама, PR-публикации, официальные извещения",
+          "price_from": 2000,
+          "price_to": 60000
+        },
+        {
+          "name": "О чём говорит Смоленск",
+          "type": "Интернет-издание",
+          "url": "https://smolensk-i.ru/",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "sml_smolenski_003",
+          "specialization": "информагентство, новости и расследования, баннерная реклама, нативные статьи, охват Смоленска и области",
+          "price_from": 3000,
+          "price_to": 60000
+        },
+        {
+          "name": "SmolDaily",
+          "type": "Интернет-издание",
+          "url": "https://smoldaily.ru/",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "sml_smoldaily_004",
+          "specialization": "быстрые новости Смоленска, оперативная лента, баннерная реклама и PR-публикации, охват региона",
+          "price_from": 2500,
+          "price_to": 50000
+        },
+        {
+          "name": "Печь.Инфо",
+          "type": "Интернет-издание",
+          "url": "https://pech-info.ru/",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "sml_pechinfo_005",
+          "specialization": "современный новостной сайт Смоленска, баннерная реклама, нативные статьи, видеоформаты, охват области",
+          "price_from": 2500,
+          "price_to": 50000
+        },
+        {
+          "name": "ГТРК «Смоленск» (ВГТРК)",
+          "type": "ТВ",
+          "url": "https://gtrksmolensk.ru/",
+          "email": "rukovodstvo@smolgtrk.rfn.ru",
+          "phone": "+7 (4812) 68-48-01",
+          "reklama_phone": "+7 (4812) 68-48-01",
+          "status": "Проверено",
+          "utm": "sml_gtrk_006",
+          "specialization": "государственная ТРК (ВГТРК), ТВ Россия 1 и Россия 24 с региональными врезками, радио России/Маяк/Вести FM, производство роликов и сюжетов, 100% охват области",
+          "price_from": 500,
+          "price_to": 150000
+        },
+        {
+          "name": "Телеканал «Регион 67»",
+          "type": "ТВ",
+          "url": "https://region-67.ru/",
+          "email": "marketing@region-67.ru",
+          "phone": "+7 (4812) 77-88-77",
+          "reklama_phone": "+7 (4812) 77-88-77",
+          "status": "Проверено",
+          "utm": "sml_region67_007",
+          "specialization": "областной телеканал 21 кнопка, прямая реклама, спонсорство программ, коммерческие сюжеты, гости в студии, индивидуальные телепроекты, интеграции на сайте и в соцсетях",
+          "price_from": 1000,
+          "price_to": 150000
+        },
+        {
+          "name": "МК в Смоленске",
+          "type": "Интернет-издание",
+          "url": "https://www.mk-smolensk.ru/",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "sml_mk_008",
+          "specialization": "региональное издание Московского Комсомольца, баннеры и нативные статьи, охват Смоленска и области",
+          "price_from": 3000,
+          "price_to": 60000
+        },
+        {
+          "name": "Типичный Смоленск (паблик ВК)",
+          "type": "Паблик ВК",
+          "url": "https://vk.ru/smolensk_baby",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "sml_vk_tipich_009",
+          "specialization": "городской интернет-журнал в ВК, культурная и общественная жизнь, рекламные посты и интеграции, охват Смоленска",
+          "price_from": 3000,
+          "price_to": 15000
+        },
+        {
+          "name": "Новости Смоленска и Области (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/smolensk_smi",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "sml_tg_smi_010",
+          "specialization": "главный TG-канал Смоленска 44,6 тыс. подписчиков, оперативные новости и Происшествия, рекламные посты и интеграции, охват области",
+          "price_from": 1385,
+          "price_to": 15000
+        },
+        {
+          "name": "Инцидент | Смоленск (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/inc_smol",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "sml_tg_incid_011",
+          "specialization": "новостной TG-канал, происшествия и события Смоленской области, рекламные посты и интеграции, охват региона",
+          "price_from": 2500,
+          "price_to": 15000
+        }
+      ],
+      "agencies": [
+        {
+          "name": "Hastra Agency",
+          "type": "Digital-агентство",
+          "url": "https://hastra.ru/smolensk/",
+          "email": "",
+          "phone": "",
+          "status": "Проверено",
+          "utm": "sml_hastra_101",
+          "specialization": "SEO-продвижение, контекстная и таргетированная реклама, SMM-ведение, SERM и репутация, аналитика",
+          "price_from": 20000,
+          "price_to": 150000
+        },
+        {
+          "name": "Digital Media Group",
+          "type": "Digital-агентство",
+          "url": "https://digitalmediagr.ru/smolensk/",
+          "email": "",
+          "phone": "+7 (495) 308-35-89",
+          "status": "Проверено",
+          "utm": "sml_dmg_102",
+          "specialization": "рекламное агентство полного цикла, SEO и контекстная реклама, SMM и SERM, создание сайтов и чат-боты, дизайн макетов",
+          "price_from": 20000,
+          "price_to": 250000
+        },
+        {
+          "name": "ART6",
+          "type": "Digital-агентство",
+          "url": "https://art6.ru/smolensk/internet-reklama/",
+          "email": "",
+          "phone": "",
+          "status": "Проверено",
+          "utm": "sml_art6_103",
+          "specialization": "интернет-реклама, создание сайтов, SEO-продвижение, контекстная и таргетированная реклама, аналитика",
+          "price_from": 10000,
+          "price_to": 120000
+        },
+        {
+          "name": "РА «Смарт»",
+          "type": "Рекламное агентство",
+          "url": "https://www.smart-67.ru/",
+          "email": "",
+          "phone": "+7 (4812) 37-27-40",
+          "status": "Проверено",
+          "utm": "sml_smart_104",
+          "specialization": "размещение рекламы на ТВ и в сети Интернет, медиабаинг на федеральных и региональных каналах, производство роликов",
+          "price_from": 10000,
+          "price_to": 200000
+        }
+      ]
+    },
+    "Вязьма": {
+      "platforms": [
+        {
+          "name": "Авось-ка Вязьма",
+          "type": "Газета",
+          "url": "https://www.avoska-gazeta.ru/vyazma",
+          "email": "",
+          "phone": "+7 (48131) 4-11-32",
+          "reklama_phone": "+7 (48131) 4-11-32",
+          "status": "Проверено",
+          "utm": "vyz_avoska_001",
+          "specialization": "городская рекламно-информационная газета Вязьмы и Гагарина, объявления и модульная реклама, новости района, сайт издания",
+          "price_from": 500,
+          "price_to": 15000
+        }
+      ],
+      "agencies": []
+    },
+    "Рославль": {
+      "platforms": [
+        {
+          "name": "Радио России-Смоленск (Рославль)",
+          "type": "Радио",
+          "url": "https://gtrksmolensk.ru/",
+          "email": "glavredrv@smolgtrk.rfn.ru",
+          "phone": "+7 (4812) 68-48-05",
+          "reklama_phone": "+7 (4812) 68-48-05",
+          "status": "Проверено",
+          "utm": "rsl_radioru_001",
+          "specialization": "региональное радио на частоте 101.8 FM в Рославле, аудиоролики и спонсорские рубрики, охват Рославльского района",
+          "price_from": 500,
+          "price_to": 25000
+        }
+      ],
+      "agencies": []
+    }
+  }
+}
