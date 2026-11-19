@@ -1,0 +1,225 @@
+{
+  "Воронежская область": {
+    "Воронеж": {
+      "platforms": [
+        {
+          "name": "РИА «Воронеж»",
+          "type": "Интернет-издание",
+          "url": "https://riavrn.ru/",
+          "email": "ra@ria-vrn.ru",
+          "phone": "+7 (473) 259-31-73",
+          "reklama_phone": "+7 (473) 235-64-24",
+          "status": "Проверено",
+          "utm": "vrn_riavrn_001",
+          "specialization": "региональные новости СМИ, баннерная реклама на сайте, PR-публикации и нативные статьи, деловая и политическая повестка, спецпроекты",
+          "price_from": 5000,
+          "price_to": 80000
+        },
+        {
+          "name": "TV Губерния",
+          "type": "ТВ",
+          "url": "https://tv-gubernia.ru/",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "+7 (473) 290-26-26",
+          "status": "Проверено",
+          "utm": "vrn_tvgubernia_002",
+          "specialization": "региональное телевидение, производство рекламных роликов, бегущая строка и спонсорство, размещение в новостных блоках, эфиры ОТР Воронеж",
+          "price_from": 500,
+          "price_to": 150000
+        },
+        {
+          "name": "МОЁ! Online",
+          "type": "Интернет-издание",
+          "url": "https://moe-online.ru/",
+          "email": "direct@moe-online.ru",
+          "phone": "+7 (473) 267-94-00",
+          "reklama_phone": "+7 (473) 267-94-13",
+          "status": "Проверено",
+          "utm": "vrn_moeonline_003",
+          "specialization": "новостной портал, медийные баннеры, нативная реклама и PR-статьи, спецпроекты и инфографика, народные новости",
+          "price_from": 3000,
+          "price_to": 90000
+        },
+        {
+          "name": "Абирег",
+          "type": "Интернет-издание",
+          "url": "https://abireg.ru/",
+          "email": "sb@abireg.ru",
+          "phone": "+7 (473) 212-02-88",
+          "reklama_phone": "+7 (960) 112-50-03",
+          "status": "Проверено",
+          "utm": "vrn_abireg_004",
+          "specialization": "деловое и политическое издание, PR-публикации и лонгриды, баннеры на сайте, размещение в TG/Дзен/ВК/ОК, репутационные проекты",
+          "price_from": 68250,
+          "price_to": 273000
+        },
+        {
+          "name": "36on.ru — Воронежский городской портал",
+          "type": "Портал",
+          "url": "https://36on.ru/",
+          "email": "",
+          "phone": "+7 (473) 254-07-77",
+          "reklama_phone": "+7 (473) 256-44-77",
+          "status": "Проверено",
+          "utm": "vrn_36on_005",
+          "specialization": "городской портал, новости и фоторепортажи, афиша мероприятий, доска объявлений, справочник компаний и вакансии",
+          "price_from": 3000,
+          "price_to": 60000
+        },
+        {
+          "name": "Коммуна",
+          "type": "Газета",
+          "url": "https://communa.ru/",
+          "email": "red@communa.ru",
+          "phone": "+7 (473) 272-74-61",
+          "reklama_phone": "+7 (473) 272-74-61",
+          "status": "Проверено",
+          "utm": "vrn_kommuna_006",
+          "specialization": "областная печатная газета, модульная и блочная реклама, частные объявления, PR-статьи, подписка и розница",
+          "price_from": 1000,
+          "price_to": 40000
+        },
+        {
+          "name": "МОЁ! Online (паблик ВК)",
+          "type": "Паблик ВК",
+          "url": "https://vk.ru/moeonline",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "+7 (473) 267-94-13",
+          "status": "Проверено",
+          "utm": "vrn_vk_moe_007",
+          "specialization": "новостное сообщество 201 тыс. подписчиков, рекламные посты и репосты, нативные интеграции, конкурсы и розыгрыши, охват региона",
+          "price_from": 8000,
+          "price_to": 35000
+        },
+        {
+          "name": "Типичный Воронеж (паблик ВК)",
+          "type": "Паблик ВК",
+          "url": "https://vk.ru/cityvrn",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "vrn_vk_typical_008",
+          "specialization": "крупнейший городской паблик 399 тыс. подписчиков, рекламные посты, нативные интеграции, развлекательный и вирусный контент, конкурсы",
+          "price_from": 10000,
+          "price_to": 50000
+        },
+        {
+          "name": "TV Губерния Воронеж (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/tvgubernia",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "+7 (473) 290-26-26",
+          "status": "Проверено",
+          "utm": "vrn_tg_gubernia_009",
+          "specialization": "новостной TG-канал 19,8 тыс. подписчиков, рекламные посты и интеграции, охват СМИ региона, оперативные новости",
+          "price_from": 6364,
+          "price_to": 20000
+        },
+        {
+          "name": "Мой и твой Воронеж (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/mtv36",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "vrn_tg_mtv36_010",
+          "specialization": "городской TG-канал 145+ тыс. подписчиков, нативные интеграции, рекламные посты формат 1/24, охват воронежцев, lifestyle-контент",
+          "price_from": 10813,
+          "price_to": 30000
+        },
+        {
+          "name": "Типичный Воронеж (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/typicalvoronezh",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "vrn_tg_typical_011",
+          "specialization": "крупнейший TG-канал региона 363+ тыс. подписчиков, оперативные новости, рекламные интеграции, публикации с места событий, охват области",
+          "price_from": 15000,
+          "price_to": 60000
+        }
+      ],
+      "agencies": [
+        {
+          "name": "Лапшин Медиа",
+          "type": "Наружная реклама",
+          "url": "https://lapshin-media.ru/",
+          "email": "hello@lapshin-media.ru",
+          "phone": "+7 (473) 210-04-44",
+          "status": "Проверено",
+          "utm": "vrn_lapshin_101",
+          "specialization": "билборды и digital-билборды, сити-форматы и скроллеры, медиафасады и видеоэкраны, производство и монтаж конструкций, indoor и реклама на транспорте",
+          "price_from": 4000,
+          "price_to": 90000
+        },
+        {
+          "name": "Digital-агентство Time-Life",
+          "type": "Digital-агентство",
+          "url": "https://timelife36.ru/",
+          "email": "info@timelife36.ru",
+          "phone": "+7 (930) 401-93-48",
+          "status": "Проверено",
+          "utm": "vrn_timelife_102",
+          "specialization": "создание сайтов, SEO-продвижение, контекстная и таргетированная реклама, SMM и контент-маркетинг, видеопродакшн и брендинг",
+          "price_from": 10000,
+          "price_to": 100000
+        },
+        {
+          "name": "Hastra Agency",
+          "type": "Digital-агентство",
+          "url": "https://hastra.ru/voronezh/",
+          "email": "",
+          "phone": "",
+          "status": "Проверено",
+          "utm": "vrn_hastra_103",
+          "specialization": "SEO-продвижение, контекстная и таргетированная реклама, SMM-ведение, SERM и управление репутацией, сквозная аналитика",
+          "price_from": 20000,
+          "price_to": 150000
+        },
+        {
+          "name": "РА «В точку»",
+          "type": "Рекламное агентство",
+          "url": "https://t4ka.ru/reklamnoe-agentstvo-voronezh",
+          "email": "",
+          "phone": "",
+          "status": "Проверено",
+          "utm": "vrn_t4ka_104",
+          "specialization": "рекламные кампании полного цикла, контекст и таргет, SEO и брендинг, HR-маркетинг и SERM, видеопродакшн",
+          "price_from": 15000,
+          "price_to": 200000
+        },
+        {
+          "name": "Маркетинговое агентство «Продам слона»",
+          "type": "Рекламное агентство",
+          "url": "https://prodam-slona.ru/voronezh",
+          "email": "",
+          "phone": "+7 (927) 306-60-26",
+          "status": "Проверено",
+          "utm": "vrn_slon_105",
+          "specialization": "маркетинг под ключ, брендинг и фирменный стиль, таргетированная и контекстная реклама, разработка сайтов и SEO, маркетинг недвижимости",
+          "price_from": 30000,
+          "price_to": 300000
+        },
+        {
+          "name": "Digital Media Group",
+          "type": "Digital-агентство",
+          "url": "https://digitalmediagr.ru/voronezh/",
+          "email": "",
+          "phone": "",
+          "status": "Проверено",
+          "utm": "vrn_dmg_106",
+          "specialization": "продвижение сайтов и SEO, контекстная реклама и SMM, SERM и чат-боты, наружная реклама и дизайн макетов",
+          "price_from": 20000,
+          "price_to": 250000
+        }
+      ]
+    }
+  }
+}
