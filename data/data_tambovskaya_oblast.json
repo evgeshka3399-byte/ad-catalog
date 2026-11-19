@@ -1,0 +1,172 @@
+{
+  "Тамбовская область": {
+    "Тамбов": {
+      "platforms": [
+        {
+          "name": "Тамбовская жизнь",
+          "type": "Газета",
+          "url": "https://tamlife.ru/",
+          "email": "tg_reklama@bk.ru",
+          "phone": "+7 (4752) 45-05-76",
+          "reklama_phone": "+7 (4752) 53-57-40",
+          "status": "Проверено",
+          "utm": "tmb_tamlife_001",
+          "specialization": "общественно-политическая газета Тамбовской области, модульная реклама, PR-статьи и пресс-релизы, сайт издания, подписка",
+          "price_from": 1500,
+          "price_to": 50000
+        },
+        {
+          "name": "ВЕСТИ / Тамбов (ГТРК)",
+          "type": "ТВ",
+          "url": "https://vestitambov.ru/",
+          "email": "vesti@vestitambov.ru",
+          "phone": "+7 (4752) 72-12-12",
+          "reklama_phone": "+7 (4752) 72-90-42",
+          "status": "Проверено",
+          "utm": "tmb_gtrk_002",
+          "specialization": "государственная ТРК Тамбовской области, производство сюжетов и роликов, реклама на ТВ и радио, сайт vesti-lipetsk.ru, охват региона",
+          "price_from": 500,
+          "price_to": 150000
+        },
+        {
+          "name": "ТК «Новый век»",
+          "type": "ТВ",
+          "url": "https://tvtambov.ru/",
+          "email": "tvtambov_reklama@mail.ru",
+          "phone": "+7 (4752) 56-18-85",
+          "reklama_phone": "+7 (4752) 56-46-49",
+          "status": "Проверено",
+          "utm": "tmb_novyvek_003",
+          "specialization": "областное ТВ, радио Юмор FM-95.9, сайт tvtambov.ru, производство роликов и сюжетов, паблик ВК 30,9 тыс. подписчиков, охват Тамбова",
+          "price_from": 500,
+          "price_to": 120000
+        },
+        {
+          "name": "Онлайн Тамбов",
+          "type": "Интернет-издание",
+          "url": "https://onlinetambov.ru/",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "tmb_onlinetmb_004",
+          "specialization": "интернет-СМИ Тамбова, баннерная реклама и PR-публикации, новости и происшествия, охват области",
+          "price_from": 3000,
+          "price_to": 50000
+        },
+        {
+          "name": "Новости Тамбова и Области (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/tambov_smi",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "tmb_tg_news_005",
+          "specialization": "главный TG-канал Тамбова 48 тыс. подписчиков, оперативные новости, рекламные посты и интеграции, охват области",
+          "price_from": 3000,
+          "price_to": 20000
+        },
+        {
+          "name": "Подслушано Тамбов (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/podslushano_tambov",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "tmb_tg_podsl_006",
+          "specialization": "городской TG-канал, обсуждения и народные новости, рекламные посты и интеграции, охват Тамбова и области",
+          "price_from": 2000,
+          "price_to": 10000
+        }
+      ],
+      "agencies": [
+        {
+          "name": "Digital Media Group",
+          "type": "Digital-агентство",
+          "url": "https://digitalmediagr.ru/tambov/",
+          "email": "",
+          "phone": "",
+          "status": "Проверено",
+          "utm": "tmb_dmg_101",
+          "specialization": "продвижение сайтов и SEO, контекстная реклама и SMM, SERM и чат-боты, дизайн макетов",
+          "price_from": 20000,
+          "price_to": 250000
+        },
+        {
+          "name": "Hastra Agency",
+          "type": "Digital-агентство",
+          "url": "https://hastra.ru/tambov/",
+          "email": "",
+          "phone": "",
+          "status": "Проверено",
+          "utm": "tmb_hastra_102",
+          "specialization": "SEO-продвижение, контекстная и таргетированная реклама, SMM-ведение, SERM и репутация, аналитика",
+          "price_from": 20000,
+          "price_to": 150000
+        },
+        {
+          "name": "DOT Digital Agency",
+          "type": "Digital-агентство",
+          "url": "https://dot.ru/",
+          "email": "",
+          "phone": "",
+          "status": "Проверено",
+          "utm": "tmb_dot_103",
+          "specialization": "digital-агентство полного цикла, разработка и поддержка сайтов, SMM и чат-боты, контекстная реклама, брендинг",
+          "price_from": 30000,
+          "price_to": 300000
+        },
+        {
+          "name": "ART6",
+          "type": "Digital-агентство",
+          "url": "https://art6.ru/tambov/internet-reklama/",
+          "email": "",
+          "phone": "",
+          "status": "Проверено",
+          "utm": "tmb_art6_104",
+          "specialization": "интернет-реклама, создание сайтов, SEO-продвижение, контекстная и таргетированная реклама, аналитика",
+          "price_from": 10000,
+          "price_to": 120000
+        }
+      ]
+    },
+    "Мичуринск": {
+      "platforms": [
+        {
+          "name": "Мичуринская правда",
+          "type": "Газета",
+          "url": "https://michpravda.ru/",
+          "email": "",
+          "phone": "+7 (915) 861-05-58",
+          "reklama_phone": "+7 (915) 861-05-58",
+          "status": "Проверено",
+          "utm": "mch_michpravda_001",
+          "specialization": "общественно-политическая газета Мичуринска, объявления и модульная реклама, новости города, подписка, сайт издания",
+          "price_from": 800,
+          "price_to": 20000
+        }
+      ],
+      "agencies": []
+    },
+    "Котовск": {
+      "platforms": [
+        {
+          "name": "Наш вестник",
+          "type": "Газета",
+          "url": "https://gazetakotovsk.ru/",
+          "email": "",
+          "phone": "+7 (47541) 4-38-63",
+          "reklama_phone": "+7 (900) 497-31-77",
+          "status": "Проверено",
+          "utm": "kot_nashvestnik_001",
+          "specialization": "городская газета Котовска, объявления и модульная реклама, новости города и района, подписка, сайт издания",
+          "price_from": 600,
+          "price_to": 15000
+        }
+      ],
+      "agencies": []
+    }
+  }
+}
