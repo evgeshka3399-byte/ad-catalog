@@ -1,0 +1,224 @@
+{
+  "Орловская область": {
+    "Орёл": {
+      "platforms": [
+        {
+          "name": "Орловская правда",
+          "type": "Газета",
+          "url": "https://regionorel.ru/",
+          "email": "",
+          "phone": "+7 (4862) 47-52-52",
+          "reklama_phone": "+7 (4862) 76-35-50",
+          "status": "Проверено",
+          "utm": "orl_opravda_001",
+          "specialization": "областная общественно-политическая газета, модульная реклама, PR-статьи, официальные публикации, подписка, сайт издания",
+          "price_from": 1500,
+          "price_to": 50000
+        },
+        {
+          "name": "ОрелТаймс",
+          "type": "Интернет-издание",
+          "url": "https://oreltimes.ru/",
+          "email": "basargina@oreltimes.ru",
+          "phone": "+7 (4862) 48-82-92",
+          "reklama_phone": "+7 (920) 084-04-87",
+          "status": "Проверено",
+          "utm": "orl_oreltimes_002",
+          "specialization": "зарегистрированное орловское СМИ, баннерная реклама и нативные статьи, PR-публикации, охват 500 тыс. уникальных посетителей в месяц, предвыборная агитация",
+          "price_from": 3000,
+          "price_to": 60000
+        },
+        {
+          "name": "МК в Орле",
+          "type": "Интернет-издание",
+          "url": "https://mk-orel.ru/",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "orl_mkorel_003",
+          "specialization": "региональный новостной портал, баннерная реклама, нативные статьи и спецпроекты, охват Орла и области",
+          "price_from": 2500,
+          "price_to": 45000
+        },
+        {
+          "name": "Вести-Орёл (ГТРК)",
+          "type": "ТВ",
+          "url": "https://vk.ru/vestiorel",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "orl_gtrk_004",
+          "specialization": "областная государственная ТРК, производство роликов и сюжетов, реклама на ТВ и радио, паблик ВК 63,9 тыс. подписчиков, охват всей области",
+          "price_from": 500,
+          "price_to": 120000
+        },
+        {
+          "name": "РА «Беркут» (реклама на ТВ)",
+          "type": "ТВ",
+          "url": "https://orel-tv.ru/",
+          "email": "r57@orel-tv.ru",
+          "phone": "+7 (4862) 44-34-11",
+          "reklama_phone": "+7 (4862) 44-34-11",
+          "status": "Проверено",
+          "utm": "orl_berkut_005",
+          "specialization": "размещение на федеральных и региональных телеканалах в Орле, Первый, Россия 1, НТВ, ТНТ, СТС, РЕН ТВ, онлайн-видео и баннерная реклама",
+          "price_from": 500,
+          "price_to": 150000
+        },
+        {
+          "name": "Город Орёл (паблик ВК)",
+          "type": "Паблик ВК",
+          "url": "https://vk.ru/vk_orel",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "orl_vk_gorod_006",
+          "specialization": "крупнейшее информационно-развлекательное сообщество №1 в Орле, рекламные посты и интеграции, оперативные новости, охват города и области",
+          "price_from": 5000,
+          "price_to": 25000
+        },
+        {
+          "name": "Орел Лайв (паблик ВК)",
+          "type": "Паблик ВК",
+          "url": "https://vk.ru/oryol_live",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "orl_vk_oryollive_007",
+          "specialization": "новостное сообщество 80,2 тыс. подписчиков, рекламные посты, охват Орла, городская повестка и события",
+          "price_from": 4000,
+          "price_to": 20000
+        },
+        {
+          "name": "Вести-Орёл (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/vestiorel",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "orl_tg_vesti_008",
+          "specialization": "TG-канал ГТРК Орёл, видеосюжеты и новости региона, рекламные посты, охват Орловской области",
+          "price_from": 2500,
+          "price_to": 12000
+        },
+        {
+          "name": "Новости Орёл и Область (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/orel_smi",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "orl_tg_orelsmi_009",
+          "specialization": "крупнейший TG-канал региона 76,6 тыс. подписчиков, оперативные новости, рекламные интеграции, охват Орла и области",
+          "price_from": 5000,
+          "price_to": 30000
+        },
+        {
+          "name": "Орёл 24 | Главные новости (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/orel24",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "orl_tg_orel24_010",
+          "specialization": "новостной TG-канал 8,4 тыс. подписчиков, свежие события Орловской области, рекламные посты, охват региона",
+          "price_from": 1500,
+          "price_to": 8000
+        }
+      ],
+      "agencies": [
+        {
+          "name": "Digital Media Group",
+          "type": "Digital-агентство",
+          "url": "https://digitalmediagr.ru/oryol/",
+          "email": "",
+          "phone": "",
+          "status": "Проверено",
+          "utm": "orl_dmg_101",
+          "specialization": "продвижение сайтов и SEO, контекстная реклама и SMM, SERM и чат-боты, дизайн макетов и наружная реклама",
+          "price_from": 20000,
+          "price_to": 250000
+        },
+        {
+          "name": "ART6",
+          "type": "Digital-агентство",
+          "url": "https://art6.ru/orel/marketing/",
+          "email": "",
+          "phone": "",
+          "status": "Проверено",
+          "utm": "orl_art6_102",
+          "specialization": "создание и продвижение сайтов, контекстная реклама, интернет-маркетинг и аналитика, брендинг и SMM",
+          "price_from": 15000,
+          "price_to": 120000
+        },
+        {
+          "name": "РА «Беркут»",
+          "type": "Рекламное агентство",
+          "url": "https://orel-tv.ru/",
+          "email": "r57@orel-tv.ru",
+          "phone": "+7 (4862) 44-34-11",
+          "status": "Проверено",
+          "utm": "orl_berkut_103",
+          "specialization": "ТВ-реклама и медиабаинг на федеральных и региональных каналах, интернет-размещение, авторизованный партнёр НРА",
+          "price_from": 10000,
+          "price_to": 300000
+        },
+        {
+          "name": "Медиа Траст Орёл",
+          "type": "Рекламное агентство",
+          "url": "https://vorle.ru/",
+          "email": "manager@vorle.ru",
+          "phone": "",
+          "status": "Проверено",
+          "utm": "orl_mediatrust_104",
+          "specialization": "медийная реклама и радио, продвижение на порталах, наружная реклама, спецпроекты и фотоконкурсы, охват Орла",
+          "price_from": 10000,
+          "price_to": 100000
+        }
+      ]
+    },
+    "Ливны": {
+      "platforms": [
+        {
+          "name": "Ливенская реклама",
+          "type": "Газета",
+          "url": "https://livreklama.ru/",
+          "email": "livreklama@mail.ru",
+          "phone": "+7 (48677) 7-50-06",
+          "reklama_phone": "+7 (48677) 7-50-06",
+          "status": "Проверено",
+          "utm": "liv_livrekl_001",
+          "specialization": "городская газета бесплатных объявлений, модульная реклама и объявления, охват Ливен и района, паблик ВК",
+          "price_from": 500,
+          "price_to": 10000
+        }
+      ],
+      "agencies": []
+    },
+    "Мценск": {
+      "platforms": [
+        {
+          "name": "Мценский край",
+          "type": "Газета",
+          "url": "https://mcenskij-kraj.ru/",
+          "email": "oo_mcnsmi@orel-region.ru",
+          "phone": "+7 (48646) 7-44-85",
+          "reklama_phone": "+7 (48646) 7-44-85",
+          "status": "Проверено",
+          "utm": "mcn_mcenskraj_001",
+          "specialization": "городская газета Мценска, модульная реклама ч/б и цвет, PR-статьи, официальные публикации, охват Мценского района",
+          "price_from": 120,
+          "price_to": 8000
+        }
+      ],
+      "agencies": []
+    }
+  }
+}
