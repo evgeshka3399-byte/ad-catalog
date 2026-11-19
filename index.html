@@ -142,96 +142,104 @@
     
     <p id="ui-form-disclaimer" style="font-size: 0.9rem; color: #666; margin-top: 1rem; text-align: center;"></p>
 
-               <script>
+    <!-- ИСПРАВЛЕННЫЙ СКРИПТ С ЧТЕНИЕМ ИЗ ПАПКИ DATA -->
+    <script>
         let DB = null;
         let CFG = null;
         let currentTab = 'platforms';
         let searchQuery = '';
 
-        const dataFiles = [
-            'data.json',                  
-            'data_moskovskaya_oblast.json' 
-        ];
+        // 1. Сначала загружаем "меню" файлов из папки data
+        fetch('data/list.json')
+            .then(res => {
+                if (!res.ok) throw new Error('Не удалось загрузить list.json');
+                return res.json();
+            })
+            .then(fileList => {
+                // fileList - это массив имен из list.json
+                
+                // 2. Создаем запросы ко всем файлам данных внутри папки data/
+                const dataPromises = fileList.map(fileName => 
+                    fetch(`data/${fileName}`) // Путь теперь ведет в папку
+                        .then(r => {
+                            if (!r.ok) {
+                                console.error(`❌ Ошибка загрузки ${fileName}: ${r.status}`);
+                                return null;
+                            }
+                            return r.json().catch(e => {
+                                console.error(`❌ Ошибка JSON в ${fileName}`, e);
+                                return null;
+                            });
+                        })
+                        .catch(e => {
+                            console.error(`❌ Сетевая ошибка ${fileName}`, e);
+                            return null;
+                        })
+                );
 
-        console.log("Начинаю загрузку данных...");
+                // 3. Загружаем конфиг и все данные параллельно
+                return Promise.all([
+                    fetch('config.json').then(r => r.ok ? r.json() : null),
+                    ...dataPromises
+                ]);
+            })
+            .then(results => {
+                const rawConfig = results[0];
+                
+                // Проверяем структуру конфига (как в твоем старом коде)
+                CFG = (rawConfig && rawConfig.site) ? rawConfig.site : rawConfig;
+                
+                DB = {}; 
+                let loadedCount = 0;
 
-        Promise.all([
-            fetch('config.json').then(r => r.ok ? r.json() : null),
-            ...dataFiles.map(file => 
-                fetch(file).then(r => {
-                    if (!r.ok) {
-                        console.error(`❌ ОШИБКА: Не удалось загрузить ${file}`);
-                        return null;
-                    }
-                    return r.json().catch(e => {
-                        console.error(`❌ ОШИБКА JSON в ${file}`, e);
-                        return null;
-                    });
-                }).catch(e => {
-                    console.error(`❌ Сетевая ошибка ${file}`, e);
-                    return null;
-                })
-            )
-        ])
-        .then(results => {
-            // results[0] - это config.json, results[1] - data.json, results[2] - moskovskaya...
-            const rawConfig = results[0];
-            
-            // ВАЖНО: Проверяем структуру конфига. Если внутри есть объект "site", берем его.
-            // Это исправляет ошибку, когда мы пытались читать CFG.header, а он лежал в CFG.site.header
-            CFG = (rawConfig && rawConfig.site) ? rawConfig.site : rawConfig;
-            
-            DB = {}; 
-            let loadedCount = 0;
-
-            for (let i = 1; i < results.length; i++) {
-                if (results[i]) {
-                    const keys = Object.keys(results[i]);
-                    if (keys.length > 0) {
-                        Object.assign(DB, results[i]);
-                        loadedCount++;
-                        console.log(`✅ Загружен регион: ${keys[0]}`);
-                    }
-                }
-            }
-
-            console.log(`Итого регионов: ${loadedCount}. Области:`, Object.keys(DB));
-            
-            // Фильтрация карточек без сайта
-            if (DB) {
-                for (let region in DB) {
-                    for (let city in DB[region]) {
-                        if (DB[region][city].platforms) {
-                            DB[region][city].platforms = DB[region][city].platforms.filter(p => p.url && p.url.trim() !== '');
-                        }
-                        if (DB[region][city].agencies) {
-                            DB[region][city].agencies = DB[region][city].agencies.filter(a => a.url && a.url.trim() !== '');
+                // Объединяем регионы
+                for (let i = 1; i < results.length; i++) {
+                    if (results[i]) {
+                        const keys = Object.keys(results[i]);
+                        if (keys.length > 0) {
+                            Object.assign(DB, results[i]);
+                            loadedCount++;
+                            console.log(`✅ Загружен: ${keys[0]}`);
                         }
                     }
                 }
-                console.log("✅ База очищена от карточек без URL");
-            }
-            
-            // Применяем конфиг и запускаем сайт
-            if (CFG) {
-                applyConfig();
-            } else {
-                console.warn("⚠️ Конфиг не загружен, использую заглушки");
-                document.getElementById('ui-header-h1').textContent = "Каталог рекламных площадок";
-                document.getElementById('ui-header-subtitle').textContent = "Бесплатный тест";
-            }
-            
-            initFilters();
-            render();
-        })
-        .catch(err => {
-            console.error("Критическая ошибка:", err);
-            document.body.innerHTML = '<div style="text-align:center; padding:50px; color:red;"><h1>Ошибка загрузки</h1><p>Проверьте консоль (F12)</p></div>';
-        });
+
+                console.log(`Итого регионов: ${loadedCount}`);
+
+                // Фильтруем карточки без ссылок
+                if (DB) {
+                    for (let region in DB) {
+                        for (let city in DB[region]) {
+                            if (DB[region][city].platforms) {
+                                DB[region][city].platforms = DB[region][city].platforms.filter(p => p.url && p.url.trim() !== '');
+                            }
+                            if (DB[region][city].agencies) {
+                                DB[region][city].agencies = DB[region][city].agencies.filter(a => a.url && a.url.trim() !== '');
+                            }
+                        }
+                    }
+                    console.log("✅ База очищена от карточек без URL");
+                }
+
+                // Применяем конфиг и запускаем сайт
+                if (CFG) {
+                    applyConfig();
+                } else {
+                    console.warn("⚠️ Конфиг не загружен, использую заглушки");
+                    document.getElementById('ui-header-h1').textContent = "Каталог рекламных площадок";
+                    document.getElementById('ui-header-subtitle').textContent = "Бесплатный тест";
+                }
+                
+                initFilters();
+                render();
+            })
+            .catch(err => {
+                console.error("Критическая ошибка:", err);
+                document.body.innerHTML = '<div style="text-align:center;padding:50px;color:red"><h1>Ошибка загрузки</h1><p>Проверьте консоль (F12)</p></div>';
+            });
 
         function applyConfig() {
             if (!CFG) return;
-            // Теперь мы точно знаем, что CFG - это объект из ключа "site"
             document.title = CFG.title || "Каталог";
             document.getElementById('page-desc').content = CFG.description || "";
             
