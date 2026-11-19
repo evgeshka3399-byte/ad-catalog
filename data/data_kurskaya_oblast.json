@@ -1,0 +1,281 @@
+{
+  "Курская область": {
+    "Курск": {
+      "platforms": [
+        {
+          "name": "Курские Известия",
+          "type": "Газета",
+          "url": "https://kursk-izvestia.ru/",
+          "email": "kursk-izvestia@yandex.ru",
+          "phone": "+7 (4712) 39-19-42",
+          "reklama_phone": "+7 (4712) 39-19-42",
+          "status": "Проверено",
+          "utm": "kursk_kursk_izv_001",
+          "specialization": "областная общественно-политическая газета, модульная реклама, PR-статьи, официальные публикации и объявления, реклама на сайте",
+          "price_from": 5000,
+          "price_to": 133848
+        },
+        {
+          "name": "Городские известия",
+          "type": "Газета",
+          "url": "https://gi-kursk.ru/",
+          "email": "gi-kursk@mail.ru",
+          "phone": "+7 (4712) 73-10-27",
+          "reklama_phone": "+7 (4712) 73-10-27",
+          "status": "Проверено",
+          "utm": "kursk_gi_002",
+          "specialization": "муниципальная газета города Курска, реклама в печатном издании, коммерческие и официальные публикации, модульная реклама",
+          "price_from": 3000,
+          "price_to": 80000
+        },
+        {
+          "name": "Друг для друга (ДДД)",
+          "type": "Газета",
+          "url": "https://dddkursk.ru/",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "kursk_ddd_003",
+          "specialization": "крупнейший тираж в Курской области 10 600 экз, еженедельная газета, афиша, доска объявлений, ТВ-программа, коммерческая реклама",
+          "price_from": 3000,
+          "price_to": 60000
+        },
+        {
+          "name": "46ТВ — Курское Интернет Телевидение",
+          "type": "ТВ",
+          "url": "https://46tv.ru/",
+          "email": "info@46tv.ru",
+          "phone": "+7 (4712) 44-60-24",
+          "reklama_phone": "+7 (4712) 44-60-24",
+          "status": "Проверено",
+          "utm": "kursk_46tv_004",
+          "specialization": "интернет-телевидение Курска, видеосюжеты и ролики, корпоративная реклама на сайте, баннеры, спонсорство новостных проектов",
+          "price_from": 5000,
+          "price_to": 100000
+        },
+        {
+          "name": "Телекомпания ТАКТ 24",
+          "type": "ТВ",
+          "url": "https://takt-tv.ru/",
+          "email": "reklama@takt-tv.ru",
+          "phone": "+7 (4712) 54-70-70",
+          "reklama_phone": "+7 (4712) 54-70-70",
+          "status": "Проверено",
+          "utm": "kursk_takt_005",
+          "specialization": "региональный телеканал, производство видеороликов, спонсорство эфиров, бегущая строка, тематические программы и репортажи",
+          "price_from": 3000,
+          "price_to": 150000
+        },
+        {
+          "name": "Сейм Инфо",
+          "type": "Интернет-издание",
+          "url": "https://seyminfo.ru/",
+          "email": "",
+          "phone": "+7 (4712) 70-35-25",
+          "reklama_phone": "+7 (4712) 70-35-25",
+          "status": "Проверено",
+          "utm": "kursk_seym_006",
+          "specialization": "новости Курска и области, баннерная реклама на сайте, PR-статьи, информационная поддержка новостных выпусков, нативные материалы",
+          "price_from": 12500,
+          "price_to": 70000
+        },
+        {
+          "name": "Типичный Курск (паблик ВК)",
+          "type": "Паблик ВК",
+          "url": "https://vk.ru/kurskkk",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "kursk_vk_typical_007",
+          "specialization": "крупнейший городской паблик 147 тыс. подписчиков, рекламные посты, нативные интеграции, конкурсы и розыгрыши, охват региона",
+          "price_from": 8000,
+          "price_to": 40000
+        },
+        {
+          "name": "Типичный Курск (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/tipich_kursk",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "kursk_tg_typical_008",
+          "specialization": "главный TG-канал региона 60+ тыс. подписчиков, оперативные новости, рекламные посты и интеграции, охват Курской области",
+          "price_from": 5000,
+          "price_to": 25000
+        },
+        {
+          "name": "ЧП Курск (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/chp_kursk46",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "kursk_tg_chp_009",
+          "specialization": "новостной TG-канал 8,8 тыс. подписчиков, оперативные сводки и происшествия, рекламные посты, охват Курска и области",
+          "price_from": 2000,
+          "price_to": 8000
+        }
+      ],
+      "agencies": [
+        {
+          "name": "Digital Media Group",
+          "type": "Digital-агентство",
+          "url": "https://digitalmediagr.ru/kursk/",
+          "email": "",
+          "phone": "",
+          "status": "Проверено",
+          "utm": "kursk_dmg_101",
+          "specialization": "SEO-продвижение сайтов, контекстная реклама, SMM и SERM, создание сайтов и лендингов, управление репутацией",
+          "price_from": 20000,
+          "price_to": 250000
+        },
+        {
+          "name": "Hastra Agency",
+          "type": "Digital-агентство",
+          "url": "https://hastra.ru/kursk/",
+          "email": "info@hastra.ru",
+          "phone": "+7 (800) 333-13-49",
+          "status": "Проверено",
+          "utm": "kursk_hastra_102",
+          "specialization": "контекстная и таргетированная реклама, SEO-продвижение, SERM и управление репутацией, SMM-ведение",
+          "price_from": 20000,
+          "price_to": 150000
+        },
+        {
+          "name": "ART6",
+          "type": "Digital-агентство",
+          "url": "https://art6.ru/kursk/",
+          "email": "",
+          "phone": "",
+          "status": "Проверено",
+          "utm": "kursk_art6_103",
+          "specialization": "создание и продвижение сайтов, контекстная реклама, интернет-маркетинг и аналитика, брендинг",
+          "price_from": 15000,
+          "price_to": 120000
+        },
+        {
+          "name": "РА «Три ботинка»",
+          "type": "Рекламное агентство",
+          "url": "https://3bt.ru/",
+          "email": "info@3bt.ru",
+          "phone": "+7 (4712) 70-70-54",
+          "status": "Проверено",
+          "utm": "kursk_3bt_104",
+          "specialization": "реклама полного цикла, полиграфия и сувенирка, дизайн макетов, наружная реклама, digital-продвижение",
+          "price_from": 10000,
+          "price_to": 100000
+        },
+        {
+          "name": "РА «25 Кадр»",
+          "type": "Рекламное агентство",
+          "url": "https://ra25kadr.ru/",
+          "email": "",
+          "phone": "+7 (4712) 73-08-93",
+          "status": "Проверено",
+          "utm": "kursk_25kadr_105",
+          "specialization": "размещение рекламы на ТВ и радио, полиграфия, маркетинговые исследования, расклейка афиш, директ-маркетинг",
+          "price_from": 5000,
+          "price_to": 80000
+        },
+        {
+          "name": "Orange — реклама и печать",
+          "type": "Рекламное агентство",
+          "url": "https://orange-kursk.ru/",
+          "email": "",
+          "phone": "",
+          "status": "Проверено",
+          "utm": "kursk_orange_106",
+          "specialization": "рекламно-производственная компания, вывески и световые буквы, полиграфия всех форматов, сувенирная продукция с логотипом",
+          "price_from": 3000,
+          "price_to": 50000
+        },
+        {
+          "name": "P18 Agency",
+          "type": "Digital-агентство",
+          "url": "https://www.instagram.com/p18_agency/",
+          "email": "",
+          "phone": "",
+          "status": "Проверено",
+          "utm": "kursk_p18_107",
+          "specialization": "продающие сайты, дизайн и айдентика, контекстная реклама, SMM и таргет, работа с отзывами",
+          "price_from": 15000,
+          "price_to": 100000
+        }
+      ]
+    },
+    "Железногорск": {
+      "platforms": [
+        {
+          "name": "Железногорские новости",
+          "type": "Интернет-издание",
+          "url": "https://ferumnews.ru/",
+          "email": "ferumnews@yandex.ru",
+          "phone": "+7 (47148) 4-20-12",
+          "reklama_phone": "+7 (47148) 4-86-24",
+          "status": "Проверено",
+          "utm": "zhel_ferumnews_001",
+          "specialization": "городской новостной портал, нативные и PR-публикации, баннеры на сайте, охват Железногорска и Курской области",
+          "price_from": 2000,
+          "price_to": 30000
+        },
+        {
+          "name": "Zhel.City",
+          "type": "Портал",
+          "url": "https://zhel.city/",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "zhel_zhelcity_002",
+          "specialization": "городской интернет-портал, справочник и афиша, реклама в печатных изданиях, доска объявлений, охват Железногорска",
+          "price_from": 1500,
+          "price_to": 20000
+        },
+        {
+          "name": "Наш Железногорск (паблик ВК)",
+          "type": "Паблик ВК",
+          "url": "https://vk.ru/nash_zheleznogorsk",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "zhel_vk_nash_003",
+          "specialization": "крупнейший городской паблик 48,1 тыс. подписчиков, рекламные посты и интеграции, охват Железногорска, лайфстайл и новости",
+          "price_from": 3000,
+          "price_to": 15000
+        },
+        {
+          "name": "Наш Железногорск (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/Nash_Zheleznogorsk",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "zhel_tg_nash_004",
+          "specialization": "городской TG-канал, оперативные новости и обсуждения, рекламные посты и интеграции, охват Железногорска и Курской области",
+          "price_from": 1500,
+          "price_to": 8000
+        }
+      ],
+      "agencies": [
+        {
+          "name": "Рекламная группа «Ключ»",
+          "type": "Рекламное агентство",
+          "url": "",
+          "email": "",
+          "phone": "",
+          "status": "Проверено",
+          "utm": "zhel_kluch_101",
+          "specialization": "изготовление вывесок, широкоформатная печать, реклама на транспорте, неоновая реклама, рекламные щиты и оформление АЗС",
+          "price_from": 5000,
+          "price_to": 60000
+        }
+      ]
+    }
+  }
+}
