@@ -229,17 +229,17 @@
       ],
       "agencies": [
         {
-          "name": "Ferrum Studio",
-          "type": "Digital-агентство",
-          "url": "https://ferrumstudio.ru/",
-          "email": "",
-          "phone": "",
-          "status": "Проверено",
-          "utm": "osk_ferrum_101",
-          "specialization": "VK-реклама и таргет в регионах, SMM-продвижение, контекстная реклама, разработка сайтов и SEO",
-          "price_from": 20000,
-          "price_to": 100000
-        }
+  "name": "Hastra Agency",
+  "type": "Digital-агентство",
+  "url": "https://hastra.ru/staryj-oskol/",
+  "email": "",
+  "phone": "",
+  "status": "Проверено",
+  "utm": "osk_hastra_101",
+  "specialization": "SEO-продвижение, контекстная и таргетированная реклама, SMM-ведение, SERM и репутация, аналитика",
+  "price_from": 20000,
+  "price_to": 150000
+}
       ]
     },
     "Губкин": {
