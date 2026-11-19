@@ -220,6 +220,156 @@
           "price_to": 250000
         }
       ]
+    },
+    "Борисоглебск": {
+      "platforms": [
+        {
+          "name": "РИА «Глас-Медиа»",
+          "type": "Интернет-издание",
+          "url": "https://ria-glas.ru/",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "bsk_riaglas_001",
+          "specialization": "городское интернет-СМИ, новости Борисоглебска и области, нативные статьи, баннерная реклама, спецпроекты и репортажи",
+          "price_from": 2000,
+          "price_to": 30000
+        },
+        {
+          "name": "Мой Борисоглебск (паблик ВК)",
+          "type": "Паблик ВК",
+          "url": "https://vk.ru/my_bsk",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "+7 (920) 225-69-31",
+          "status": "Проверено",
+          "utm": "bsk_vk_mybsk_002",
+          "specialization": "городской паблик 6,4 тыс. подписчиков, рекламные посты и аудио/видео-интеграции, охват Борисоглебска, лайфстайл-контент",
+          "price_from": 500,
+          "price_to": 3000
+        },
+        {
+          "name": "Твой Борисоглебск (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/tvoy_borisoglebsk",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "bsk_tg_tvoy_003",
+          "specialization": "городской TG-канал 5,5 тыс. подписчиков, рекламные посты и интеграции, оперативные новости Борисоглебска",
+          "price_from": 919,
+          "price_to": 5000
+        },
+        {
+          "name": "Мой Борисоглебск (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/my_bsk",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "bsk_tg_mybsk_004",
+          "specialization": "TG-канал 5,8 тыс. подписчиков, нативные и прямые рекламные посты, городская повестка, анонсы мероприятий",
+          "price_from": 919,
+          "price_to": 5000
+        }
+      ],
+      "agencies": []
+    },
+    "Россошь": {
+      "platforms": [
+        {
+          "name": "Подслушано. Россошь (паблик ВК)",
+          "type": "Паблик ВК",
+          "url": "https://vk.ru/podslushanorossosh",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "ross_vk_podsl_001",
+          "specialization": "крупнейший городской паблик 69,4 тыс. подписчиков, рекламные посты и интеграции, народные новости и обсуждения, охват Россоши и района",
+          "price_from": 2000,
+          "price_to": 10000
+        },
+        {
+          "name": "Подслушано. Россошь (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/podslushano_rossosh",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "ross_tg_podsl_002",
+          "specialization": "крупнейший TG-канал Россоши 32 тыс. подписчиков, оперативные новости и ЧП, рекламные посты и интеграции, охват района",
+          "price_from": 1500,
+          "price_to": 8000
+        }
+      ],
+      "agencies": []
+    },
+    "Лиски": {
+      "platforms": [
+        {
+          "name": "Подслушано Лиски (паблик ВК)",
+          "type": "Паблик ВК",
+          "url": "https://vk.ru/overhear_lsk",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "liski_vk_podsl_001",
+          "specialization": "крупнейший городской паблик 52 тыс. подписчиков, рекламные посты и интеграции, народные новости, объявления и обсуждения",
+          "price_from": 2000,
+          "price_to": 8000
+        },
+        {
+          "name": "Подслушано Лиски (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/liski_podslushano36",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "liski_tg_podsl_002",
+          "specialization": "главный TG-канал города 12,5 тыс. подписчиков, свежие новости Лисок и района, рекламные посты и интеграции",
+          "price_from": 1838,
+          "price_to": 8000
+        },
+        {
+          "name": "ЛИСКИ | НОВОСТИ О ГЛАВНОМ (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/liski_36",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "liski_tg_news_003",
+          "specialization": "городской TG-канал 7,4 тыс. подписчиков, новости и события Лисок, рекламные посты, охват Воронежской области",
+          "price_from": 1200,
+          "price_to": 5000
+        }
+      ],
+      "agencies": []
+    },
+    "Нововоронеж": {
+      "platforms": [
+        {
+          "name": "Новости Нововоронежа",
+          "type": "Портал",
+          "url": "https://new-vrn36.ru/",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "nvrn_news_001",
+          "specialization": "городской информационный портал, новости и объявления, реклама на сайте, анонсы мероприятий и АЭС, охват города Нововоронеж",
+          "price_from": 1500,
+          "price_to": 15000
+        }
+      ],
+      "agencies": []
     }
   }
 }
