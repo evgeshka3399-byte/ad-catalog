@@ -1,0 +1,193 @@
+{
+  "Липецкая область": {
+    "Липецк": {
+      "platforms": [
+        {
+          "name": "Gorod48",
+          "type": "Интернет-издание",
+          "url": "https://gorod48.ru/",
+          "email": "info@pridemedia.ru",
+          "phone": "+7 (4742) 74-08-08",
+          "reklama_phone": "+7 (4742) 77-55-88",
+          "status": "Проверено",
+          "utm": "lpc_gorod48_001",
+          "specialization": "главный новостной портал Липецка, баннерная реклама, нативные статьи и спецпроекты, видеоформаты, охват области",
+          "price_from": 3000,
+          "price_to": 70000
+        },
+        {
+          "name": "ТРК «Липецкое время»",
+          "type": "ТВ",
+          "url": "https://lipetsktime.ru/",
+          "email": "",
+          "phone": "+7 (4742) 27-55-99",
+          "reklama_phone": "+7 (4742) 27-55-99",
+          "status": "Проверено",
+          "utm": "lpc_liptime_002",
+          "specialization": "областной телеканал и радио Липецк-FM, производство роликов, спонсорские рубрики, бегущая строка, 100% охват области",
+          "price_from": 500,
+          "price_to": 120000
+        },
+        {
+          "name": "ГТРК «Липец» (Вести-Липецк)",
+          "type": "ТВ",
+          "url": "https://vesti-lipetsk.ru/",
+          "email": "commercetv@lipetsk.rfn.ru",
+          "phone": "+7 (4742) 27-66-03",
+          "reklama_phone": "+7 (4742) 27-66-19",
+          "status": "Проверено",
+          "utm": "lpc_gtrk_003",
+          "specialization": "Россия 1 и Россия 24 с региональными врезками, радио России/Маяк/Вести FM, рекламные сюжеты и аудиоролики, баннеры на сайте",
+          "price_from": 1000,
+          "price_to": 150000
+        },
+        {
+          "name": "Gorod48 (паблик ВК)",
+          "type": "Паблик ВК",
+          "url": "https://vk.ru/gorod48",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "+7 (4742) 74-08-08",
+          "status": "Проверено",
+          "utm": "lpc_vk_gorod48_004",
+          "specialization": "новостное сообщество 154,1 тыс. подписчиков, рекламные посты, охват Липецка и области, оперативные новости",
+          "price_from": 6000,
+          "price_to": 30000
+        },
+        {
+          "name": "ЧП 48 Липецк (паблик ВК)",
+          "type": "Паблик ВК",
+          "url": "https://vk.ru/myregion48",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "lpc_vk_chp48_005",
+          "specialization": "новостной паблик 164,4 тыс. подписчиков, рекламные посты и интеграции, происшествия и новости, охват региона",
+          "price_from": 6000,
+          "price_to": 30000
+        },
+        {
+          "name": "Липецкач • Новости Липецка (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/lipetska4",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "lpc_tg_lipetskach_006",
+          "specialization": "TG-канал 65,7 тыс. подписчиков, оперативные новости и эксклюзивы, рекламные посты, охват Липецкой области",
+          "price_from": 4000,
+          "price_to": 20000
+        },
+        {
+          "name": "Gorod48 (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/gorod48",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "+7 (4742) 74-08-08",
+          "status": "Проверено",
+          "utm": "lpc_tg_gorod48_007",
+          "specialization": "TG-канал портала Gorod48, 59,2 тыс. подписчиков, новости и происшествия, рекламные посты, охват региона",
+          "price_from": 4000,
+          "price_to": 20000
+        },
+        {
+          "name": "ЧП 48 (Telegram-канал)",
+          "type": "Telegram-канал",
+          "url": "https://t.me/myregion48",
+          "email": "",
+          "phone": "",
+          "reklama_phone": "",
+          "status": "Проверено",
+          "utm": "lpc_tg_myregion48_008",
+          "specialization": "TG-канал новостного портала ЧП 48, оперативные новости, рекламные интеграции, охват Липецка и области",
+          "price_from": 5000,
+          "price_to": 25000
+        }
+      ],
+      "agencies": [
+        {
+          "name": "L-Digital",
+          "type": "Digital-агентство",
+          "url": "https://l-digital.ru/",
+          "email": "info@l-digital.ru",
+          "phone": "+7 (4742) 71-83-84",
+          "status": "Проверено",
+          "utm": "lpc_ldigital_101",
+          "specialization": "интернет-маркетинг для B2B и производств, разработка и SEO-продвижение сайтов, контекстная реклама, SMM и репутация, внедрение CRM",
+          "price_from": 30000,
+          "price_to": 250000
+        },
+        {
+          "name": "РА «Инициатива» (RED)",
+          "type": "Рекламное агентство",
+          "url": "https://red48.ru/",
+          "email": "",
+          "phone": "",
+          "status": "Проверено",
+          "utm": "lpc_red48_102",
+          "specialization": "реклама на транспорте и транспортное ТВ, indoor-реклама, брендирование салонов, коммерческий транспорт",
+          "price_from": 10000,
+          "price_to": 90000
+        },
+        {
+          "name": "Hastra Agency",
+          "type": "Digital-агентство",
+          "url": "https://hastra.ru/lipeck/",
+          "email": "",
+          "phone": "",
+          "status": "Проверено",
+          "utm": "lpc_hastra_103",
+          "specialization": "SEO-продвижение, контекстная и таргетированная реклама, SMM-ведение, SERM и репутация, аналитика",
+          "price_from": 20000,
+          "price_to": 150000
+        },
+        {
+          "name": "Digital Media Group",
+          "type": "Digital-агентство",
+          "url": "https://digitalmediagr.ru/lipeczk/",
+          "email": "",
+          "phone": "",
+          "status": "Проверено",
+          "utm": "lpc_dmg_104",
+          "specialization": "продвижение сайтов и SEO, контекстная реклама и SMM, SERM и чат-боты, дизайн макетов",
+          "price_from": 20000,
+          "price_to": 250000
+        }
+      ]
+    },
+    "Елец": {
+      "platforms": [
+        {
+          "name": "Красное знамя",
+          "type": "Газета",
+          "url": "https://kznam.ru/",
+          "email": "info@kznam.ru",
+          "phone": "+7 (47467) 2-10-12",
+          "reklama_phone": "+7 (47467) 2-10-12",
+          "status": "Проверено",
+          "utm": "ele_kznam_001",
+          "specialization": "городская общественно-политическая газета Ельца, модульная реклама и объявления, PR-статьи, официальные публикации, сайт издания",
+          "price_from": 800,
+          "price_to": 25000
+        },
+        {
+          "name": "Газета Елецкая Реклама (паблик ВК)",
+          "type": "Паблик ВК",
+          "url": "https://vk.ru/elreklama",
+          "email": "",
+          "phone": "+7 (47467) 6-94-65",
+          "reklama_phone": "+7 (960) 153-56-33",
+          "status": "Проверено",
+          "utm": "ele_vk_reklama_002",
+          "specialization": "городское сообщество 19,5 тыс. подписчиков, рекламные посты и объявления, охват Ельца и района, новости",
+          "price_from": 1000,
+          "price_to": 6000
+        }
+      ],
+      "agencies": []
+    }
+  }
+}
