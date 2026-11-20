@@ -81,6 +81,7 @@
       ],
       "agencies": []
     },
+  }
         {"name": "Церебро Таргет", "type": "SMM-студия", "url": "https://cerebro.target/", "email": "spb@cerebro.target", "phone": "+7 (812) 309-00-00", "status": "Проверено", "utm": "leningrad_all_cerebro", "specialization": "Платформа для таргетированной рекламы, парсинг аудиторий, SMM-аналитика, обучение", "price_from": 50000, "price_to": 700000},
         {"name": "Pepper.Ninja", "type": "SMM-студия", "url": "https://pepper.ninja/", "email": "spb@pepper.ninja", "phone": "+7 (812) 309-00-00", "status": "Проверено", "utm": "leningrad_all_pepper", "specialization": "Сервис и услуги по парсингу аудиторий для таргетированной рекламы, SMM-аналитика", "price_from": 40000, "price_to": 600000},
         {"name": "Segmento Target", "type": "SMM-студия", "url": "https://segmento.target/", "email": "spb@segmento.target", "phone": "+7 (812) 309-00-00", "status": "Проверено", "utm": "leningrad_all_segmento", "specialization": "Автоматизация таргетированной рекламы, парсинг, SMM-продвижение, аналитика", "price_from": 50000, "price_to": 700000},
