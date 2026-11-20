@@ -31,8 +31,6 @@
         /* Кнопки */
         .btn { display: inline-block; padding: 12px 24px; background: #005bbb; color: #fff; text-decoration: none; border-radius: 8px; font-size: 1rem; font-weight: bold; transition: background 0.3s; text-align: center; cursor: pointer; border: none; touch-action: manipulation; }
         .btn:hover { background: #004a99; }
-        .btn-outline { background: transparent; color: #005bbb; border: 2px solid #005bbb; }
-        .btn-outline:hover { background: #f0f8ff; }
         
         /* Блок преимуществ */
         .benefits { background: #f8f9fa; padding: 25px; border-radius: 12px; margin-bottom: 2rem; border-left: 5px solid #005bbb; }
@@ -97,7 +95,7 @@
             <p class="subtitle" id="ui-header-subtitle"></p>
         </div>
         <div>
-            <a href="#form-anchor" class="btn" id="ui-header-btn"></a>
+            <a href="#form-anchor" class="btn" id="ui-header-btn">Оставить заявку</a>
         </div>
     </div>
 
@@ -107,7 +105,7 @@
         <a href="about.html" class="benefits-link">🚀 Узнать о Premium-версии и полной аналитике →</a>
     </div>
 
-    <h2 id="ui-catalog-title"></h2>
+    <h2 id="ui-catalog-title">Доступные площадки и агентства</h2>
     
     <div class="controls">
         <div class="controls-row-1">
@@ -122,19 +120,19 @@
         </div>
         <div class="controls-row-2">
             <label for="searchInput" id="ui-search-label">Поиск услуг или площадок:</label>
-            <input type="text" id="searchInput" placeholder="">
+            <input type="text" id="searchInput" placeholder="Например: табличка с адресом, SEO, газета...">
         </div>
     </div>
 
     <div class="tabs">
-        <button class="tab-btn active" id="btn-platforms">Площадки</button>
-        <button class="tab-btn" id="btn-agencies">Агентства</button>
+        <button class="tab-btn active" id="btn-platforms">Площадки (Реклама)</button>
+        <button class="tab-btn" id="btn-agencies">Агентства (Маркетологи)</button>
     </div>
 
     <div id="cardsContainer" class="grid"></div>
 
     <div id="form-anchor"></div>
-    <h2 id="ui-form-title" style="text-align: center; margin: 40px 0 20px;"></h2>
+    <h2 id="ui-form-title" style="text-align: center; margin: 40px 0 20px;">Оставить заявку на размещение</h2>
     
     <div class="form-container">
         <iframe id="ui-form-iframe" frameborder="0" marginheight="0" marginwidth="0" title="Форма заявки">Загрузка формы…</iframe>
@@ -148,25 +146,56 @@
         let currentTab = 'platforms';
         let searchQuery = '';
 
-        // 1. Загрузка списка файлов и конфигурации
-        fetch('data/list.json')
-            .then(res => {
-                if (!res.ok) throw new Error('Не удалось загрузить list.json');
-                return res.json();
-            })
-            .then(fileList => {
-                const dataPromises = fileList.map(fileName => 
-                    fetch(`data/${fileName}`)
-                        .then(r => r.ok ? r.json().catch(() => null) : null)
-                        .catch(() => null)
-                );
+        // ЗАПАСНОЙ СПИСОК ФАЙЛОВ (если list.json не сработает)
+        // Добавь сюда свои файлы, если автоматическая загрузка не работает
+        const fallbackFiles = [
+            'data_volgograd.json', 
+            'data_moscow.json',
+            'data_tula.json'
+        ];
 
-                return Promise.all([
-                    fetch('config.json').then(r => r.ok ? r.json() : null),
-                    ...dataPromises
-                ]);
-            })
-            .then(results => {
+        function loadData() {
+            console.log('Начало загрузки данных...');
+            
+            // Пытаемся загрузить список из list.json
+            fetch('data/list.json')
+                .then(res => {
+                    if (!res.ok) throw new Error('list.json не найден');
+                    return res.json();
+                })
+                .then(fileList => {
+                    console.log('✅ list.json загружен, файлов:', fileList.length);
+                    processFiles(fileList);
+                })
+                .catch(err => {
+                    console.warn('⚠️ Не удалось загрузить list.json, использую запасной список:', err);
+                    processFiles(fallbackFiles);
+                });
+        }
+
+        function processFiles(fileList) {
+            const dataPromises = fileList.map(fileName => 
+                fetch(`data/${fileName}`)
+                    .then(r => {
+                        if (!r.ok) {
+                            console.error(`❌ Ошибка загрузки ${fileName}: ${r.status}`);
+                            return null;
+                        }
+                        return r.json().catch(e => {
+                            console.error(`❌ Ошибка JSON в ${fileName}`, e);
+                            return null;
+                        });
+                    })
+                    .catch(e => {
+                        console.error(`❌ Сетевая ошибка ${fileName}`, e);
+                        return null;
+                    })
+            );
+
+            Promise.all([
+                fetch('config.json').then(r => r.ok ? r.json() : null).catch(() => null),
+                ...dataPromises
+            ]).then(results => {
                 const rawConfig = results[0];
                 CFG = (rawConfig && rawConfig.site) ? rawConfig.site : rawConfig;
                 
@@ -179,6 +208,8 @@
                         loadedCount++;
                     }
                 }
+
+                console.log(`✅ Загружено регионов: ${loadedCount}`);
 
                 // Фильтрация пустых URL
                 if (DB) {
@@ -202,11 +233,14 @@
                 
                 initFilters();
                 render();
-            })
-            .catch(err => {
-                console.error("Критическая ошибка:", err);
-                document.body.innerHTML = '<div style="text-align:center;padding:50px;color:red"><h1>Ошибка загрузки</h1><p>Проверьте консоль (F12)</p></div>';
+            }).catch(err => {
+                console.error("Критическая ошибка при сборке данных:", err);
+                document.body.innerHTML = '<div style="text-align:center;padding:50px;color:red"><h1>Ошибка загрузки данных</h1><p>Проверьте консоль (F12) и наличие папки data/</p></div>';
             });
+        }
+
+        // Запуск загрузки
+        loadData();
 
         function applyConfig() {
             if (!CFG) return;
@@ -300,7 +334,7 @@
 
             // ЛОГИКА СБОРА ДАННЫХ
             if (searchQuery) {
-                // При поиске ищем ВСЕГДА везде, игнорируя вкладки и фильтры города/области
+                // При поиске ищем ВСЕГДА везде
                 if (DB) {
                     for (let r in DB) {
                         for (let c in DB[r]) {
@@ -310,21 +344,17 @@
                     }
                 }
             } else {
-                // Обычный режим (без поиска)
+                // Обычный режим
                 if (DB && region && DB[region]) {
                     let citiesToCheck = city ? [city] : Object.keys(DB[region]);
                     
                     citiesToCheck.forEach(c => {
                         const cityData = DB[region][c];
-                        if (cityData) {
-                            // Добавляем данные ТОЛЬКО для активной вкладки
-                            if (cityData[currentTab]) {
-                                cityData[currentTab].forEach(i => items.push({...i, _r: region, _c: c}));
-                            }
+                        if (cityData && cityData[currentTab]) {
+                            cityData[currentTab].forEach(i => items.push({...i, _r: region, _c: c}));
                         }
                     });
                 } else if (DB && !region) {
-                    // Если область не выбрана, показываем всё для активной вкладки
                     for (let r in DB) {
                         for (let c in DB[r]) {
                             if (DB[r][c][currentTab]) DB[r][c][currentTab].forEach(i => items.push({...i, _r: r, _c: c}));
@@ -340,10 +370,9 @@
                     return text.includes(searchQuery);
                 });
                 
-                // Авто-переключение вкладки при поиске, если нашли только агентства
                 if (items.length > 0 && items[0]._t !== currentTab) {
                     setTab(items[0]._t);
-                    return; // Прерываем рендер, setTab вызовет его заново
+                    return;
                 }
             }
 
@@ -351,7 +380,6 @@
             if (items.length === 0) {
                 let msg = searchQuery ? `Ничего не найдено по запросу "${searchQuery}"` : 'В выбранном городе нет данных для этой категории';
                 
-                // Подсказка, если в городе есть данные, но в другой вкладке
                 if (!searchQuery && city && region && DB[region][city]) {
                     const otherTab = currentTab === 'platforms' ? 'agencies' : 'platforms';
                     if (DB[region][city][otherTab] && DB[region][city][otherTab].length > 0) {
@@ -367,9 +395,7 @@
                 let card = document.createElement('div');
                 card.className = 'card';
                 
-                // Локация показывается только если не выбран конкретный город ИЛИ идет поиск
                 let locHtml = (!city || searchQuery) ? `<span class="location-tag">📍 ${item._r}, ${item._c}</span>` : '';
-                
                 let specHtml = item.specialization ? `<div class="specialization">💼 ${item.specialization}</div>` : '';
                 
                 let contactsHtml = '';
