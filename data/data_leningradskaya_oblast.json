@@ -1,4 +1,5 @@
-    "Санкт-Петербург": {
+{
+"Санкт-Петербург": {
       "platforms": [
         {"name": "ТРК «Санкт-Петербург»", "type": "TV", "url": "https://topspb.tv/", "email": "reklama@topspb.tv", "phone": "+7 (812) 327-41-00", "status": "Проверено", "utm": "leningrad_spb_trk", "specialization": "Основной городской телеканал, новости, аналитика, прямые эфиры, спонсорство программ, бегущая строка", "price_from": 35000, "price_to": 250000},
         {"name": "100 ТВ", "type": "TV", "url": "https://100tv.ru/", "email": "reklama@100tv.ru", "phone": "+7 (812) 327-41-00", "status": "Проверено", "utm": "leningrad_spb_100tv", "specialization": "Развлекательный городской канал, кино, сериалы, музыка, рекламные ролики и интеграции", "price_from": 25000, "price_to": 180000},
