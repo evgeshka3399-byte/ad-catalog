@@ -235,8 +235,8 @@
         {"name": "Веллер Медиа", "type": "Рекламное агентство", "url": "https://wellermedia.ru/", "email": "info@wellermedia.ru", "phone": "+7 (495) 725-39-08", "status": "Проверено", "utm": "moscow_weller", "specialization": "PR-агентство, №4 Рейтинга Рунета, медиа-коммуникации, репутация, event", "price_from": 120000, "price_to": 2000000},
         {"name": "Другое Агентство", "type": "Рекламное агентство", "url": "https://drugoeagency.ru/", "email": "info@drugoeagency.ru", "phone": "+7 (495) 725-39-08", "status": "Проверено", "utm": "moscow_drugoe", "specialization": "PR-агентство, №6 Рейтинга Рунета, нестандартные коммуникации, креатив", "price_from": 100000, "price_to": 1800000},
         {"name": "Dragons.Media", "type": "Рекламное агентство", "url": "https://dragons.media/", "email": "info@dragons.media", "phone": "+7 (495) 725-39-08", "status": "Проверено", "utm": "moscow_dragons", "specialization": "Репутационное агентство, управление репутацией, PR-стратегии, кризисные коммуникации", "price_from": 120000, "price_to": 2000000}
-      ]
-    },
+      
+    
         {"name": "Арбат | Новости", "type": "Telegram-канал", "url": "https://t.me/arbat", "email": "", "phone": "", "status": "Проверено", "utm": "moscow_cao_arbat", "specialization": "Районный канал Арбата (ЦАО), новости района, анонсы мероприятий, локальные события", "price_from": 5000, "price_to": 50000},
         {"name": "Хамовники | Мой район", "type": "Telegram-канал", "url": "https://t.me/khamovniki", "email": "", "phone": "", "status": "Проверено", "utm": "moscow_cao_khamovniki", "specialization": "Районный канал Хамовников (ЦАО), новости района, благоустройство, локальные события", "price_from": 5000, "price_to": 50000},
         {"name": "Замоскворечье", "type": "Telegram-канал", "url": "https://t.me/zamoskvorechye", "email": "", "phone": "", "status": "Проверено", "utm": "moscow_cao_zamoskv", "specialization": "Районный канал Замоскворечья (ЦАО), исторический центр, новости и события", "price_from": 5000, "price_to": 50000},
